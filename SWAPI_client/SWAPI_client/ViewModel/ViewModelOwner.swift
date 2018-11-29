@@ -30,7 +30,6 @@ extension ViewModelOwner where Self: UIViewController {
                 fatalError("viewModel has not yet been set")
             })
         }
-        
         set {
             assertAssociatedObjectNil(object: self, key: &viewModelKey, type: ViewModelType.self, message: "viewModel has already been set")
             associateObject(object: self, key: &viewModelKey, value: newValue)

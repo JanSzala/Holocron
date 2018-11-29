@@ -10,6 +10,10 @@ import Foundation
 
 internal protocol DependencyContainerViewControllers {
     var mainMenuViewController: MainMenuViewController { get }
+    var mainTableViewController: MainTableViewController { get }
+    var optionsViewController: OptionsViewController { get }
+    var detailsViewController: DetailsViewController { get }
+    var apiClient: APIClientType { get }
 }
 
 internal protocol DependencyContainerType: DependencyContainerViewControllers {

@@ -17,7 +17,10 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
     var flowController: FlowControllerType?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        if UserDefaults.isFirstLaunch() {
+            UserDefaults.standard.set(true, forKey: "isDarkModeOn")
+        }
+            
         flowController = dependencyContainer.flowController
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -27,4 +30,3 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

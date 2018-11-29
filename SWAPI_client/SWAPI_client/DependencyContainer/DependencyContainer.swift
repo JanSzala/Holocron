@@ -22,10 +22,44 @@ internal class DependencyContainer: DependencyContainerType {
 
 // MARK: DependencyContainerViewControllers
 
-extension DependencyContainer: DependencyContainerViewControllers {    
+extension DependencyContainer: DependencyContainerViewControllers {
+    var apiClient: APIClientType {
+        return APIClient(apiParser: apiParser, router: router, urlSessionCreator: urlSessionCreator)
+    }
+    
+    var apiParser: APIParserType {
+        return APIParser()
+    }
+    
+    var router: RouterType {
+        return Router()
+    }
+    
+    var urlSessionCreator: URLSessionCreatorType {
+        return URLSessionCreator()
+    }
+    
     var mainMenuViewController: MainMenuViewController {
         let controller = MainMenuViewController()
         controller.viewModel = MainMenuViewModel()
+        return controller
+    }
+    
+    var mainTableViewController: MainTableViewController {
+        let controller = MainTableViewController()
+        controller.viewModel = MainTableViewModel(apiClient: apiClient)
+        return controller
+    }
+    
+    var optionsViewController: OptionsViewController {
+        let controller = OptionsViewController()
+        controller.viewModel = OptionsViewModel()
+        return controller
+    }
+    
+    var detailsViewController: DetailsViewController {
+        let controller = DetailsViewController()
+        controller.viewModel = DetailsViewModel()
         return controller
     }
 }

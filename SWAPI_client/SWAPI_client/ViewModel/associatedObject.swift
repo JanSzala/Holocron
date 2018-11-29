@@ -11,9 +11,7 @@ import Foundation
 public func associatedObject<T: Any>(object: AnyObject, key: UnsafePointer<UInt8>, constructor: () -> T) -> T {
     if let associated = objc_getAssociatedObject(object, key) as? T {
         return associated
-        
     }
-    
     let defaultValue = constructor()
     objc_setAssociatedObject(object, key, defaultValue, .OBJC_ASSOCIATION_RETAIN)
     return defaultValue

@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  SWAPI_client
+
+  Created by JanSzala on 09/03/2019.
+  Copyright © 2019 JanSzala. All rights reserved.
+*/
+
+"Films" = "Films";
+"People" = "People";
+"Planets" = "Planets";
+"Species" = "Species";
+"Ships" = "Ships";
+"Vehicles" = "Vehicles";
+
+"No internet connection" = "No internet connection";
+"No internet message" = "This app requires internet connetion, please make sure that you're connected.";
+
+"Options" = "Options";

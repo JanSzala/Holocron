@@ -19,6 +19,14 @@ internal class FlowController: NSObject, FlowControllerType {
     private lazy var mainMenuViewController: MainMenuViewController = {
         let controller = dependencyContainer.mainMenuViewController
         
+        controller.viewModel.onTapped = { dataType, title in
+            self.showMainTable(dataType, title)
+        }
+        
+        controller.viewModel.onOptions = {
+            self.showOptions()
+        }
+        
         return controller
     }()
     
@@ -34,15 +42,34 @@ internal class FlowController: NSObject, FlowControllerType {
     }
 }
 
-// MARK: Game
-
 extension FlowController {
-    func showMainMenuViewController() {
-        if navigationController.viewControllers.contains(mainMenuViewController) {
-            navigationController.popToViewController(mainMenuViewController, animated: true)
-        } else {
-            navigationController.pushViewController(mainMenuViewController, animated: true)
-        }
+    func showMainMenu() {
+        navigationController.pushViewController(mainMenuViewController, animated: true)
     }
     
+    func showMainTable(_ dataType: dataType, _ title: String) {
+        let controller = dependencyContainer.mainTableViewController
+        controller.viewModel.dataType = dataType
+        controller.viewModel.controllerTitle = title
+        
+        controller.viewModel.showDetails = { data, dataType in
+            self.showDetails(for: data, dataType: dataType)
+        }
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func showOptions() {
+        let controller = dependencyContainer.optionsViewController
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func showDetails(for data: Any, dataType: dataType) {
+        let controller = dependencyContainer.detailsViewController
+        controller.viewModel.dataType = dataType
+        controller.viewModel.data = data
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
 }

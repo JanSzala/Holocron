@@ -12,4 +12,3 @@ import UIKit
 internal protocol FlowControllerType {
     var rootViewController: UIViewController { get set }
 }
-

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="basicHeaderView" id="vxm-qw-3YC" customClass="BasicHeaderView" customModule="SWAPI_client" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="352"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-Yu-Rix">
+                    <rect key="frame" x="0.0" y="16" width="375" height="320"/>
+                    <subviews>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-PF-3Xc">
+                            <rect key="frame" x="16" y="0.0" width="359" height="320"/>
+                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="b6q-PF-3Xc" secondAttribute="bottom" id="2Zh-5x-Wbf"/>
+                        <constraint firstItem="b6q-PF-3Xc" firstAttribute="leading" secondItem="WAb-Yu-Rix" secondAttribute="leading" constant="16" id="FLO-Zs-y3R"/>
+                        <constraint firstAttribute="trailing" secondItem="b6q-PF-3Xc" secondAttribute="trailing" id="WRk-Zc-7vg"/>
+                        <constraint firstItem="b6q-PF-3Xc" firstAttribute="top" secondItem="WAb-Yu-Rix" secondAttribute="top" id="m45-iz-vsn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <accessibility key="accessibilityConfiguration" identifier="basicHeaderView"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WAb-Yu-Rix" secondAttribute="bottom" priority="999" constant="16" id="1Sf-bS-Ju0"/>
+                <constraint firstItem="WAb-Yu-Rix" firstAttribute="top" secondItem="vxm-qw-3YC" secondAttribute="top" priority="999" constant="16" id="ByT-9I-Efq"/>
+                <constraint firstItem="WAb-Yu-Rix" firstAttribute="leading" secondItem="vxm-qw-3YC" secondAttribute="leading" id="bZ6-yA-Wjc"/>
+                <constraint firstAttribute="trailing" secondItem="WAb-Yu-Rix" secondAttribute="trailing" id="veC-7q-T65"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="K2r-gr-dqB"/>
+            <connections>
+                <outlet property="titleLabel" destination="b6q-PF-3Xc" id="fYm-aX-cK5"/>
+            </connections>
+            <point key="canvasLocation" x="-77.599999999999994" y="11.694152923538232"/>
+        </view>
+    </objects>
+</document>

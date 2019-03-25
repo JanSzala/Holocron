@@ -20,12 +20,19 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.isFirstLaunch() {
             UserDefaults.standard.set(true, forKey: "isDarkModeOn")
         }
+                    
+        window = {
+            let flowController = dependencyContainer.flowController
             
-        flowController = dependencyContainer.flowController
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = flowController?.rootViewController
-        window?.makeKeyAndVisible()
+            let appearanceConfig = dependencyContainer.appearanceConfig
+            appearanceConfig.applyDefault()
+            
+            let mainWindow = UIWindow(frame: UIScreen.main.bounds)
+            mainWindow.rootViewController = flowController.rootViewController
+            mainWindow.makeKeyAndVisible()
+            
+            return mainWindow
+        }()
         
         return true
     }

@@ -20,7 +20,8 @@ public protocol ViewModelOwner: class {
 private var viewModelKey: UInt8 = 0
 
 /**
- Extension for UIViewController that associates viewModel with it, as assosciated type, not concrete class, using Objective C runtime.
+ Extension for UIViewController that associates viewModel with it, as assosciated type,
+ not concrete class, using Objective C runtime.
  */
 
 extension ViewModelOwner where Self: UIViewController {
@@ -31,7 +32,10 @@ extension ViewModelOwner where Self: UIViewController {
             })
         }
         set {
-            assertAssociatedObjectNil(object: self, key: &viewModelKey, type: ViewModelType.self, message: "viewModel has already been set")
+            assertAssociatedObjectNil(object: self,
+                                      key: &viewModelKey,
+                                      type: ViewModelType.self,
+                                      message: "viewModel has already been set")
             associateObject(object: self, key: &viewModelKey, value: newValue)
             viewModelWasSet(viewModel: newValue)
         }

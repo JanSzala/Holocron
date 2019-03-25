@@ -22,7 +22,6 @@ class Film: Decodable {
     let created: String
     let edited: String
     
-    
     init(json: [String: Any]) {
         title = json["title"] as? String ?? ""
         episode_id = json["episode_id"] as? Int ?? 0
@@ -40,5 +39,3 @@ class Film: Decodable {
         edited = json["edited"] as? String ?? ""
     }
 }
-
-

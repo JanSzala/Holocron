@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIFont {
+    static let DINCondensedNameBold = "DINCondensed-Bold"
+    
+    static func font(name fontName: String, size fontSize: CGFloat) -> UIFont {
+        guard let font = UIFont(name: fontName, size: fontSize) else {
+            return UIFont.systemFont(ofSize: fontSize)
+        }
+        
+        return font
+    }
+    
+    static func dinCondensedBold(ofSize size: CGFloat) -> UIFont {
+        return UIFont.font(name: DINCondensedNameBold, size: size)
+    }    
+}

@@ -21,7 +21,10 @@ public func associateObject<T: Any>(object: AnyObject, key: UnsafePointer<UInt8>
     objc_setAssociatedObject(object, key, value, .OBJC_ASSOCIATION_RETAIN)
 }
 
-public func assertAssociatedObjectNil<T: Any>(object: AnyObject, key: UnsafePointer<UInt8>, type: T.Type, message error: String) {
+public func assertAssociatedObjectNil<T: Any>(object: AnyObject,
+                                              key: UnsafePointer<UInt8>,
+                                              type: T.Type,
+                                              message error: String) {
     if let _ = objc_getAssociatedObject(object, key) as? T {
         fatalError(error)
     }

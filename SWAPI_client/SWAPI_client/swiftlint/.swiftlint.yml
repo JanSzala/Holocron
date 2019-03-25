@@ -11,13 +11,14 @@ disabled_rules: # rule identifiers to exclude from running
 - private_unit_test
 - strict_fileprivate
 - void_return
-- trailing_whitespace
 - file_header
 - unused_optional_binding
 - trailing_closure
 - identifier_name
 - multiline_arguments
 - multiline_parameters
+- identifier_name
+- trailing_whitespace
 
 opt_in_rules: # some rules are only opt-in
 - attributes

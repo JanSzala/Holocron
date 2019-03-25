@@ -18,6 +18,8 @@ internal class DependencyContainer: DependencyContainerType {
     }
     
     lazy var flowController = FlowController(dependencyContainer: self, rootViewController: rootViewController, navigationController: navigationController)
+    
+    internal lazy var appearanceConfig: AppearanceConfigType = AppearanceConfig()
 }
 
 // MARK: DependencyContainerViewControllers

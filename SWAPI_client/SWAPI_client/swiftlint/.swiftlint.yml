@@ -2,7 +2,6 @@ disabled_rules: # rule identifiers to exclude from running
 
 - array_init
 - explicit_type_interface
-- line_length
 - nimble_operator
 - no_grouping_extension
 - notification_center_detachment
@@ -12,12 +11,13 @@ disabled_rules: # rule identifiers to exclude from running
 - private_unit_test
 - strict_fileprivate
 - void_return
+- trailing_whitespace
 - file_header
 - unused_optional_binding
 - trailing_closure
+- identifier_name
 - multiline_arguments
-- redundant_string_enum_value
-- trailing_whitespace
+- multiline_parameters
 
 opt_in_rules: # some rules are only opt-in
 - attributes
@@ -55,7 +55,6 @@ opt_in_rules: # some rules are only opt-in
 - function_body_length
 - function_parameter_count
 - generic_type_name
-- identifier_name
 - implicit_getter
 - implicit_return
 - implicitly_unwrapped_optional
@@ -70,7 +69,6 @@ opt_in_rules: # some rules are only opt-in
 - let_var_whitespace
 - literal_expression_end_indentation
 - mark
-- multiline_parameters
 - multiple_closures_with_trailing_closure
 - nesting
 - object_literal
@@ -87,6 +85,7 @@ opt_in_rules: # some rules are only opt-in
 - redundant_discardable_let
 - redundant_nil_coalescing
 - redundant_optional_initialization
+- redundant_string_enum_value
 - redundant_void_return
 - return_arrow_whitespace
 - shorthand_operator
@@ -113,48 +112,49 @@ opt_in_rules: # some rules are only opt-in
 - vertical_whitespace
 - weak_delegate
 - xctfail_message
+- line_length
 
 # Rules configuration
 
 closure_spacing:
-severity: error
+    severity: error
 
 colon:
-severity: error
+    severity: error
 
 force_unwrapping:
-severity: warning
+    severity: warning
 
 force_cast:
-severity: warning
+    severity: warning
 
 force_try:
-severity: warning
+    severity: warning
 
 control_statement:
-severity: warning
+    severity: warning
 
 cyclomatic_complexity:
-warning: 10
-error: 20
+    warning: 10
+    error: 20
 
 explicit_init:
-severity: error
+    severity: error
 
 file_length:
-warning: 400
-error: 800
+    warning: 400
+    error: 800
 
 first_where:
-severity: error
+    severity: error
 
 function_body_length:
-warning: 50
-error: 100
+    warning: 50
+    error: 100
 
 function_parameter_count:
-warning: 8
-error: 10
+    warning: 8
+    error: 10
 
 generic_type_name:
     min_length:
@@ -173,98 +173,101 @@ identifier_name:
         error: 100
 
 large_tuple:
-warning: 4
-error: 6
+    warning: 4
+    error: 6
 
 leading_whitespace:
-severity: error
+    severity: error
 
 legacy_cggeometry_functions:
-severity: error
+    severity: error
 
 legacy_constant:
-severity: error
+    severity: error
 
 legacy_constructor:
-severity: error
+    severity: error
 
 legacy_nsgeometry_functions:
-severity: error
+    severity: error
+
+line_length:
+    warning: 160
+    error: 160
 
 mark:
-severity: warning
+    severity: warning
 
 nesting:
-severity: warning
+    severity: warning
 
 notification_center_detachment:
-severity: error
+    severity: error
 
 number_separator:
-severity: error
+    severity: error
 
 object_literal:
-severity: error
+    severity: error
 
 opening_brace:
-severity: error
+    severity: error
 
 operator_whitespace:
-severity: error
+    severity: error
 
 operator_usage_whitespace:
-severity: error
+    severity: error
 
 overridden_super_call:
-severity: error
+    severity: error
 
 private_outlet:
-severity: error
+    severity: error
 
 private_unit_test:
-severity: error
+    severity: error
 
 prohibited_super_call:
-severity: error
+    severity: error
 
 redundant_nil_coalescing:
-severity: error
+    severity: error
 
 redundant_void_return:
-severity: error
+    severity: error
 
 return_arrow_whitespace:
-severity: error
+    severity: error
 
 shorthand_operator:
-severity: error
+    severity: error
 
 sorted_imports:
-severity: error
+    severity: error
 
 statement_position:
-statement_mode: default
-#statement_mode: uncuddled_else
-severity: error
+    statement_mode: default
+    severity: error
 
 switch_case_on_newline:
-severity: error
+    severity: error
 
 syntactic_sugar:
-severity: error
+    severity: error
 
 trailing_comma:
-severity: error
+    severity: error
 
 trailing_newline:
-severity: error
+    severity: error
 
 trailing_semicolon:
-severity: error
+    severity: error
 
 type_body_length:
-warning: 400
-error: 400
+    warning: 400
+    error: 400
 
 type_name:
     min_length:
@@ -275,34 +278,34 @@ type_name:
         error: 100
 
 unused_closure_parameter:
-severity: error
+    severity: error
 
 unused_enumerated:
-severity: error
+    severity: error
 
 unused_optional_binding:
-severity: error
+    severity: error
 
 valid_ibinspectable:
-severity: error
+    severity: error
 
 vertical_parameter_alignment:
-severity: error
+    severity: error
 
 vertical_whitespace:
-severity: error
+    severity: error
 
 weak_delegate:
-severity: error
+    severity: error
 
 reporter: "xcode"
 
 # Find all the available rules by running:
 # swiftlint rules
 included: # paths to include during linting. `--path` is ignored if present.
-- SwitchDrawiOSClient
+- RocheOneiOS
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Carthage
 - Pods
-- Source/ExcludedFolder
-- Source/ExcludedFile.swift
+# - Source/ExcludedFolder
+# - Source/ExcludedFile.swift

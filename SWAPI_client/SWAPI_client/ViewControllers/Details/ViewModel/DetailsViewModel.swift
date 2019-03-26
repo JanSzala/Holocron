@@ -9,7 +9,7 @@
 import Foundation
 
 internal class DetailsViewModel: DetailsViewModelType {
-    var dataType: dataType = .People
+    var dataType: DataType = .People
     var data: Any = ""
     
     let personSections = ["Name",

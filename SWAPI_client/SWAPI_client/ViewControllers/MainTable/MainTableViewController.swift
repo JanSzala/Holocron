@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTableViewController: UIViewController {
+internal class MainTableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     

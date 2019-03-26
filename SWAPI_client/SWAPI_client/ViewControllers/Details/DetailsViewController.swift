@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+internal class DetailsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -25,7 +25,6 @@ class DetailsViewController: UIViewController {
         tableView.tableFooterView = UIView()
     }
 
-    
     private func registerCells() {
         tableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "mainTableViewCell")
         tableView.register(UINib(nibName: "BasicHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "basicHeaderView")
@@ -73,7 +72,6 @@ extension DetailsViewController: UITableViewDataSource {
 
 extension DetailsViewController: UITableViewDelegate {
 }
-
 
 extension DetailsViewController: ViewModelOwner {
     func viewModelWasSet(viewModel: DetailsViewModelType) {

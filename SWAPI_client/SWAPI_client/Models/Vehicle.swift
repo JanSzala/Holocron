@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-class Vehicle: Decodable {
+internal class Vehicle: Decodable {
     let name: String
     let model: String
     let vehicle_class: String

@@ -10,11 +10,11 @@ import Foundation
 
 internal protocol DetailsViewModelType: class {
     var data: Any { get set }
-    var dataType: dataType { get set }
+    var dataType: DataType { get set }
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
-    
     var sectionsCount: Int { get }
+    
     func sectionTitle(for index: Int) -> String
     func dataForRow(at indexPath: IndexPath) -> String
 

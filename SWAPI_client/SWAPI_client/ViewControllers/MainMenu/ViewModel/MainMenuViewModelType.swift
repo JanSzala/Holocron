@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 internal protocol MainMenuViewModelType: class {
-    var onTapped: ((dataType, String) -> ())? { get set }
+    var onTapped: ((DataType, String) -> ())? { get set }
     var onOptions: (() -> ())? { get set }
     
     var spacingBetweenButtons: CGFloat { get }
@@ -21,8 +21,8 @@ internal protocol MainMenuViewModelType: class {
     var alert: UIAlertController { get }
     
     func buttonTitle(for index: Int) -> String
-    func dataType(for index: Int) -> dataType
-    func addViewToArray(_ view: mainMenuSquareView)
+    func dataType(for index: Int) -> DataType
+    func addViewToArray(_ view: MainMenuSquareView)
     func isInternetConnected() -> Bool
     func applyCurrentModeToViews(color: UIColor, reversedColor: UIColor)
 }

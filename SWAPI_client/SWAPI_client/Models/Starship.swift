@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-class Starship: Decodable {
+internal class Starship: Decodable {
     let name: String
     let model: String
     let starship_class: String
@@ -47,4 +47,3 @@ class Starship: Decodable {
          edited = json["edited"] as? String ?? ""
     }
 }
-

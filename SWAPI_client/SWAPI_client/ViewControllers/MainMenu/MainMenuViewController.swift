@@ -10,7 +10,7 @@ import UIKit
 
 class MainMenuViewController: UIViewController {
     @IBOutlet var sceneView: UIView!
-    @IBOutlet weak var menuView: mainMenuSquareView!
+    @IBOutlet weak var menuView: MainMenuSquareView!
     
     lazy var xAxisSpacing = menuView.frame.width + viewModel.spacingBetweenButtons
     lazy var yAxisSpacing = menuView.frame.height + viewModel.spacingBetweenButtons
@@ -23,6 +23,7 @@ class MainMenuViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
         sceneView.backgroundColor = darkModeColor()
         viewModel.applyCurrentModeToViews(color: darkModeColor(), reversedColor: darkModeColor(reversedColors: true))
@@ -42,7 +43,7 @@ class MainMenuViewController: UIViewController {
 extension MainMenuViewController {
     private func animateMenuView() {
         UIView.animate(withDuration: viewModel.animationDuration, delay: viewModel.animationDelay, options: .curveEaseInOut, animations: {
-            self.menuView.frame.origin.y = self.sceneView.frame.height/2
+            self.menuView.frame.origin.y = self.sceneView.frame.height / 2
         }, completion: { _ in
             self.createView(delay: 0.1, viewPlacing: .leftMiddle, index: 0)
             self.createView(delay: 0.2, viewPlacing: .leftTop, index: 1)
@@ -54,7 +55,7 @@ extension MainMenuViewController {
     }
     
     private func createView(delay: TimeInterval, viewPlacing: ViewPlacing, index: Int) {
-        let view = mainMenuSquareView(frame: menuView.frame)
+        let view = MainMenuSquareView(frame: menuView.frame)
         view.button.setTitle(viewModel.buttonTitle(for: index), for: .normal)
         sceneView.insertSubview(view, belowSubview: menuView)
         
@@ -73,20 +74,20 @@ extension MainMenuViewController {
         UIView.animate(withDuration: viewModel.placingAnimationDuration, delay: delay, options: .curveEaseInOut, animations: {
             switch viewPlacing {
             case .leftDown:
-                view.frame.origin.x -= self.xAxisSpacing/2
+                view.frame.origin.x -= self.xAxisSpacing / 2
                 view.frame.origin.y += self.yAxisSpacing
             case .leftMiddle:
                 view.frame.origin.x -= self.xAxisSpacing
             case .leftTop:
-                view.frame.origin.x -= self.xAxisSpacing/2
+                view.frame.origin.x -= self.xAxisSpacing / 2
                 view.frame.origin.y -= self.yAxisSpacing
             case .rightTop:
-                view.frame.origin.x += self.xAxisSpacing/2
+                view.frame.origin.x += self.xAxisSpacing / 2
                 view.frame.origin.y -= self.yAxisSpacing
             case .rightMiddle:
                 view.frame.origin.x += self.xAxisSpacing
             case .rightDown:
-                view.frame.origin.x += self.xAxisSpacing/2
+                view.frame.origin.x += self.xAxisSpacing / 2
                 view.frame.origin.y += self.yAxisSpacing
             }
         }, completion: nil)

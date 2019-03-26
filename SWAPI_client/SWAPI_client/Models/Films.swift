@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-class Films: Decodable {
+internal class Films: Decodable {
     let count: Int
     let next: String?
     let previous: String?
@@ -14,8 +14,8 @@ class Films: Decodable {
     
     init(json: [String: Any]) {
         count = json["count"] as? Int ?? 0
-        next = json["next"] as? String ?? nil
-        previous = json["previous"] as? String ?? nil
-        results = json["results"] as? [Film] ?? nil
+        next = json["next"] as? String
+        previous = json["previous"] as? String
+        results = json["results"] as? [Film]
     }
 }

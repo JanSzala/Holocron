@@ -9,9 +9,9 @@
 import Foundation
 
 internal class MainTableViewModel: MainTableViewModelType {
-    var showDetails: ((Any, dataType) -> ())?
+    var showDetails: ((Any, DataType) -> ())?
     
-    var dataType: dataType = .People
+    var dataType: DataType = .People
     var controllerTitle: String = ""
     var currentPage: Int = 1
     var shouldFetchData: Bool = true
@@ -22,8 +22,6 @@ internal class MainTableViewModel: MainTableViewModelType {
     var peopleArrayCount: Int {
         return dataArray.count
     }
-    
-    
     
     let apiClient: APIClientType
     
@@ -89,7 +87,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.currentPage += 1
                 
                 guard let arrayOfData = data.results else {
-                    fatalError()
+                    fatalError("could not fill the array with results")
                 }
                 
                 self.shouldFetchData = data.next != nil
@@ -105,7 +103,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.currentPage += 1
                 
                 guard let arrayOfData = data.results else {
-                    fatalError()
+                    fatalError("could not fill the array with results")
                 }
                 
                 self.shouldFetchData = data.next != nil
@@ -121,7 +119,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.currentPage += 1
                 
                 guard let arrayOfData = data.results else {
-                    fatalError()
+                    fatalError("could not fill the array with results")
                 }
 
                 self.shouldFetchData = data.next != nil
@@ -137,7 +135,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.currentPage += 1
                 
                 guard let arrayOfData = data.results else {
-                    fatalError()
+                    fatalError("could not fill the array with results")
                 }
                 
                 self.shouldFetchData = data.next != nil
@@ -153,7 +151,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.currentPage += 1
                 
                 guard let arrayOfData = data.results else {
-                    fatalError()
+                    fatalError("could not fill the array with results")
                 }
                 
                 self.shouldFetchData = data.next != nil
@@ -169,7 +167,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.currentPage += 1
                 
                 guard let arrayOfData = data.results else {
-                    fatalError()
+                    fatalError("could not fill the array with results")
                 }
                 
                 self.shouldFetchData = data.next != nil

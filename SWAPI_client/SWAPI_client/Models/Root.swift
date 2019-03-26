@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Root: Decodable {
+internal struct Root: Decodable {
     let films: String
     let people: String
     let planets: String

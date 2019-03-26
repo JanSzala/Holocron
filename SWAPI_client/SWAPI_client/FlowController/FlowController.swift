@@ -47,7 +47,7 @@ extension FlowController {
         navigationController.pushViewController(mainMenuViewController, animated: true)
     }
     
-    func showMainTable(_ dataType: dataType, _ title: String) {
+    func showMainTable(_ dataType: DataType, _ title: String) {
         let controller = dependencyContainer.mainTableViewController
         controller.viewModel.dataType = dataType
         controller.viewModel.controllerTitle = title
@@ -65,7 +65,7 @@ extension FlowController {
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func showDetails(for data: Any, dataType: dataType) {
+    func showDetails(for data: Any, dataType: DataType) {
         let controller = dependencyContainer.detailsViewController
         controller.viewModel.dataType = dataType
         controller.viewModel.data = data

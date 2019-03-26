@@ -1,4 +1,3 @@
-
 //
 //  Person.swift
 //  SWAPI_client
@@ -9,7 +8,7 @@
 
 import Foundation
 
-class Person: Decodable {
+internal class Person: Decodable {
     let name: String
     let birth_year: String
     let eye_color: String

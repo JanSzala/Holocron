@@ -12,13 +12,13 @@ internal protocol URLSessionCreatorType: class {
     func createURLSession(pageAddress: String, onSuccess: @escaping (Data) -> (), onFailure: @escaping () -> ())
 }
 
-class URLSessionCreator: URLSessionCreatorType {
+internal class URLSessionCreator: URLSessionCreatorType {
     func createURLSession(pageAddress: String, onSuccess: @escaping (Data) -> (), onFailure: @escaping () -> ()) {
         guard let url = URL(string: pageAddress) else {
             return
         }
         
-        URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+        URLSession.shared.dataTask(with: url, completionHandler: { data, response, _ in
             guard let data = data, let response = response else {
                 return }
             

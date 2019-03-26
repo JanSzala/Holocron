@@ -18,7 +18,8 @@ internal class OptionsViewModel: OptionsViewModelType {
     }
     
     func onDarkModeSwitchTapped() {
-        UserDefaults.standard.bool(forKey: "isDarkModeOn") == true ? UserDefaults.standard.set(false, forKey: "isDarkModeOn") : UserDefaults.standard.set(true, forKey: "isDarkModeOn")
+        UserDefaults.standard.bool(forKey: "isDarkModeOn") == true ? UserDefaults.standard.set(false, forKey: "isDarkModeOn") :
+            UserDefaults.standard.set(true, forKey: "isDarkModeOn")
     }
     
     func isDarkMode() -> Bool {

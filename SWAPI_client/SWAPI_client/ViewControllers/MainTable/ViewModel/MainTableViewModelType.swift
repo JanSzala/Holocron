@@ -9,9 +9,9 @@
 import Foundation
 
 internal protocol MainTableViewModelType: class {
-    var showDetails: ((Any, dataType) -> ())? { get set }
+    var showDetails: ((Any, DataType) -> ())? { get set }
     
-    var dataType: dataType { get set }
+    var dataType: DataType { get set }
     var controllerTitle: String { get set }
     var currentPage: Int { get }
     var shouldFetchData: Bool { get }

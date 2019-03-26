@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-class Vehicles: Decodable {
+internal class Vehicles: Decodable {
     let count: Int
     let next: String?
     let previous: String?
@@ -14,9 +14,8 @@ class Vehicles: Decodable {
     
     init(json: [String: Any]) {
         count = json["count"] as? Int ?? 0
-        next = json["next"] as? String ?? nil
-        previous = json["previous"] as? String ?? nil
-        results = json["results"] as? [Vehicle] ?? nil
+        next = json["next"] as? String
+        previous = json["previous"] as? String
+        results = json["results"] as? [Vehicle]
     }
 }
-

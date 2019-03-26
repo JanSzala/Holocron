@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-class Kind: Decodable {
+internal class Kind: Decodable {
     let name: String
     let classification: String
     let designation: String

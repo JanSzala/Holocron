@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-class Planet: Decodable {
+internal class Planet: Decodable {
     let name: String
     let diameter: String
     let rotation_period: String
@@ -39,5 +39,3 @@ class Planet: Decodable {
          edited = json["edited"] as? String ?? ""
     }
 }
-
-

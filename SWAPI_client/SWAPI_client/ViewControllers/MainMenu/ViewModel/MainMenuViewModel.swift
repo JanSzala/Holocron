@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public enum dataType {
+public enum DataType {
     case People
     case Films
     case Species
@@ -28,12 +28,12 @@ internal enum ViewPlacing {
 }
 
 internal class MainMenuViewModel: MainMenuViewModelType {
-    var onTapped: ((dataType, String) -> ())?
+    var onTapped: ((DataType, String) -> ())?
     var onOptions: (() -> ())?
     
-    var views = [mainMenuSquareView]()
+    var views = [MainMenuSquareView]()
     
-    var buttonTitlesArray: [(String, dataType)] = [(NSLocalizedString("Films", comment: ""), .Films),
+    var buttonTitlesArray: [(String, DataType)] = [(NSLocalizedString("Films", comment: ""), .Films),
                                                  (NSLocalizedString("People", comment: ""), .People),
                                                  (NSLocalizedString("Planets", comment: ""), .Planets),
                                                  (NSLocalizedString("Species", comment: ""), .Species),
@@ -46,7 +46,6 @@ internal class MainMenuViewModel: MainMenuViewModelType {
     let placingAnimationDuration: TimeInterval = 0.3
     let animationDelay: TimeInterval = 0.5
 
-    
     var alert: UIAlertController {
         let alert = UIAlertController(title: NSLocalizedString("No internet connection", comment: ""),
                                       message: NSLocalizedString("No internet message", comment: ""),
@@ -60,11 +59,11 @@ internal class MainMenuViewModel: MainMenuViewModelType {
         return buttonTitlesArray[index].0
     }
     
-    func dataType(for index: Int) -> dataType {
+    func dataType(for index: Int) -> DataType {
         return buttonTitlesArray[index].1
     }
     
-    func addViewToArray(_ view: mainMenuSquareView){
+    func addViewToArray(_ view: MainMenuSquareView) {
         views.append(view)
     }
     

@@ -17,7 +17,7 @@ internal protocol APIParserType: class {
     func parsePlanets(data: Data, onSuccess: @escaping (Planets) -> (), onFailure: @escaping () -> ())
 }
 
-class APIParser: APIParserType {
+internal class APIParser: APIParserType {
     func parsePeople(data: Data, onSuccess: @escaping (People) -> (), onFailure: @escaping () -> ()) {
         do {
             let json = try JSONDecoder().decode(People.self, from: data)
@@ -83,6 +83,4 @@ class APIParser: APIParserType {
             onFailure()
         }
     }
-    
-    
 }

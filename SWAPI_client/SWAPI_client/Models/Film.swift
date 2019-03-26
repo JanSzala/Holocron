@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-class Film: Decodable {
+internal class Film: Decodable {
     let title: String
     let episode_id: Int
     let opening_crawl: String

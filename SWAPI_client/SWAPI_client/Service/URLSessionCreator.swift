@@ -32,19 +32,19 @@ internal class URLSessionCreator: URLSessionCreatorType {
         if let httpResponse = response as? HTTPURLResponse {
             switch httpResponse.statusCode {
             case 200:
-                print("\(httpResponse.statusCode) Ok")
+                logMsg("\(httpResponse.statusCode) Ok")
             case 400:
-                print("\(httpResponse.statusCode) Bad Request")
+                logMsg("\(httpResponse.statusCode) Bad Request")
             case 403:
-                print("\(httpResponse.statusCode) Forbidden")
+                logMsg("\(httpResponse.statusCode) Forbidden")
             case 404:
-                print("\(httpResponse.statusCode) Not Found")
+                logMsg("\(httpResponse.statusCode) Not Found")
             case 500:
-                print("\(httpResponse.statusCode) Internal Server Error")
+                logMsg("\(httpResponse.statusCode) Internal Server Error")
             case 501:
-                print("\(httpResponse.statusCode) Not Implemented")
+                logMsg("\(httpResponse.statusCode) Not Implemented")
             default:
-                print("\(httpResponse.statusCode) Unknown response status code")
+                logMsg("\(httpResponse.statusCode) Unknown response status code")
             }
         }
     }

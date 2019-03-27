@@ -40,12 +40,12 @@ internal class MainTableViewController: UIViewController {
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
             }
-            print("fetched data")
+            logMsg("fetched data")
         }, onFailure: {
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
             }
-            print("error during fetching data")
+            logMsg("error during fetching data")
         }, noMoreData: {
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()

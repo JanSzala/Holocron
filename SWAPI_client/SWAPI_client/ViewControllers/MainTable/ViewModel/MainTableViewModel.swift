@@ -95,7 +95,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.dataArray.append(contentsOf: arrayOfData)
                 onSuccess()
             }, onFailure: {
-                print("Failed fetching data")
+                logMsg("Failed fetching data")
                 onFailure()
             })
         case .Films:
@@ -111,7 +111,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.dataArray.append(contentsOf: arrayOfData)
                 onSuccess()
             }, onFailure: {
-                print("Failed fetching data")
+                logMsg("Failed fetching data")
                 onFailure()
             })
         case .Species:
@@ -127,7 +127,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.dataArray.append(contentsOf: arrayOfData)
                 onSuccess()
             }, onFailure: {
-                print("Failed fetching data")
+                logMsg("Failed fetching data")
                 onFailure()
             })
         case .Starships:
@@ -143,7 +143,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.dataArray.append(contentsOf: arrayOfData)
                 onSuccess()
             }, onFailure: {
-                print("Failed fetching data")
+                logMsg("Failed fetching data")
                 onFailure()
             })
         case .Vehicles:
@@ -159,7 +159,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.dataArray.append(contentsOf: arrayOfData)
                 onSuccess()
             }, onFailure: {
-                print("Failed fetching data")
+                logMsg("Failed fetching data")
                 onFailure()
             })
         case .Planets:
@@ -175,7 +175,7 @@ internal class MainTableViewModel: MainTableViewModelType {
                 self.dataArray.append(contentsOf: arrayOfData)
                 onSuccess()
             }, onFailure: {
-                print("Failed fetching data")
+                logMsg("Failed fetching data")
                 onFailure()
             })
         }

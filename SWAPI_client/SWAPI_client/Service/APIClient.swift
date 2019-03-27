@@ -34,11 +34,11 @@ internal class APIClient: APIClientType {
             self.apiParser.parsePeople(data: data, onSuccess: { fetchedData in
                     onSuccess(fetchedData)
             }, onFailure: {
-                print("Failure parsing data")
+                logMsg("Failure parsing data")
                 onFailure()
             })
         }, onFailure: {
-            print("Failure fetching data")
+            logMsg("Failure parsing data")
             onFailure()
         })
     }
@@ -48,11 +48,11 @@ internal class APIClient: APIClientType {
             self.apiParser.parseFilms(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
-                print("Failure parsing data")
+                logMsg("Failure parsing data")
                 onFailure()
             })
         }, onFailure: {
-            print("Failure fetching data")
+            logMsg("Failure fetching data")
             onFailure()
         })
     }
@@ -62,11 +62,11 @@ internal class APIClient: APIClientType {
             self.apiParser.parseSpecies(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
-                print("Failure parsing data")
+                logMsg("Failure parsing data")
                 onFailure()
             })
         }, onFailure: {
-            print("Failure fetching data")
+            logMsg("Failure fetching data")
             onFailure()
         })
     }
@@ -76,11 +76,11 @@ internal class APIClient: APIClientType {
             self.apiParser.parseStarships(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
-                print("Failure parsing data")
+                logMsg("Failure parsing data")
                 onFailure()
             })
         }, onFailure: {
-            print("Failure fetching data")
+            logMsg("Failure fetching data")
             onFailure()
         })
     }
@@ -90,11 +90,11 @@ internal class APIClient: APIClientType {
             self.apiParser.parseVehicles(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
-                print("Failure parsing data")
+                logMsg("Failure parsing data")
                 onFailure()
             })
         }, onFailure: {
-            print("Failure fetching data")
+            logMsg("Failure fetching data")
             onFailure()
         })
     }
@@ -104,11 +104,11 @@ internal class APIClient: APIClientType {
             self.apiParser.parsePlanets(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
-                print("Failure parsing data")
+                logMsg("Failure parsing data")
                 onFailure()
             })
         }, onFailure: {
-            print("Failure fetching data")
+            logMsg("Failure fetching data")
             onFailure()
         })
     }

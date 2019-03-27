@@ -64,6 +64,7 @@
 		67CA0744221340D5001B55BB /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CA0742221340D5001B55BB /* DetailsViewController.xib */; };
 		67CA0747221341AA001B55BB /* DetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CA0746221341AA001B55BB /* DetailsViewModelType.swift */; };
 		67CA0749221341B4001B55BB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CA0748221341B4001B55BB /* DetailsViewModel.swift */; };
+		67D3CBBA224BEDA6001B5402 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D3CBB9224BEDA6001B5402 /* Logger.swift */; };
 		67E8FC84220EF40500CB9B40 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8FC82220EF40500CB9B40 /* OptionsViewController.swift */; };
 		67E8FC85220EF40500CB9B40 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E8FC83220EF40500CB9B40 /* OptionsViewController.xib */; };
 		67E8FC88220EF66900CB9B40 /* OptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8FC87220EF66900CB9B40 /* OptionsViewModel.swift */; };
@@ -155,6 +156,7 @@
 		67CA0742221340D5001B55BB /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		67CA0746221341AA001B55BB /* DetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelType.swift; sourceTree = "<group>"; };
 		67CA0748221341B4001B55BB /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		67D3CBB9224BEDA6001B5402 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		67E8FC82220EF40500CB9B40 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		67E8FC83220EF40500CB9B40 /* OptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
 		67E8FC87220EF66900CB9B40 /* OptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewModel.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				67969D9521F35AEB00B0A6EE /* InternetReachability.swift */,
+				67D3CBB9224BEDA6001B5402 /* Logger.swift */,
 				67B714E4224943F20033C249 /* NavigationBar.swift */,
 			);
 			path = Utility;
@@ -689,6 +692,7 @@
 				6771D7C92205ED3500E1D031 /* Species.swift in Sources */,
 				67E8FC88220EF66900CB9B40 /* OptionsViewModel.swift in Sources */,
 				671416EC21B0564E00B90FD9 /* MainMenuViewModelType.swift in Sources */,
+				67D3CBBA224BEDA6001B5402 /* Logger.swift in Sources */,
 				67B714E32249404B0033C249 /* Apperance.swift in Sources */,
 				6771D7C72205EB5F00E1D031 /* Kind.swift in Sources */,
 				671416EF21B056C500B90FD9 /* DependencyContainer.swift in Sources */,

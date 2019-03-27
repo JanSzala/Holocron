@@ -15,21 +15,20 @@ internal protocol AppearanceConfigType {
 
 internal class AppearanceConfig: AppearanceConfigType {
     func applyDefault() {
-        NavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 17)]
-        
-        NavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 30),
-                                                               NSAttributedString.Key.kern: 0.16,
-                                                               NSAttributedString.Key.foregroundColor: UIColor.purple
+        NavigationBar.appearance().tintColor = UIColor.black
+        NavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 50),
+                                                               NSAttributedString.Key.kern: 2.0,
+                                                               NSAttributedString.Key.foregroundColor: UIColor.black
         ]
 
         UIBarButtonItem.appearance(whenContainedInInstancesOf:
             [NavigationBar.self]).setTitleTextAttributes([NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 17),
-                                                          NSAttributedString.Key.foregroundColor: UIColor.purple],
+                                                          NSAttributedString.Key.foregroundColor: UIColor.black],
                                                          for: UIControl.State.normal)
 
         UIBarButtonItem.appearance(whenContainedInInstancesOf:
             [NavigationBar.self]).setTitleTextAttributes([NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 17),
-                                                          NSAttributedString.Key.foregroundColor: UIColor.purple],
+                                                          NSAttributedString.Key.foregroundColor: UIColor.black],
                                                          for: UIControl.State.highlighted)
     }
 }

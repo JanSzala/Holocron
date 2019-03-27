@@ -24,7 +24,7 @@ internal class APIParser: APIParserType {
             onSuccess(json)
             
         } catch let error {
-            print("Error during serialization of JSON: ", error)
+            logMsg("Error during serialization of JSON: \(error)")
             onFailure()
         }
     }
@@ -35,7 +35,7 @@ internal class APIParser: APIParserType {
             onSuccess(json)
             
         } catch let error {
-            print("Error during serialization of JSON: ", error)
+            logMsg("Error during serialization of JSON: \(error)")
             onFailure()
         }
     }
@@ -46,7 +46,7 @@ internal class APIParser: APIParserType {
             onSuccess(json)
             
         } catch let error {
-            print("Error during serialization of JSON: ", error)
+            logMsg("Error during serialization of JSON: \(error)")
             onFailure()
         }
     }
@@ -57,7 +57,7 @@ internal class APIParser: APIParserType {
             onSuccess(json)
             
         } catch let error {
-            print("Error during serialization of JSON: ", error)
+            logMsg("Error during serialization of JSON: \(error)")
             onFailure()
         }
     }
@@ -68,7 +68,7 @@ internal class APIParser: APIParserType {
             onSuccess(json)
             
         } catch let error {
-            print("Error during serialization of JSON: ", error)
+            logMsg("Error during serialization of JSON: \(error)")
             onFailure()
         }
     }
@@ -79,7 +79,7 @@ internal class APIParser: APIParserType {
             onSuccess(json)
             
         } catch let error {
-            print("Error during serialization of JSON: ", error)
+            logMsg("Error during serialization of JSON: \(error)")
             onFailure()
         }
     }

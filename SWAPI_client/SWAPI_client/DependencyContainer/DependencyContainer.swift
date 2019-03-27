@@ -11,7 +11,7 @@ import UIKit
 
 internal class DependencyContainer: DependencyContainerType {
     
-    private lazy var navigationController = NavigationController()
+    private lazy var navigationController = NavigationController(navigationBarClass: NavigationBar.self, toolbarClass: nil)
     
     private var rootViewController: UIViewController {
         return navigationController

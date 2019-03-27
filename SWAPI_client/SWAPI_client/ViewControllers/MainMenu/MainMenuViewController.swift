@@ -45,6 +45,8 @@ extension MainMenuViewController {
         UIView.animate(withDuration: viewModel.animationDuration, delay: viewModel.animationDelay, options: .curveEaseInOut, animations: {
             self.menuView.frame.origin.y = self.sceneView.frame.height / 2
         }, completion: { _ in
+            
+            //TODO: Change it to iterate through enum
             self.createView(delay: 0.1, viewPlacing: .leftMiddle, index: 0)
             self.createView(delay: 0.2, viewPlacing: .leftTop, index: 1)
             self.createView(delay: 0.3, viewPlacing: .rightTop, index: 2)

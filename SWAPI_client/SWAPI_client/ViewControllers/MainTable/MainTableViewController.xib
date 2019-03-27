@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTableViewController" customModule="SWAPI_client" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="GHR-KK-FSX" id="3hF-7S-rOh"/>
+                <outlet property="emptyListLabel" destination="BeR-gw-jsK" id="28y-4n-9Yv"/>
+                <outlet property="emptyListView" destination="nRF-n4-ZaY" id="nz1-cl-DII"/>
                 <outlet property="tableView" destination="BpU-i9-Czg" id="k16-WQ-0Mx"/>
                 <outlet property="view" destination="vpx-Ci-0Jr" id="U1z-Ft-6Oi"/>
             </connections>
@@ -34,6 +36,24 @@
                     <rect key="frame" x="169" y="315" width="37" height="37"/>
                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRF-n4-ZaY" userLabel="EmptyListView">
+                    <rect key="frame" x="0.0" y="269.5" width="375" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I couldn't download data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeR-gw-jsK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                            <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="BeR-gw-jsK" secondAttribute="bottom" id="109-eY-qIH"/>
+                        <constraint firstAttribute="height" constant="128" id="18J-Jp-Y9y"/>
+                        <constraint firstItem="BeR-gw-jsK" firstAttribute="leading" secondItem="nRF-n4-ZaY" secondAttribute="leading" id="Q8X-SH-emm"/>
+                        <constraint firstItem="BeR-gw-jsK" firstAttribute="top" secondItem="nRF-n4-ZaY" secondAttribute="top" id="VE4-HG-wQp"/>
+                        <constraint firstAttribute="trailing" secondItem="BeR-gw-jsK" secondAttribute="trailing" id="jR2-Q8-jq9"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -42,6 +62,9 @@
                 <constraint firstItem="GHR-KK-FSX" firstAttribute="centerY" secondItem="vpx-Ci-0Jr" secondAttribute="centerY" id="LA4-ad-Ht8"/>
                 <constraint firstItem="GHR-KK-FSX" firstAttribute="centerX" secondItem="vpx-Ci-0Jr" secondAttribute="centerX" id="Slz-M7-Ote"/>
                 <constraint firstAttribute="trailing" secondItem="BpU-i9-Czg" secondAttribute="trailing" id="XlW-G7-fbl"/>
+                <constraint firstItem="Rt5-PM-fg1" firstAttribute="trailing" secondItem="nRF-n4-ZaY" secondAttribute="trailing" id="b2g-Y8-6TK"/>
+                <constraint firstItem="nRF-n4-ZaY" firstAttribute="centerY" secondItem="vpx-Ci-0Jr" secondAttribute="centerY" id="kWG-mu-Soc"/>
+                <constraint firstItem="nRF-n4-ZaY" firstAttribute="leading" secondItem="Rt5-PM-fg1" secondAttribute="leading" id="mtC-ql-c49"/>
                 <constraint firstItem="BpU-i9-Czg" firstAttribute="leading" secondItem="Rt5-PM-fg1" secondAttribute="leading" id="yw2-Fw-rQg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Rt5-PM-fg1"/>

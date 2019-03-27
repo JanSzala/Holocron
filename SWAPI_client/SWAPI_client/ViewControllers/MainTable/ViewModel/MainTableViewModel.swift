@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 internal class MainTableViewModel: MainTableViewModelType {
     var showDetails: ((Any, DataType) -> ())?
@@ -17,11 +18,17 @@ internal class MainTableViewModel: MainTableViewModelType {
     var shouldFetchData: Bool = true
     var dataArray = [Any]()
     
-    let numberOfSections: Int = 1
-    
     var peopleArrayCount: Int {
         return dataArray.count
     }
+    
+    var emptyListLabel: NSAttributedString {
+        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 35),
+                                                         NSAttributedString.Key.foregroundColor: UIColor.red]
+        return NSAttributedString(string: "I couldn't download data", attributes: attributes)
+    }
+    
+    let numberOfSections: Int = 1
     
     let apiClient: APIClientType
     
@@ -85,13 +92,13 @@ internal class MainTableViewModel: MainTableViewModelType {
         case .People:
             apiClient.getPeople(endPoint: .People, page: currentPage, onSuccess: { data in
                 self.currentPage += 1
-                
+
                 guard let arrayOfData = data.results else {
                     fatalError("could not fill the array with results")
                 }
-                
+
                 self.shouldFetchData = data.next != nil
-                
+
                 self.dataArray.append(contentsOf: arrayOfData)
                 onSuccess()
             }, onFailure: {

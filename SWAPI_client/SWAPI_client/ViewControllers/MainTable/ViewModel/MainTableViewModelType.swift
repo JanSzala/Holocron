@@ -17,6 +17,7 @@ internal protocol MainTableViewModelType: class {
     var shouldFetchData: Bool { get }
     var peopleArrayCount: Int { get }
     var numberOfSections: Int { get }
+    var emptyListLabel: NSAttributedString { get }
     
     func title(for indexPath: IndexPath) -> String?
     func presentDetails(for indexPath: IndexPath)

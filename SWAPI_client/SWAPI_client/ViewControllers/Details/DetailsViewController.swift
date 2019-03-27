@@ -16,13 +16,17 @@ internal class DetailsViewController: UIViewController {
 
         setupTable()
         registerCells()
-        title = viewModel.controllerTitle
+        setupUI()
     }
     
     private func setupTable() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
+    }
+    
+    private func setupUI() {
+        title = viewModel.controllerTitle
     }
 
     private func registerCells() {

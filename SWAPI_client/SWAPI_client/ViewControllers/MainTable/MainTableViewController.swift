@@ -11,6 +11,8 @@ import UIKit
 internal class MainTableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var emptyListView: UIView!
+    @IBOutlet weak var emptyListLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +41,13 @@ internal class MainTableViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
+                self.emptyListView.isHidden = true
             }
             logMsg("fetched data")
         }, onFailure: {
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
+                self.emptyListView.isHidden = false
             }
             logMsg("error during fetching data")
         }, noMoreData: {
@@ -57,6 +61,8 @@ internal class MainTableViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
         title = viewModel.controllerTitle
+        emptyListView.isHidden = true
+        emptyListLabel.attributedText = viewModel.emptyListLabel
     }
     
     private func setupTable() {

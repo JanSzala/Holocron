@@ -7,10 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 internal class DetailsViewModel: DetailsViewModelType {
     var dataType: DataType = .People
     var data: Any = ""
+    
+    var sectionsCount: Int {
+        return personSections.count
+    }
     
     let personSections = ["Name",
                           "Birth year",
@@ -31,10 +36,6 @@ internal class DetailsViewModel: DetailsViewModelType {
     
     let controllerTitle = "Details"
     let numberOfRowsInSection: Int = 1
-    
-    var sectionsCount: Int {
-        return personSections.count
-    }
     
     func sectionTitle(for index: Int) -> String {
         return personSections[index]

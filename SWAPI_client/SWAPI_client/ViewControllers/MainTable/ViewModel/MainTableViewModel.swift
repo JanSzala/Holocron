@@ -79,7 +79,6 @@ internal class MainTableViewModel: MainTableViewModelType {
             
             return planet.name
         }
-        
     }
     
     func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ()) {

@@ -1,0 +1,19 @@
+//
+//  Router+Starships.swift
+//  SWAPI_client
+//
+//  Created by JanSzala on 02/04/2019.
+//  Copyright © 2019 JanSzala. All rights reserved.
+//
+
+import Foundation
+
+extension Router {
+    func getStarships(for page: Int) -> Route {
+        return Route(method: .get,
+                     baseURL: baseURL,
+                     endpoint: "/starships/?page=\(page)",
+                     accessToken: nil,
+                     queryString: nil)
+    }
+}

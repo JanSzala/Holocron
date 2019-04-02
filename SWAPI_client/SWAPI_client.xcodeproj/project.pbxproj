@@ -30,6 +30,53 @@
 		671416F121B056F300B90FD9 /* DependencyContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671416F021B056F300B90FD9 /* DependencyContainerType.swift */; };
 		6722E2D822246D6300DC0DDB /* UIViewController+ColorChanging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6722E2D722246D6300DC0DDB /* UIViewController+ColorChanging.swift */; };
 		67239BE82211EA8D006AB3B9 /* UserDefaults+IsFirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67239BE72211EA8D006AB3B9 /* UserDefaults+IsFirstLaunch.swift */; };
+		672C87FB2253BEBA000857DC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C87FA2253BEBA000857DC /* APIService.swift */; };
+		672C87FE2253BF1E000857DC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C87FD2253BF1E000857DC /* Alamofire.framework */; };
+		672C88012253C11C000857DC /* APIServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88002253C11C000857DC /* APIServiceType.swift */; };
+		672C88032253C167000857DC /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88022253C167000857DC /* APIServiceError.swift */; };
+		672C88052253C18D000857DC /* APIServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88042253C18D000857DC /* APIServiceResponse.swift */; };
+		672C88092253C30F000857DC /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88082253C30F000857DC /* Route.swift */; };
+		672C880B2253C43F000857DC /* ArrayEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C880A2253C43F000857DC /* ArrayEncoding.swift */; };
+		672C880E2253C67F000857DC /* APIService+People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C880D2253C67F000857DC /* APIService+People.swift */; };
+		672C88102253C7B5000857DC /* Router+People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C880F2253C7B5000857DC /* Router+People.swift */; };
+		672C88132253C88C000857DC /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88122253C88C000857DC /* AppSettings.swift */; };
+		672C88152253C941000857DC /* Router+Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88142253C941000857DC /* Router+Films.swift */; };
+		672C88172253C94F000857DC /* Router+Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88162253C94F000857DC /* Router+Planets.swift */; };
+		672C88192253C969000857DC /* Router+Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88182253C969000857DC /* Router+Species.swift */; };
+		672C881B2253C978000857DC /* Router+Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C881A2253C978000857DC /* Router+Starships.swift */; };
+		672C881D2253C984000857DC /* Router+Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C881C2253C984000857DC /* Router+Vehicles.swift */; };
+		672C881F2253CC81000857DC /* APIService+Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C881E2253CC81000857DC /* APIService+Films.swift */; };
+		672C88212253CC8B000857DC /* APIService+Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88202253CC8B000857DC /* APIService+Planets.swift */; };
+		672C88232253CC96000857DC /* APIService+Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88222253CC96000857DC /* APIService+Species.swift */; };
+		672C88252253CCA1000857DC /* APIService+Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88242253CCA1000857DC /* APIService+Starships.swift */; };
+		672C88272253CCB0000857DC /* APIService+Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88262253CCB0000857DC /* APIService+Vehicles.swift */; };
+		672C882A2253CDF0000857DC /* APIParserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88292253CDF0000857DC /* APIParserType.swift */; };
+		672C882D2253CE67000857DC /* APIParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C882C2253CE67000857DC /* APIParserError.swift */; };
+		672C88302253D091000857DC /* JSONDecoder+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C882F2253D091000857DC /* JSONDecoder+API.swift */; };
+		672C88332253D11E000857DC /* DateFormatter+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88322253D11E000857DC /* DateFormatter+Formatters.swift */; };
+		672C88362253D204000857DC /* APIParser+People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88352253D204000857DC /* APIParser+People.swift */; };
+		672C88382253D215000857DC /* APIParser+Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88372253D215000857DC /* APIParser+Films.swift */; };
+		672C883A2253D21E000857DC /* APIParser+Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88392253D21E000857DC /* APIParser+Planets.swift */; };
+		672C883C2253D22A000857DC /* APIParser+Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C883B2253D22A000857DC /* APIParser+Species.swift */; };
+		672C883E2253D233000857DC /* APIParser+Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C883D2253D233000857DC /* APIParser+Starships.swift */; };
+		672C88402253D23F000857DC /* APIParser+Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C883F2253D23F000857DC /* APIParser+Vehicles.swift */; };
+		672C88422253D293000857DC /* PeopleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88412253D293000857DC /* PeopleResponse.swift */; };
+		672C88442253D2A6000857DC /* FilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88432253D2A6000857DC /* FilmsResponse.swift */; };
+		672C88462253D2B0000857DC /* PlanetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88452253D2B0000857DC /* PlanetsResponse.swift */; };
+		672C88482253D2BB000857DC /* SpeciesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88472253D2BB000857DC /* SpeciesResponse.swift */; };
+		672C884A2253D2C9000857DC /* StarshipsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88492253D2C9000857DC /* StarshipsResponse.swift */; };
+		672C884C2253D2D7000857DC /* VehiclesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C884B2253D2D7000857DC /* VehiclesResponse.swift */; };
+		672C884E2253D56A000857DC /* GeneralListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C884D2253D56A000857DC /* GeneralListResponse.swift */; };
+		672C88502253D5D5000857DC /* DataListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C884F2253D5D5000857DC /* DataListResponse.swift */; };
+		672C88532253D772000857DC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88522253D772000857DC /* APIClient.swift */; };
+		672C88552253D791000857DC /* APIClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88542253D791000857DC /* APIClientType.swift */; };
+		672C88572253DAA3000857DC /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88562253DAA3000857DC /* APIClientError.swift */; };
+		672C885A2253DEEB000857DC /* APIClient+People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88592253DEEB000857DC /* APIClient+People.swift */; };
+		672C885C2253DEFF000857DC /* APIClient+Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C885B2253DEFF000857DC /* APIClient+Films.swift */; };
+		672C885E2253DF09000857DC /* APIClient+Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C885D2253DF09000857DC /* APIClient+Planets.swift */; };
+		672C88602253DF15000857DC /* APIClient+Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C885F2253DF15000857DC /* APIClient+Species.swift */; };
+		672C88622253DF1E000857DC /* APIClient+Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88612253DF1E000857DC /* APIClient+Starships.swift */; };
+		672C88642253DF27000857DC /* APIClient+Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C88632253DF27000857DC /* APIClient+Vehicles.swift */; };
 		6742C5012233D8A50076A3BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6742C5032233D8A50076A3BA /* Localizable.strings */; };
 		6742C5082233ED860076A3BA /* BasicHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742C5062233ED860076A3BA /* BasicHeaderView.swift */; };
 		6742C5092233ED860076A3BA /* BasicHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6742C5072233ED860076A3BA /* BasicHeaderView.xib */; };
@@ -48,7 +95,7 @@
 		6771D7D5220654D400E1D031 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7D4220654D400E1D031 /* Planets.swift */; };
 		67969D9621F35AEB00B0A6EE /* InternetReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9521F35AEB00B0A6EE /* InternetReachability.swift */; };
 		67969D9921F36DC100B0A6EE /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9821F36DC100B0A6EE /* Root.swift */; };
-		67969D9B21F3701D00B0A6EE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9A21F3701D00B0A6EE /* APIClient.swift */; };
+		67969D9B21F3701D00B0A6EE /* APIClientUNUSED.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9A21F3701D00B0A6EE /* APIClientUNUSED.swift */; };
 		67969D9D21F494A800B0A6EE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9C21F494A800B0A6EE /* Person.swift */; };
 		67969D9F21F496DE00B0A6EE /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9E21F496DE00B0A6EE /* People.swift */; };
 		679C8A7C21EA693B001ECDEC /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679C8A7A21EA693B001ECDEC /* MainTableViewController.swift */; };
@@ -120,6 +167,53 @@
 		671416F021B056F300B90FD9 /* DependencyContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerType.swift; sourceTree = "<group>"; };
 		6722E2D722246D6300DC0DDB /* UIViewController+ColorChanging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ColorChanging.swift"; sourceTree = "<group>"; };
 		67239BE72211EA8D006AB3B9 /* UserDefaults+IsFirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+IsFirstLaunch.swift"; sourceTree = "<group>"; };
+		672C87FA2253BEBA000857DC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		672C87FD2253BF1E000857DC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		672C88002253C11C000857DC /* APIServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceType.swift; sourceTree = "<group>"; };
+		672C88022253C167000857DC /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		672C88042253C18D000857DC /* APIServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceResponse.swift; sourceTree = "<group>"; };
+		672C88082253C30F000857DC /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		672C880A2253C43F000857DC /* ArrayEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEncoding.swift; sourceTree = "<group>"; };
+		672C880D2253C67F000857DC /* APIService+People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+People.swift"; sourceTree = "<group>"; };
+		672C880F2253C7B5000857DC /* Router+People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+People.swift"; sourceTree = "<group>"; };
+		672C88122253C88C000857DC /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		672C88142253C941000857DC /* Router+Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Films.swift"; sourceTree = "<group>"; };
+		672C88162253C94F000857DC /* Router+Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Planets.swift"; sourceTree = "<group>"; };
+		672C88182253C969000857DC /* Router+Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Species.swift"; sourceTree = "<group>"; };
+		672C881A2253C978000857DC /* Router+Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Starships.swift"; sourceTree = "<group>"; };
+		672C881C2253C984000857DC /* Router+Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Vehicles.swift"; sourceTree = "<group>"; };
+		672C881E2253CC81000857DC /* APIService+Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Films.swift"; sourceTree = "<group>"; };
+		672C88202253CC8B000857DC /* APIService+Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Planets.swift"; sourceTree = "<group>"; };
+		672C88222253CC96000857DC /* APIService+Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Species.swift"; sourceTree = "<group>"; };
+		672C88242253CCA1000857DC /* APIService+Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Starships.swift"; sourceTree = "<group>"; };
+		672C88262253CCB0000857DC /* APIService+Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Vehicles.swift"; sourceTree = "<group>"; };
+		672C88292253CDF0000857DC /* APIParserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParserType.swift; sourceTree = "<group>"; };
+		672C882C2253CE67000857DC /* APIParserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParserError.swift; sourceTree = "<group>"; };
+		672C882F2253D091000857DC /* JSONDecoder+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+API.swift"; sourceTree = "<group>"; };
+		672C88322253D11E000857DC /* DateFormatter+Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Formatters.swift"; sourceTree = "<group>"; };
+		672C88352253D204000857DC /* APIParser+People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIParser+People.swift"; sourceTree = "<group>"; };
+		672C88372253D215000857DC /* APIParser+Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIParser+Films.swift"; sourceTree = "<group>"; };
+		672C88392253D21E000857DC /* APIParser+Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIParser+Planets.swift"; sourceTree = "<group>"; };
+		672C883B2253D22A000857DC /* APIParser+Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIParser+Species.swift"; sourceTree = "<group>"; };
+		672C883D2253D233000857DC /* APIParser+Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIParser+Starships.swift"; sourceTree = "<group>"; };
+		672C883F2253D23F000857DC /* APIParser+Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIParser+Vehicles.swift"; sourceTree = "<group>"; };
+		672C88412253D293000857DC /* PeopleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponse.swift; sourceTree = "<group>"; };
+		672C88432253D2A6000857DC /* FilmsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsResponse.swift; sourceTree = "<group>"; };
+		672C88452253D2B0000857DC /* PlanetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsResponse.swift; sourceTree = "<group>"; };
+		672C88472253D2BB000857DC /* SpeciesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesResponse.swift; sourceTree = "<group>"; };
+		672C88492253D2C9000857DC /* StarshipsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsResponse.swift; sourceTree = "<group>"; };
+		672C884B2253D2D7000857DC /* VehiclesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesResponse.swift; sourceTree = "<group>"; };
+		672C884D2253D56A000857DC /* GeneralListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralListResponse.swift; sourceTree = "<group>"; };
+		672C884F2253D5D5000857DC /* DataListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListResponse.swift; sourceTree = "<group>"; };
+		672C88522253D772000857DC /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		672C88542253D791000857DC /* APIClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientType.swift; sourceTree = "<group>"; };
+		672C88562253DAA3000857DC /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
+		672C88592253DEEB000857DC /* APIClient+People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+People.swift"; sourceTree = "<group>"; };
+		672C885B2253DEFF000857DC /* APIClient+Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Films.swift"; sourceTree = "<group>"; };
+		672C885D2253DF09000857DC /* APIClient+Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Planets.swift"; sourceTree = "<group>"; };
+		672C885F2253DF15000857DC /* APIClient+Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Species.swift"; sourceTree = "<group>"; };
+		672C88612253DF1E000857DC /* APIClient+Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Starships.swift"; sourceTree = "<group>"; };
+		672C88632253DF27000857DC /* APIClient+Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Vehicles.swift"; sourceTree = "<group>"; };
 		6742C4FE2233D8300076A3BA /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6742C5022233D8A50076A3BA /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6742C5042233D90D0076A3BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -140,7 +234,7 @@
 		6771D7D4220654D400E1D031 /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
 		67969D9521F35AEB00B0A6EE /* InternetReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetReachability.swift; sourceTree = "<group>"; };
 		67969D9821F36DC100B0A6EE /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
-		67969D9A21F3701D00B0A6EE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		67969D9A21F3701D00B0A6EE /* APIClientUNUSED.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientUNUSED.swift; sourceTree = "<group>"; };
 		67969D9C21F494A800B0A6EE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		67969D9E21F496DE00B0A6EE /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		679C8A7A21EA693B001ECDEC /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672C87FE2253BF1E000857DC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				6722E2D722246D6300DC0DDB /* UIViewController+ColorChanging.swift */,
+				672C882F2253D091000857DC /* JSONDecoder+API.swift */,
+				672C88322253D11E000857DC /* DateFormatter+Formatters.swift */,
 				67B714E6224945410033C249 /* UIFont+ProjectFonts.swift */,
 				6709F46A21E0EEDE00056F80 /* UIView+fixInView.swift */,
 				67239BE72211EA8D006AB3B9 /* UserDefaults+IsFirstLaunch.swift */,
@@ -208,6 +305,7 @@
 				671416B621B053AA00B90FD9 /* SWAPI_clientTests */,
 				671416C121B053AA00B90FD9 /* SWAPI_clientUITests */,
 				6714169D21B053A800B90FD9 /* Products */,
+				672C87FC2253BF1E000857DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +322,7 @@
 		6714169E21B053A800B90FD9 /* SWAPI_client */ = {
 			isa = PBXGroup;
 			children = (
+				672C88112253C87E000857DC /* AppSettings */,
 				67B714E02249402F0033C249 /* Service */,
 				67B714DF224940130033C249 /* AppDelegate */,
 				67969D9721F36D9D00B0A6EE /* Models */,
@@ -337,6 +436,134 @@
 			path = DependencyContainer;
 			sourceTree = "<group>";
 		};
+		672C87FC2253BF1E000857DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				672C87FD2253BF1E000857DC /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		672C88062253C273000857DC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				67BE63C6220CA5BA002347E4 /* Router.swift */,
+				672C88082253C30F000857DC /* Route.swift */,
+				672C88282253CD5F000857DC /* Routes */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		672C88072253C286000857DC /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				672C88002253C11C000857DC /* APIServiceType.swift */,
+				672C87FA2253BEBA000857DC /* APIService.swift */,
+				672C88022253C167000857DC /* APIServiceError.swift */,
+				672C88042253C18D000857DC /* APIServiceResponse.swift */,
+				672C880C2253C577000857DC /* APIServiceRequests */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		672C880C2253C577000857DC /* APIServiceRequests */ = {
+			isa = PBXGroup;
+			children = (
+				672C880D2253C67F000857DC /* APIService+People.swift */,
+				672C881E2253CC81000857DC /* APIService+Films.swift */,
+				672C88202253CC8B000857DC /* APIService+Planets.swift */,
+				672C88222253CC96000857DC /* APIService+Species.swift */,
+				672C88242253CCA1000857DC /* APIService+Starships.swift */,
+				672C88262253CCB0000857DC /* APIService+Vehicles.swift */,
+			);
+			path = APIServiceRequests;
+			sourceTree = "<group>";
+		};
+		672C88112253C87E000857DC /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				672C88122253C88C000857DC /* AppSettings.swift */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		672C88282253CD5F000857DC /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				672C880F2253C7B5000857DC /* Router+People.swift */,
+				672C88142253C941000857DC /* Router+Films.swift */,
+				672C88162253C94F000857DC /* Router+Planets.swift */,
+				672C88182253C969000857DC /* Router+Species.swift */,
+				672C881A2253C978000857DC /* Router+Starships.swift */,
+				672C881C2253C984000857DC /* Router+Vehicles.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		672C882B2253CDF5000857DC /* APIParser */ = {
+			isa = PBXGroup;
+			children = (
+				672C882E2253D01E000857DC /* Responses */,
+				67BE63C4220CA414002347E4 /* APIParser.swift */,
+				672C88292253CDF0000857DC /* APIParserType.swift */,
+				672C882C2253CE67000857DC /* APIParserError.swift */,
+				672C88342253D1B9000857DC /* APIParserExtensions */,
+			);
+			path = APIParser;
+			sourceTree = "<group>";
+		};
+		672C882E2253D01E000857DC /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				672C88412253D293000857DC /* PeopleResponse.swift */,
+				672C88432253D2A6000857DC /* FilmsResponse.swift */,
+				672C88452253D2B0000857DC /* PlanetsResponse.swift */,
+				672C88472253D2BB000857DC /* SpeciesResponse.swift */,
+				672C88492253D2C9000857DC /* StarshipsResponse.swift */,
+				672C884B2253D2D7000857DC /* VehiclesResponse.swift */,
+				672C884D2253D56A000857DC /* GeneralListResponse.swift */,
+				672C884F2253D5D5000857DC /* DataListResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		672C88342253D1B9000857DC /* APIParserExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				672C88352253D204000857DC /* APIParser+People.swift */,
+				672C88372253D215000857DC /* APIParser+Films.swift */,
+				672C88392253D21E000857DC /* APIParser+Planets.swift */,
+				672C883B2253D22A000857DC /* APIParser+Species.swift */,
+				672C883D2253D233000857DC /* APIParser+Starships.swift */,
+				672C883F2253D23F000857DC /* APIParser+Vehicles.swift */,
+			);
+			path = APIParserExtensions;
+			sourceTree = "<group>";
+		};
+		672C88512253D761000857DC /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				672C88542253D791000857DC /* APIClientType.swift */,
+				672C88522253D772000857DC /* APIClient.swift */,
+				672C88562253DAA3000857DC /* APIClientError.swift */,
+				672C88582253DEDA000857DC /* APIClientFunctions */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		672C88582253DEDA000857DC /* APIClientFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				672C88592253DEEB000857DC /* APIClient+People.swift */,
+				672C885B2253DEFF000857DC /* APIClient+Films.swift */,
+				672C885D2253DF09000857DC /* APIClient+Planets.swift */,
+				672C885F2253DF15000857DC /* APIClient+Species.swift */,
+				672C88612253DF1E000857DC /* APIClient+Starships.swift */,
+				672C88632253DF27000857DC /* APIClient+Vehicles.swift */,
+			);
+			path = APIClientFunctions;
+			sourceTree = "<group>";
+		};
 		6742C5052233ED6B0076A3BA /* BasicHeaderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				67969D9521F35AEB00B0A6EE /* InternetReachability.swift */,
+				672C880A2253C43F000857DC /* ArrayEncoding.swift */,
 				67D3CBB9224BEDA6001B5402 /* Logger.swift */,
 				67B714E4224943F20033C249 /* NavigationBar.swift */,
 			);
@@ -442,11 +670,13 @@
 		67B714E02249402F0033C249 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				67969D9A21F3701D00B0A6EE /* APIClient.swift */,
-				675438E221FE24A300900D30 /* URLSessionCreator.swift */,
-				67BE63C6220CA5BA002347E4 /* Router.swift */,
-				67BE63C4220CA414002347E4 /* APIParser.swift */,
 				67B714E12249403D0033C249 /* Apperance */,
+				67969D9A21F3701D00B0A6EE /* APIClientUNUSED.swift */,
+				675438E221FE24A300900D30 /* URLSessionCreator.swift */,
+				672C88512253D761000857DC /* APIClient */,
+				672C882B2253CDF5000857DC /* APIParser */,
+				672C88062253C273000857DC /* Router */,
+				672C88072253C286000857DC /* APIService */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -517,6 +747,7 @@
 				6714169921B053A800B90FD9 /* Frameworks */,
 				6714169A21B053A800B90FD9 /* Resources */,
 				671416F221B05AB800B90FD9 /* SwiftLint */,
+				672C87FF2253BF42000857DC /* Alamofire */,
 			);
 			buildRules = (
 			);
@@ -660,6 +891,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		672C87FF2253BF42000857DC /* Alamofire */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Alamofire;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -667,31 +917,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672C88172253C94F000857DC /* Router+Planets.swift in Sources */,
 				671416F121B056F300B90FD9 /* DependencyContainerType.swift in Sources */,
+				672C880B2253C43F000857DC /* ArrayEncoding.swift in Sources */,
 				67CA0743221340D5001B55BB /* DetailsViewController.swift in Sources */,
 				6771D7D5220654D400E1D031 /* Planets.swift in Sources */,
 				6771D7C12205E2F500E1D031 /* Film.swift in Sources */,
+				672C881F2253CC81000857DC /* APIService+Films.swift in Sources */,
 				671416DD21B0551900B90FD9 /* FlowControllerType.swift in Sources */,
+				672C882D2253CE67000857DC /* APIParserError.swift in Sources */,
+				672C88092253C30F000857DC /* Route.swift in Sources */,
 				675438E321FE24A300900D30 /* URLSessionCreator.swift in Sources */,
+				672C88332253D11E000857DC /* DateFormatter+Formatters.swift in Sources */,
+				672C88602253DF15000857DC /* APIClient+Species.swift in Sources */,
 				67969D9621F35AEB00B0A6EE /* InternetReachability.swift in Sources */,
+				672C88642253DF27000857DC /* APIClient+Vehicles.swift in Sources */,
 				671416DF21B0552F00B90FD9 /* FlowController.swift in Sources */,
 				6709F46621E0E44100056F80 /* MainMenuSquareView.swift in Sources */,
+				672C88212253CC8B000857DC /* APIService+Planets.swift in Sources */,
 				67E8FC90220EFE2E00CB9B40 /* OptionsCellWithSwitch.swift in Sources */,
 				67BE63C7220CA5BA002347E4 /* Router.swift in Sources */,
+				672C885C2253DEFF000857DC /* APIClient+Films.swift in Sources */,
+				672C88012253C11C000857DC /* APIServiceType.swift in Sources */,
 				67CA0747221341AA001B55BB /* DetailsViewModelType.swift in Sources */,
+				672C881D2253C984000857DC /* Router+Vehicles.swift in Sources */,
+				672C88032253C167000857DC /* APIServiceError.swift in Sources */,
+				672C885E2253DF09000857DC /* APIClient+Planets.swift in Sources */,
+				672C88502253D5D5000857DC /* DataListResponse.swift in Sources */,
 				679C8A7C21EA693B001ECDEC /* MainTableViewController.swift in Sources */,
+				672C884C2253D2D7000857DC /* VehiclesResponse.swift in Sources */,
 				675438E021FE167900900D30 /* MainTableViewCell.swift in Sources */,
+				672C885A2253DEEB000857DC /* APIClient+People.swift in Sources */,
 				67239BE82211EA8D006AB3B9 /* UserDefaults+IsFirstLaunch.swift in Sources */,
 				6771D7D3220654CB00E1D031 /* Planet.swift in Sources */,
-				67969D9B21F3701D00B0A6EE /* APIClient.swift in Sources */,
+				67969D9B21F3701D00B0A6EE /* APIClientUNUSED.swift in Sources */,
 				671416A821B053A800B90FD9 /* SWAPI_client.xcdatamodeld in Sources */,
 				67BE63C5220CA414002347E4 /* APIParser.swift in Sources */,
 				679C8A7F21EA6A48001ECDEC /* MainTableViewModelType.swift in Sources */,
+				672C884A2253D2C9000857DC /* StarshipsResponse.swift in Sources */,
+				672C882A2253CDF0000857DC /* APIParserType.swift in Sources */,
 				671416D321B0547400B90FD9 /* ViewModel.swift in Sources */,
 				67969D9921F36DC100B0A6EE /* Root.swift in Sources */,
+				672C87FB2253BEBA000857DC /* APIService.swift in Sources */,
 				6771D7C92205ED3500E1D031 /* Species.swift in Sources */,
 				67E8FC88220EF66900CB9B40 /* OptionsViewModel.swift in Sources */,
+				672C881B2253C978000857DC /* Router+Starships.swift in Sources */,
 				671416EC21B0564E00B90FD9 /* MainMenuViewModelType.swift in Sources */,
+				672C88102253C7B5000857DC /* Router+People.swift in Sources */,
 				67D3CBBA224BEDA6001B5402 /* Logger.swift in Sources */,
 				67B714E32249404B0033C249 /* Apperance.swift in Sources */,
 				6771D7C72205EB5F00E1D031 /* Kind.swift in Sources */,
@@ -699,22 +971,46 @@
 				671416A021B053A800B90FD9 /* AppDelegate.swift in Sources */,
 				6771D7C52205EA8700E1D031 /* Films.swift in Sources */,
 				671416E721B055E200B90FD9 /* MainMenuViewController.swift in Sources */,
+				672C883C2253D22A000857DC /* APIParser+Species.swift in Sources */,
+				672C88272253CCB0000857DC /* APIService+Vehicles.swift in Sources */,
+				672C88442253D2A6000857DC /* FilmsResponse.swift in Sources */,
+				672C88132253C88C000857DC /* AppSettings.swift in Sources */,
+				672C88552253D791000857DC /* APIClientType.swift in Sources */,
+				672C88252253CCA1000857DC /* APIService+Starships.swift in Sources */,
+				672C88572253DAA3000857DC /* APIClientError.swift in Sources */,
 				6771D7CB2205ED8600E1D031 /* Starship.swift in Sources */,
 				671416D721B054B000B90FD9 /* associatedObject.swift in Sources */,
 				671416DA21B054DA00B90FD9 /* NavigationController.swift in Sources */,
+				672C88052253C18D000857DC /* APIServiceResponse.swift in Sources */,
+				672C88482253D2BB000857DC /* SpeciesResponse.swift in Sources */,
+				672C88532253D772000857DC /* APIClient.swift in Sources */,
+				672C883E2253D233000857DC /* APIParser+Starships.swift in Sources */,
+				672C88382253D215000857DC /* APIParser+Films.swift in Sources */,
+				672C88192253C969000857DC /* Router+Species.swift in Sources */,
 				67CA0749221341B4001B55BB /* DetailsViewModel.swift in Sources */,
 				671416D521B0548E00B90FD9 /* ViewModelOwner.swift in Sources */,
 				67969D9D21F494A800B0A6EE /* Person.swift in Sources */,
+				672C884E2253D56A000857DC /* GeneralListResponse.swift in Sources */,
 				6709F46B21E0EEDE00056F80 /* UIView+fixInView.swift in Sources */,
+				672C88152253C941000857DC /* Router+Films.swift in Sources */,
 				67E8FC84220EF40500CB9B40 /* OptionsViewController.swift in Sources */,
 				67B714E5224943F20033C249 /* NavigationBar.swift in Sources */,
 				67969D9F21F496DE00B0A6EE /* People.swift in Sources */,
+				672C88232253CC96000857DC /* APIService+Species.swift in Sources */,
 				6771D7CF2205EF8800E1D031 /* Vehicles.swift in Sources */,
+				672C880E2253C67F000857DC /* APIService+People.swift in Sources */,
 				679C8A8121EA6A6B001ECDEC /* MainTableViewModel.swift in Sources */,
 				6771D7D12205EF9100E1D031 /* Vehicle.swift in Sources */,
 				671416EA21B0563600B90FD9 /* MainMenuViewModel.swift in Sources */,
 				6722E2D822246D6300DC0DDB /* UIViewController+ColorChanging.swift in Sources */,
+				672C88402253D23F000857DC /* APIParser+Vehicles.swift in Sources */,
+				672C883A2253D21E000857DC /* APIParser+Planets.swift in Sources */,
+				672C88422253D293000857DC /* PeopleResponse.swift in Sources */,
+				672C88462253D2B0000857DC /* PlanetsResponse.swift in Sources */,
+				672C88622253DF1E000857DC /* APIClient+Starships.swift in Sources */,
+				672C88302253D091000857DC /* JSONDecoder+API.swift in Sources */,
 				6771D7CD2205ED9000E1D031 /* Starships.swift in Sources */,
+				672C88362253D204000857DC /* APIParser+People.swift in Sources */,
 				67B714E7224945410033C249 /* UIFont+ProjectFonts.swift in Sources */,
 				6742C5082233ED860076A3BA /* BasicHeaderView.swift in Sources */,
 				67E8FC8A220EF67600CB9B40 /* OptionsViewModelType.swift in Sources */,
@@ -899,6 +1195,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SWAPI_client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -919,6 +1219,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SWAPI_client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

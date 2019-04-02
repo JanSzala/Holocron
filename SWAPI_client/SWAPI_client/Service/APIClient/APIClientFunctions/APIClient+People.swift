@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+extension APIClient: APIClientTypePeople {
+    func listPeople(page: Int, onSuccess: @escaping APICompletionChallenges, onFailure: @escaping APICompletionFailure) -> URLSessionTask? {
+        return apiService.getPeople(for: page, onSuccess: { [unowned self] response in
+            self.apiParser.parse(listPeopleResponse: response, onSuccess: onSuccess, onFailure: { error in
+                onFailure(APIClientError(with: error))
+            })
+            }, onFailure: { error in
+                onFailure(APIClientError(with: error))
+        })
+    }
+}

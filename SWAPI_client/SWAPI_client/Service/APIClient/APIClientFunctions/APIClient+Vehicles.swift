@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+extension APIClient: APIClientTypePlanets {
+    func listVehicles(page: Int, onSuccess: @escaping APICompletionVehicles, onFailure: @escaping APICompletionFailure) -> URLSessionTask? {
+        return apiService.getVehicles(for: page, onSuccess: { [unowned self] response in
+            self.apiParser.parse(listVehiclesResponse: response, onSuccess: onSuccess, onFailure: { error in
+                onFailure(APIClientError(with: error))
+            })
+            }, onFailure: { error in
+                onFailure(APIClientError(with: error))
+        })
+    }
+}

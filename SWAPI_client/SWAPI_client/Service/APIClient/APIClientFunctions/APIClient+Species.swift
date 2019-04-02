@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+extension APIClient: APIClientTypePlanets {
+    func listSpecies(page: Int, onSuccess: @escaping APICompletionSpecies, onFailure: @escaping APICompletionFailure) -> URLSessionTask? {
+        return apiService.getSpecies(for: page, onSuccess: { [unowned self] response in
+            self.apiParser.parse(listSpeciesResponse: response, onSuccess: onSuccess, onFailure: { error in
+                onFailure(APIClientError(with: error))
+            })
+            }, onFailure: { error in
+                onFailure(APIClientError(with: error))
+        })
+    }
+}

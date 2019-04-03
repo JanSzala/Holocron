@@ -6,7 +6,11 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Planets: Decodable {
+internal protocol PlanetsType: ItemsBaseType {
+    var results: [Planet]? { get }
+}
+
+internal class Planets: PlanetsType, Decodable {
     var count: Int
     var next: String?
     var previous: String?

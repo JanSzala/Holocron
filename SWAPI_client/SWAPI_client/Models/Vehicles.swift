@@ -6,7 +6,11 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Vehicles: Decodable {
+internal protocol VehiclesType: ItemsBaseType {
+    var results: [Vehicle]? { get }
+}
+
+internal class Vehicles: VehiclesType, Decodable {
     let count: Int
     let next: String?
     let previous: String?

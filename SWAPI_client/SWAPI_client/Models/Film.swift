@@ -6,8 +6,21 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Film: Decodable {
-    let title: String
+internal protocol FilmType: ItemBaseType {
+    var episode_id: Int { get }
+    var opening_crawl: String { get }
+    var director: String { get }
+    var producer: String { get }
+    var release_date: String { get }
+    var species: [String] { get }
+    var starships: [String] { get }
+    var vehicles: [String] { get }
+    var characters: [String] { get }
+    var planets: [String] { get }
+}
+
+internal class Film: FilmType, Decodable {
+    let name: String
     let episode_id: Int
     let opening_crawl: String
     let director: String
@@ -23,7 +36,7 @@ internal class Film: Decodable {
     let edited: String
     
     init(json: [String: Any]) {
-        title = json["title"] as? String ?? ""
+        name = json["title"] as? String ?? ""
         episode_id = json["episode_id"] as? Int ?? 0
         opening_crawl = json["opening_crawl"] as? String ?? ""
         director = json["director"] as? String ?? ""

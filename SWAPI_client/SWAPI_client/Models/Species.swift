@@ -6,7 +6,11 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Species: Decodable {
+internal protocol SpeciesType: ItemsBaseType {
+    var results: [Kind]? { get }
+}
+
+internal class Species: SpeciesType, Decodable {
     let count: Int
     let next: String?
     let previous: String?

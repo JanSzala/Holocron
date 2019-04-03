@@ -6,6 +6,19 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
+internal protocol PlanetType: ItemBaseType {
+    var diameter: String { get }
+    var rotation_period: String { get }
+    var orbital_period: String { get }
+    var gravity: String { get }
+    var population: String { get }
+    var climate: String { get }
+    var terrain: String { get }
+    var surface_water: String { get }
+    var residents: [String] { get }
+    var films: [String] { get }
+}
+
 internal class Planet: Decodable {
     let name: String
     let diameter: String

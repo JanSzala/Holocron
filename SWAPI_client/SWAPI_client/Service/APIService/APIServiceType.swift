@@ -11,7 +11,12 @@ import Foundation
 internal typealias APIServiceSuccess = (APIServiceResponseType) -> ()
 internal typealias APIServiceFailure = (APIServiceError) -> ()
 
-internal protocol APIServiceType: APIServiceTypePeople, APIServiceTypeFilms, APIServiceTypeSpecies, APIServiceTypeStarships, APIServiceTypeVehicles, APIServiceTypePlanets {
+internal protocol APIServiceType: APIServiceTypePeople,
+APIServiceTypeFilms,
+APIServiceTypeSpecies,
+APIServiceTypeStarships,
+APIServiceTypeVehicles,
+APIServiceTypePlanets {
 }
 
 internal protocol APIServiceTypePeople {
@@ -37,4 +42,3 @@ internal protocol APIServiceTypeVehicles {
 internal protocol APIServiceTypePlanets {
     func getPlanets(for page: Int, onSuccess: @escaping APIServiceSuccess, onFailure: @escaping APIServiceFailure) -> URLSessionTask?
 }
-

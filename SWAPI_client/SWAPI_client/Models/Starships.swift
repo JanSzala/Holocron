@@ -6,7 +6,11 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Starships: Decodable {
+internal protocol StarshipsType: ItemsBaseType {
+    var results: [Starship]? { get }
+}
+
+internal class Starships: StarshipsType, Decodable {
     let count: Int
     let next: String?
     let previous: String?

@@ -6,6 +6,23 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
+internal protocol StarshipType: ItemBaseType {
+    var model: String { get }
+    var starship_class: String { get }
+    var manufacturer: String { get }
+    var cost_in_credits: String { get }
+    var length: String { get }
+    var crew: String { get }
+    var passengers: String { get }
+    var max_atmosphering_speed: String { get }
+    var hyperdrive_rating: String { get }
+    var MGLT: String { get }
+    var cargo_capacity: String { get }
+    var consumables: String { get }
+    var films: [String] { get }
+    var pilots: [String] { get }
+}
+
 internal class Starship: Decodable {
     let name: String
     let model: String

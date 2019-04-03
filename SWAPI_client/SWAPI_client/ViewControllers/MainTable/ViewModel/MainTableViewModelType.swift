@@ -21,5 +21,6 @@ internal protocol MainTableViewModelType: class {
     
     func title(for indexPath: IndexPath) -> String?
     func presentDetails(for indexPath: IndexPath)
-    func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ())
+//    func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ())
+    func fetchData(onSuccess: @escaping ([People]) -> (), onFailure: @escaping UserClientFailure, noMoreData: @escaping () -> ())
 }

@@ -51,7 +51,7 @@ extension APIService {
                 
                 onFailure(.noInternetConnection)
             }
-            }.task
+        }.task
     }
     
     func makeRequestJson(using jsonName: String, code: Int, acceptType: RouteAcceptType = .json, onSuccess: @escaping APIServiceSuccess) {

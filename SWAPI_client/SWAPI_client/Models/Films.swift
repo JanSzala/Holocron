@@ -6,7 +6,11 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Films: Decodable {
+internal protocol FilmsType: ItemsBaseType {
+    var results: [Film]? { get }
+}
+
+internal class Films: FilmsType, Decodable {
     let count: Int
     let next: String?
     let previous: String?

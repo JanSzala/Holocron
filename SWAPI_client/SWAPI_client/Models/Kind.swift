@@ -6,6 +6,20 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
+internal protocol KindType: ItemBaseType {
+    var classification: String { get }
+    var designation: String { get }
+    var average_height: String { get }
+    var average_lifespan: String { get }
+    var eye_colors: String { get }
+    var hair_colors: String { get }
+    var skin_colors: String { get }
+    var language: String { get }
+    var homeworld: String { get }
+    var people: [String] { get }
+    var films: [String] { get }
+}
+
 internal class Kind: Decodable {
     let name: String
     let classification: String

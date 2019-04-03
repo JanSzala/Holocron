@@ -6,7 +6,11 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class People: Decodable {
+internal protocol PeopleType: ItemsBaseType {
+    var results: [Person]? { get }
+}
+
+internal class People: PeopleType, Decodable {
     let count: Int
     let next: String?
     let previous: String?

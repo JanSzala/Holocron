@@ -303,9 +303,8 @@ reporter: "xcode"
 # Find all the available rules by running:
 # swiftlint rules
 included: # paths to include during linting. `--path` is ignored if present.
-- RocheOneiOS
+- SWAPI_client
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Carthage
 - Pods
-# - Source/ExcludedFolder
 # - Source/ExcludedFile.swift

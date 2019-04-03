@@ -15,4 +15,3 @@ extension APIService: APIServiceTypeVehicles {
         return makeRequest(using: route, onSuccess: onSuccess, onFailure: onFailure)
     }
 }
-

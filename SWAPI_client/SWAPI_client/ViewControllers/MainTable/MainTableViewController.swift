@@ -37,19 +37,20 @@ internal class MainTableViewController: UIViewController {
     
     private func populateTable() {
         activityIndicator.startAnimating()
-        viewModel.fetchData(onSuccess: {
+        viewModel.fetchData(onSuccess: { People in
+            print(People)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
                 self.emptyListView.isHidden = true
             }
             logMsg("fetched data")
-        }, onFailure: {
+        }, onFailure: { Error in
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
                 self.emptyListView.isHidden = false
             }
-            logMsg("error during fetching data")
+            logMsg("error during fetching data: \(Error)")
         }, noMoreData: {
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
@@ -87,25 +88,25 @@ extension MainTableViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.peopleArrayCount
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: "mainTableViewCell") as? MainTableViewCell else {
             fatalError("Could not dequeue MainTableViewCell")
         }
-        
+
         return configure(cell: cell, indexPath: indexPath)
     }
-    
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 5 {
             populateTable()
         }
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.presentDetails(for: indexPath)
     }

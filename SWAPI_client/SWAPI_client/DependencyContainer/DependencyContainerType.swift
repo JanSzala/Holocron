@@ -15,7 +15,7 @@ internal protocol DependencyContainerViewControllers {
     var detailsViewController: DetailsViewController { get }
     
     var apiClient: APIClientType { get }
-    
+    var userClient: UserClientType { get }
     var appearanceConfig: AppearanceConfigType { get }
 }
 

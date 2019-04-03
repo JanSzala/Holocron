@@ -8,7 +8,22 @@
 
 import Foundation
 
-internal class Person: Decodable {
+internal protocol PersonType: ItemBaseType {
+    var birth_year: String { get }
+    var eye_color: String { get }
+    var gender: String { get }
+    var hair_color: String { get }
+    var height: String { get }
+    var mass: String { get }
+    var skin_color: String { get }
+    var homeworld: String { get }
+    var films: [String]? { get }
+    var species: [String]? { get }
+    var starships: [String]? { get }
+    var vehicles: [String]? { get }
+}
+
+internal class Person: PersonType, Decodable {
     let name: String
     let birth_year: String
     let eye_color: String

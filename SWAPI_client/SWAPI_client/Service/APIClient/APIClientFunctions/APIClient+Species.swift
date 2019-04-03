@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension APIClient: APIClientTypePlanets {
+extension APIClient: APIClientTypeSpecies {
     func listSpecies(page: Int, onSuccess: @escaping APICompletionSpecies, onFailure: @escaping APICompletionFailure) -> URLSessionTask? {
         return apiService.getSpecies(for: page, onSuccess: { [unowned self] response in
             self.apiParser.parse(listSpeciesResponse: response, onSuccess: onSuccess, onFailure: { error in

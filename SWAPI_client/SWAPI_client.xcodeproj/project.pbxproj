@@ -118,6 +118,17 @@
 		67E8FC8A220EF67600CB9B40 /* OptionsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8FC89220EF67600CB9B40 /* OptionsViewModelType.swift */; };
 		67E8FC90220EFE2E00CB9B40 /* OptionsCellWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8FC8E220EFE2E00CB9B40 /* OptionsCellWithSwitch.swift */; };
 		67E8FC91220EFE2E00CB9B40 /* OptionsCellWithSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E8FC8F220EFE2E00CB9B40 /* OptionsCellWithSwitch.xib */; };
+		67EE6AB12255111700861475 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6AB02255111700861475 /* UserClient.swift */; };
+		67EE6AB32255111F00861475 /* UserClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6AB22255111F00861475 /* UserClientType.swift */; };
+		67EE6AB52255119500861475 /* UserClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6AB42255119500861475 /* UserClientError.swift */; };
+		67EE6AB82255132500861475 /* UserClient+People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6AB72255132500861475 /* UserClient+People.swift */; };
+		67EE6ABA2255133B00861475 /* UserClient+Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6AB92255133B00861475 /* UserClient+Films.swift */; };
+		67EE6ABC2255134400861475 /* UserClient+Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6ABB2255134400861475 /* UserClient+Planets.swift */; };
+		67EE6ABE2255134C00861475 /* UserClient+Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6ABD2255134C00861475 /* UserClient+Species.swift */; };
+		67EE6AC02255135700861475 /* UserClient+Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6ABF2255135700861475 /* UserClient+Starships.swift */; };
+		67EE6AC22255136100861475 /* UserClient+Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6AC12255136100861475 /* UserClient+Vehicles.swift */; };
+		67EE6AC42255268300861475 /* ItemsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6AC32255268300861475 /* ItemsBase.swift */; };
+		67EE6AC62255278700861475 /* ItemBaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE6AC52255278700861475 /* ItemBaseType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +268,17 @@
 		67E8FC89220EF67600CB9B40 /* OptionsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewModelType.swift; sourceTree = "<group>"; };
 		67E8FC8E220EFE2E00CB9B40 /* OptionsCellWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsCellWithSwitch.swift; sourceTree = "<group>"; };
 		67E8FC8F220EFE2E00CB9B40 /* OptionsCellWithSwitch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsCellWithSwitch.xib; sourceTree = "<group>"; };
+		67EE6AB02255111700861475 /* UserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
+		67EE6AB22255111F00861475 /* UserClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClientType.swift; sourceTree = "<group>"; };
+		67EE6AB42255119500861475 /* UserClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClientError.swift; sourceTree = "<group>"; };
+		67EE6AB72255132500861475 /* UserClient+People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserClient+People.swift"; sourceTree = "<group>"; };
+		67EE6AB92255133B00861475 /* UserClient+Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserClient+Films.swift"; sourceTree = "<group>"; };
+		67EE6ABB2255134400861475 /* UserClient+Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserClient+Planets.swift"; sourceTree = "<group>"; };
+		67EE6ABD2255134C00861475 /* UserClient+Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserClient+Species.swift"; sourceTree = "<group>"; };
+		67EE6ABF2255135700861475 /* UserClient+Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserClient+Starships.swift"; sourceTree = "<group>"; };
+		67EE6AC12255136100861475 /* UserClient+Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserClient+Vehicles.swift"; sourceTree = "<group>"; };
+		67EE6AC32255268300861475 /* ItemsBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsBase.swift; sourceTree = "<group>"; };
+		67EE6AC52255278700861475 /* ItemBaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBaseType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -618,6 +640,8 @@
 				6771D7CE2205EF8800E1D031 /* Vehicles.swift */,
 				6771D7D2220654CB00E1D031 /* Planet.swift */,
 				6771D7D4220654D400E1D031 /* Planets.swift */,
+				67EE6AC32255268300861475 /* ItemsBase.swift */,
+				67EE6AC52255278700861475 /* ItemBaseType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -670,6 +694,7 @@
 		67B714E02249402F0033C249 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				67EE6AAF2255110C00861475 /* UserClient */,
 				67B714E12249403D0033C249 /* Apperance */,
 				67969D9A21F3701D00B0A6EE /* APIClientUNUSED.swift */,
 				675438E221FE24A300900D30 /* URLSessionCreator.swift */,
@@ -734,6 +759,30 @@
 				67E8FC8F220EFE2E00CB9B40 /* OptionsCellWithSwitch.xib */,
 			);
 			path = OptionsCellWithSwitch;
+			sourceTree = "<group>";
+		};
+		67EE6AAF2255110C00861475 /* UserClient */ = {
+			isa = PBXGroup;
+			children = (
+				67EE6AB02255111700861475 /* UserClient.swift */,
+				67EE6AB22255111F00861475 /* UserClientType.swift */,
+				67EE6AB42255119500861475 /* UserClientError.swift */,
+				67EE6AB62255130A00861475 /* UserClientFunctions */,
+			);
+			path = UserClient;
+			sourceTree = "<group>";
+		};
+		67EE6AB62255130A00861475 /* UserClientFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				67EE6AB72255132500861475 /* UserClient+People.swift */,
+				67EE6AB92255133B00861475 /* UserClient+Films.swift */,
+				67EE6ABB2255134400861475 /* UserClient+Planets.swift */,
+				67EE6ABD2255134C00861475 /* UserClient+Species.swift */,
+				67EE6ABF2255135700861475 /* UserClient+Starships.swift */,
+				67EE6AC12255136100861475 /* UserClient+Vehicles.swift */,
+			);
+			path = UserClientFunctions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -890,7 +939,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+
+";
 		};
 		672C87FF2253BF42000857DC /* Alamofire */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -929,10 +980,13 @@
 				672C882D2253CE67000857DC /* APIParserError.swift in Sources */,
 				672C88092253C30F000857DC /* Route.swift in Sources */,
 				675438E321FE24A300900D30 /* URLSessionCreator.swift in Sources */,
+				67EE6AB12255111700861475 /* UserClient.swift in Sources */,
 				672C88332253D11E000857DC /* DateFormatter+Formatters.swift in Sources */,
+				67EE6ABA2255133B00861475 /* UserClient+Films.swift in Sources */,
 				672C88602253DF15000857DC /* APIClient+Species.swift in Sources */,
 				67969D9621F35AEB00B0A6EE /* InternetReachability.swift in Sources */,
 				672C88642253DF27000857DC /* APIClient+Vehicles.swift in Sources */,
+				67EE6AC62255278700861475 /* ItemBaseType.swift in Sources */,
 				671416DF21B0552F00B90FD9 /* FlowController.swift in Sources */,
 				6709F46621E0E44100056F80 /* MainMenuSquareView.swift in Sources */,
 				672C88212253CC8B000857DC /* APIService+Planets.swift in Sources */,
@@ -943,6 +997,7 @@
 				67CA0747221341AA001B55BB /* DetailsViewModelType.swift in Sources */,
 				672C881D2253C984000857DC /* Router+Vehicles.swift in Sources */,
 				672C88032253C167000857DC /* APIServiceError.swift in Sources */,
+				67EE6AC42255268300861475 /* ItemsBase.swift in Sources */,
 				672C885E2253DF09000857DC /* APIClient+Planets.swift in Sources */,
 				672C88502253D5D5000857DC /* DataListResponse.swift in Sources */,
 				679C8A7C21EA693B001ECDEC /* MainTableViewController.swift in Sources */,
@@ -954,10 +1009,13 @@
 				67969D9B21F3701D00B0A6EE /* APIClientUNUSED.swift in Sources */,
 				671416A821B053A800B90FD9 /* SWAPI_client.xcdatamodeld in Sources */,
 				67BE63C5220CA414002347E4 /* APIParser.swift in Sources */,
+				67EE6AC02255135700861475 /* UserClient+Starships.swift in Sources */,
 				679C8A7F21EA6A48001ECDEC /* MainTableViewModelType.swift in Sources */,
 				672C884A2253D2C9000857DC /* StarshipsResponse.swift in Sources */,
+				67EE6ABE2255134C00861475 /* UserClient+Species.swift in Sources */,
 				672C882A2253CDF0000857DC /* APIParserType.swift in Sources */,
 				671416D321B0547400B90FD9 /* ViewModel.swift in Sources */,
+				67EE6AB82255132500861475 /* UserClient+People.swift in Sources */,
 				67969D9921F36DC100B0A6EE /* Root.swift in Sources */,
 				672C87FB2253BEBA000857DC /* APIService.swift in Sources */,
 				6771D7C92205ED3500E1D031 /* Species.swift in Sources */,
@@ -967,6 +1025,7 @@
 				672C88102253C7B5000857DC /* Router+People.swift in Sources */,
 				67D3CBBA224BEDA6001B5402 /* Logger.swift in Sources */,
 				67B714E32249404B0033C249 /* Apperance.swift in Sources */,
+				67EE6ABC2255134400861475 /* UserClient+Planets.swift in Sources */,
 				6771D7C72205EB5F00E1D031 /* Kind.swift in Sources */,
 				671416EF21B056C500B90FD9 /* DependencyContainer.swift in Sources */,
 				671416A021B053A800B90FD9 /* AppDelegate.swift in Sources */,
@@ -989,11 +1048,14 @@
 				672C88382253D215000857DC /* APIParser+Films.swift in Sources */,
 				672C88192253C969000857DC /* Router+Species.swift in Sources */,
 				67CA0749221341B4001B55BB /* DetailsViewModel.swift in Sources */,
+				67EE6AB52255119500861475 /* UserClientError.swift in Sources */,
 				671416D521B0548E00B90FD9 /* ViewModelOwner.swift in Sources */,
 				67969D9D21F494A800B0A6EE /* Person.swift in Sources */,
+				67EE6AB32255111F00861475 /* UserClientType.swift in Sources */,
 				672C884E2253D56A000857DC /* GeneralListResponse.swift in Sources */,
 				6709F46B21E0EEDE00056F80 /* UIView+fixInView.swift in Sources */,
 				672C88152253C941000857DC /* Router+Films.swift in Sources */,
+				67EE6AC22255136100861475 /* UserClient+Vehicles.swift in Sources */,
 				67E8FC84220EF40500CB9B40 /* OptionsViewController.swift in Sources */,
 				67B714E5224943F20033C249 /* NavigationBar.swift in Sources */,
 				67969D9F21F496DE00B0A6EE /* People.swift in Sources */,

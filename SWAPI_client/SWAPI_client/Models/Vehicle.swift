@@ -6,6 +6,21 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
+internal protocol VehicleType: ItemBaseType {
+    var model: String { get }
+    var vehicle_class: String { get }
+    var manufacturer: String { get }
+    var length: String { get }
+    var cost_in_credits: String { get }
+    var crew: String { get }
+    var passengers: String { get }
+    var max_atmosphering_speed: String { get }
+    var cargo_capacity: String { get }
+    var consumables: String { get }
+    var films: [String] { get }
+    var pilots: [String] { get }
+}
+
 internal class Vehicle: Decodable {
     let name: String
     let model: String

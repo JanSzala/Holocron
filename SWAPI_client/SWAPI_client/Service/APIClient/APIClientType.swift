@@ -18,15 +18,20 @@ internal typealias APICompletionSpecies = (SpeciesResponse) -> ()
 internal typealias APICompletionStarships = (StarshipsResponse) -> ()
 internal typealias APICompletionVehicles = (VehiclesResponse) -> ()
 
-internal protocol APIClientType: APIClientTypePeople, APIClientTypeFilms, APIClientTypePlanets, APIClientTypeSpecies, APIClientTypeStarships, APIClientTypeVehicles {
+internal protocol APIClientType: APIClientTypePeople,
+                                 APIClientTypeFilms,
+                                 APIClientTypePlanets,
+                                 APIClientTypeSpecies,
+                                 APIClientTypeStarships,
+                                 APIClientTypeVehicles {
 }
 
 internal protocol APIClientTypePeople {
-    func listPeople(page: Int, onSuccess: @escaping APICompletionChallenges, onFailure: @escaping APICompletionFailure) -> URLSessionTask?
+    func listPeople(page: Int, onSuccess: @escaping APICompletionPeople, onFailure: @escaping APICompletionFailure) -> URLSessionTask?
 }
 
 internal protocol APIClientTypeFilms {
-    func listFilms(page: Int, onSuccess: @escaping APICompletionChallenges, onFailure: @escaping APICompletionFailure) -> URLSessionTask?
+    func listFilms(page: Int, onSuccess: @escaping APICompletionFilms, onFailure: @escaping APICompletionFailure) -> URLSessionTask?
 }
 
 internal protocol APIClientTypePlanets {

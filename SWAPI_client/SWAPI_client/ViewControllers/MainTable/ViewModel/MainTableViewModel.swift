@@ -24,7 +24,7 @@ internal class MainTableViewModel: MainTableViewModelType {
     
     var emptyListLabel: NSAttributedString {
         let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 35),
-                                                         NSAttributedString.Key.foregroundColor: UIColor.red]
+                                                         NSAttributedString.Key.foregroundColor: UIColor.gray]
         return NSAttributedString(string: "I couldn't download data", attributes: attributes)
     }
     

@@ -94,7 +94,7 @@
 		6709F46421E0E44100056F80 /* MainMenuSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuSquareView.swift; sourceTree = "<group>"; };
 		6709F46521E0E44100056F80 /* mainMenuSquareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mainMenuSquareView.xib; sourceTree = "<group>"; };
 		6709F46A21E0EEDE00056F80 /* UIView+fixInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fixInView.swift"; sourceTree = "<group>"; };
-		6714169C21B053A800B90FD9 /* SWAPI_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAPI_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6714169C21B053A800B90FD9 /* Holocron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holocron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6714169F21B053A800B90FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		671416A721B053A800B90FD9 /* SWAPI_client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SWAPI_client.xcdatamodel; sourceTree = "<group>"; };
 		671416A921B053AA00B90FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		6714169D21B053A800B90FD9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6714169C21B053A800B90FD9 /* SWAPI_client.app */,
+				6714169C21B053A800B90FD9 /* Holocron.app */,
 				671416B321B053AA00B90FD9 /* SWAPI_clientTests.xctest */,
 				671416BE21B053AA00B90FD9 /* SWAPI_clientUITests.xctest */,
 			);
@@ -524,7 +524,7 @@
 			);
 			name = SWAPI_client;
 			productName = SWAPI_client;
-			productReference = 6714169C21B053A800B90FD9 /* SWAPI_client.app */;
+			productReference = 6714169C21B053A800B90FD9 /* Holocron.app */;
 			productType = "com.apple.product-type.application";
 		};
 		671416B221B053AA00B90FD9 /* SWAPI_clientTests */ = {
@@ -593,6 +593,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 6714169321B053A800B90FD9;
 			productRefGroup = 6714169D21B053A800B90FD9 /* Products */;
@@ -905,7 +906,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "janszala.SWAPI-client";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Holocron;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -925,7 +926,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "janszala.SWAPI-client";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Holocron;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

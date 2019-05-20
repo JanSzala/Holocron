@@ -13,8 +13,7 @@ internal class MainMenuSquareView: UIView {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var button: UIButton!
         
-    var onButton: () -> () = {
-    }
+    var onButton: () -> () = {}
         
     override func layoutSubviews() {
         super.layoutSubviews()

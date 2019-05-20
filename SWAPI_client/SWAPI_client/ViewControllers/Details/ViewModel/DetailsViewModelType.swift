@@ -9,6 +9,8 @@
 import Foundation
 
 internal protocol DetailsViewModelType: class {
+    var onSectionsSet: (() -> ())? { get set }
+    
     var data: Any { get set }
     var dataType: DataType { get set }
     var controllerTitle: String { get }

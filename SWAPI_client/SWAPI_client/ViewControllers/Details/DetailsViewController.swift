@@ -17,6 +17,10 @@ internal class DetailsViewController: UIViewController {
         setupTable()
         registerCells()
         setupUI()
+        
+        viewModel.onSectionsSet = {
+            self.tableView.reloadData()
+        }
     }
     
     private func setupTable() {

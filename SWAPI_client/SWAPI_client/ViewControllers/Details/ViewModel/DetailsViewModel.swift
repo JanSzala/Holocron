@@ -10,35 +10,26 @@ import Foundation
 import UIKit
 
 internal class DetailsViewModel: DetailsViewModelType {
+    var onSectionsSet: (() -> ())?
+    
     var dataType: DataType = .People
     var data: Any = ""
     
     var sectionsCount: Int {
-        return personSections.count
+        return dataSections.count
     }
     
-    let personSections = ["Name",
-                          "Birth year",
-                          "Eye Color",
-                          "Gender",
-                          "Hair color",
-                          "Height",
-                          "Mass",
-                          "Skin color",
-//                          "Homeworld",
-//                          "Films",
-//                          "Species",
-//                          "Starships",
-//                          "Vehicles",
-//                          "url",
-                          "Created",
-                          "Edited"]
+    var dataSections = ["Name"] {
+        didSet {
+            onSectionsSet?()
+        }
+    }
     
     let controllerTitle = "Details"
     let numberOfRowsInSection: Int = 1
     
     func sectionTitle(for index: Int) -> String {
-        return personSections[index]
+        return dataSections[index]
     }
     
     func dataForRow(at indexPath: IndexPath) -> String {
@@ -57,19 +48,70 @@ internal class DetailsViewModel: DetailsViewModelType {
                 person.height,
                 person.mass,
                 person.skin_color,
-//                person.homeworld,
-//                person.films,
-//                person.species,
-//                person.starships,
-//                person.url,
-//                person.vehicles,
+                person.homeworld,
+                person.films?.joined(separator: "\n") ?? "",
+                person.species?.joined(separator: "\n") ?? "",
+                person.starships?.joined(separator: "\n") ?? "",
+                person.url,
+                person.vehicles?.joined(separator: "\n") ?? "",
                 person.created,
                 person.edited
             ]
             
+            dataSections = ["Name",
+                            "Birth year",
+                            "Eye Color",
+                            "Gender",
+                            "Hair color",
+                            "Height",
+                            "Mass",
+                            "Skin color",
+                            "Homeworld",
+                            "Films",
+                            "Species",
+                            "Starships",
+                            "Vehicles",
+                            "url",
+                            "Created",
+                            "Edited"]
+            
             return dataArray[indexPath.section]
         case .Films:
-            return("Films")
+            guard let film = data as? Film else {
+                return ""
+            }
+            
+            let dataArray = [
+                film.title,
+                String(film.episode_id),
+                film.opening_crawl,
+                film.director,
+                film.producer,
+                film.release_date,
+                film.species.joined(separator: "\n"),
+                film.starships.joined(separator: "\n"),
+                film.vehicles.joined(separator: "\n"),
+                film.characters.joined(separator: "\n"),
+                film.planets.joined(separator: "\n"),
+                film.created,
+                film.edited
+            ]
+            
+            dataSections = ["Title",
+                            "Episode",
+                            "Opening",
+                            "Director",
+                            "Producer",
+                            "Release date",
+                            "Species",
+                            "Starships",
+                            "Vehicles",
+                            "Characters",
+                            "Planets",
+                            "Created",
+                            "Edited"]
+            
+            return dataArray[indexPath.section]
         case .Planets:
             return("Planets")
         case .Species:
@@ -80,5 +122,4 @@ internal class DetailsViewModel: DetailsViewModelType {
             return("Vehicles")
         }
     }
-
 }

@@ -17,10 +17,6 @@ internal class DetailsViewController: UIViewController {
         setupTable()
         registerCells()
         setupUI()
-        
-        viewModel.onSectionsSet = {
-            self.tableView.reloadData()
-        }
     }
     
     private func setupTable() {
@@ -69,6 +65,10 @@ extension DetailsViewController: UITableViewDataSource {
             fatalError("Could not dequeue MainTableViewCell")
         }
         
+        return configure(cell, for: indexPath)
+    }
+    
+    private func configure(_ cell: MainTableViewCell, for indexPath: IndexPath) -> MainTableViewCell {
         cell.titleLabel.text = viewModel.dataForRow(at: indexPath)
         cell.backgroundColor = darkModeColor()
         cell.titleLabel.textColor = darkModeColor(reversedColors: true)

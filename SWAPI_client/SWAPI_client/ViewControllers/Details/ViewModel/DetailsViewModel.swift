@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 internal class DetailsViewModel: DetailsViewModelType {
-    var onSectionsSet: (() -> ())?
-    
     var dataType: DataType = .People
     var data: Any = ""
     
@@ -19,9 +17,21 @@ internal class DetailsViewModel: DetailsViewModelType {
         return dataSections.count
     }
     
-    var dataSections = ["Name"] {
-        didSet {
-            onSectionsSet?()
+    var dataSections: [String] {
+        switch dataType {
+        case .People:
+            return ["Name", "Birth year", "Eye Color", "Gender", "Hair color", "Height", "Mass", "Skin color", "Homeworld", "Films",
+            "Species", "Starships", "Vehicles", "url", "Created", "Edited"]
+        case .Films:
+            return ["Title", "Episode", "Opening", "Director", "Producer", "Release date", "Species", "Starships", "Vehicles", "Characters", "Planets", "Created", "Edited"]
+        case .Planets:
+            return ["Title"]
+        case .Species:
+            return ["Title"]
+        case .Starships:
+            return ["Title"]
+        case .Vehicles:
+            return ["Title"]
         }
     }
     
@@ -58,23 +68,6 @@ internal class DetailsViewModel: DetailsViewModelType {
                 person.edited
             ]
             
-            dataSections = ["Name",
-                            "Birth year",
-                            "Eye Color",
-                            "Gender",
-                            "Hair color",
-                            "Height",
-                            "Mass",
-                            "Skin color",
-                            "Homeworld",
-                            "Films",
-                            "Species",
-                            "Starships",
-                            "Vehicles",
-                            "url",
-                            "Created",
-                            "Edited"]
-            
             return dataArray[indexPath.section]
         case .Films:
             guard let film = data as? Film else {
@@ -96,20 +89,6 @@ internal class DetailsViewModel: DetailsViewModelType {
                 film.created,
                 film.edited
             ]
-            
-            dataSections = ["Title",
-                            "Episode",
-                            "Opening",
-                            "Director",
-                            "Producer",
-                            "Release date",
-                            "Species",
-                            "Starships",
-                            "Vehicles",
-                            "Characters",
-                            "Planets",
-                            "Created",
-                            "Edited"]
             
             return dataArray[indexPath.section]
         case .Planets:

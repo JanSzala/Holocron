@@ -10,28 +10,32 @@ import Foundation
 import UIKit
 
 internal class DetailsViewModel: DetailsViewModelType {
-    var dataType: DataType = .People
+    var dataType: DataType = .People {
+        didSet {
+            
+        }
+    }
     var data: Any = ""
     
     var sectionsCount: Int {
-        return dataSections.count
+        return dataSectionTitles.count
     }
     
-    var dataSections: [String] {
+    var dataSectionTitles: [String] {
         switch dataType {
         case .People:
             return ["Name", "Birth year", "Eye Color", "Gender", "Hair color", "Height", "Mass", "Skin color", "Homeworld", "Films",
-            "Species", "Starships", "Vehicles", "url", "Created", "Edited"]
+            "Species", "Starships", "Vehicles", "Created", "Edited"]
         case .Films:
             return ["Title", "Episode", "Opening", "Director", "Producer", "Release date", "Species", "Starships", "Vehicles", "Characters", "Planets", "Created", "Edited"]
         case .Planets:
-            return ["Title"]
+            return ["Name", "Diameter", "Rotation period", "Orbital period", "Gravity", "Population", "Climate", "Terrain", "Surface water", "Residents", "Films", "Created", "Edited"]
         case .Species:
-            return ["Title"]
+            return ["Name", "Classification", "Designation", "Average height", "Average lifespan", "Eye colors", "Hair colors", "Skin colors", "Language", "People", "Films", "Ereated", "Edited"]
         case .Starships:
-            return ["Title"]
+            return ["Name", "Model", "Starship class", "Manufacturer", "Cost in credits", "Length", "Crew", "Passengers", "Max atmosphering speed", "Hyperdrive rating", "MGLT", "Cargo capacity", "Consumables", "Films", "Pilots", "Created", "Edited"]
         case .Vehicles:
-            return ["Title"]
+            return ["Name", "Model", "Vehicle class", "Manufacturer", "Length", "Cost in credits", "Crew", "Passengers", "Max atmosphering speed", "Cargo capacity", "Consumables", "Films", "Pilots", "Created", "Edited"]
         }
     }
     
@@ -39,7 +43,7 @@ internal class DetailsViewModel: DetailsViewModelType {
     let numberOfRowsInSection: Int = 1
     
     func sectionTitle(for index: Int) -> String {
-        return dataSections[index]
+        return dataSectionTitles[index]
     }
     
     func dataForRow(at indexPath: IndexPath) -> String {
@@ -62,7 +66,6 @@ internal class DetailsViewModel: DetailsViewModelType {
                 person.films?.joined(separator: "\n") ?? "",
                 person.species?.joined(separator: "\n") ?? "",
                 person.starships?.joined(separator: "\n") ?? "",
-                person.url,
                 person.vehicles?.joined(separator: "\n") ?? "",
                 person.created,
                 person.edited
@@ -92,13 +95,99 @@ internal class DetailsViewModel: DetailsViewModelType {
             
             return dataArray[indexPath.section]
         case .Planets:
-            return("Planets")
+            guard let planet = data as? Planet else {
+                return ""
+            }
+            
+            let dataArray = [
+                planet.name,
+                planet.diameter,
+                planet.rotation_period,
+                planet.orbital_period,
+                planet.gravity,
+                planet.population,
+                planet.climate,
+                planet.terrain,
+                planet.surface_water,
+                planet.residents.joined(separator: "\n"),
+                planet.films.joined(separator: "\n"),
+                planet.created,
+                planet.edited
+            ]
+            
+            return dataArray[indexPath.section]
         case .Species:
-            return("Species")
+            guard let kind = data as? Kind else {
+                return ""
+            }
+            
+            let dataArray = [
+                kind.name,
+                kind.classification,
+                kind.designation,
+                kind.average_height,
+                kind.average_lifespan,
+                kind.eye_colors,
+                kind.hair_colors,
+                kind.skin_colors,
+                kind.language,
+                kind.people.joined(separator: "\n"),
+                kind.films.joined(separator: "\n"),
+                kind.created,
+                kind.edited
+            ]
+            
+            return dataArray[indexPath.section]
         case .Starships:
-            return("Starships")
+            guard let starship = data as? Starship else {
+                return ""
+            }
+            
+            let dataArray = [
+                starship.name,
+                starship.model,
+                starship.starship_class,
+                starship.manufacturer,
+                starship.cost_in_credits,
+                starship.length,
+                starship.crew,
+                starship.passengers,
+                starship.max_atmosphering_speed,
+                starship.hyperdrive_rating,
+                starship.MGLT,
+                starship.cargo_capacity,
+                starship.consumables,
+                starship.films.joined(separator: "\n"),
+                starship.pilots.joined(separator: "\n"),
+                starship.created,
+                starship.edited
+            ]
+            
+            return dataArray[indexPath.section]
         case .Vehicles:
-            return("Vehicles")
+            guard let vehicle = data as? Vehicle else {
+                return ""
+            }
+            
+            let dataArray = [
+                vehicle.name,
+                vehicle.model,
+                vehicle.vehicle_class,
+                vehicle.manufacturer,
+                vehicle.length,
+                vehicle.cost_in_credits,
+                vehicle.crew,
+                vehicle.passengers,
+                vehicle.max_atmosphering_speed,
+                vehicle.cargo_capacity,
+                vehicle.consumables,
+                vehicle.films.joined(separator: "\n"),
+                vehicle.pilots.joined(separator: "\n"),
+                vehicle.created,
+                vehicle.edited
+            ]
+            
+            return dataArray[indexPath.section]
         }
     }
 }

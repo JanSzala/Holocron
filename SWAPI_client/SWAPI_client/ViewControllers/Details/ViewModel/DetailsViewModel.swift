@@ -10,22 +10,168 @@ import Foundation
 import UIKit
 
 internal class DetailsViewModel: DetailsViewModelType {
-    var dataType: DataType = .People {
-        didSet {
-            
-        }
-    }
-    var data: Any = ""
+    var dataType: DataType = .People
+    var dataArray = [String]()
+    
+    let controllerTitle = "Details"
+    let numberOfRowsInSection: Int = 1
     
     var sectionsCount: Int {
         return dataSectionTitles.count
     }
     
+    var data: Any = "" {
+        didSet {
+            switch dataType {
+            case .People:
+                guard let person = data as? Person else {
+                    return
+                }
+                
+                dataArray = [
+                    person.name,
+                    person.birth_year,
+                    person.eye_color,
+                    person.gender,
+                    person.hair_color,
+                    person.height,
+                    person.mass,
+                    person.skin_color,
+                    person.homeworld,
+                    person.films?.joined(separator: "\n") ?? "",
+                    person.species?.joined(separator: "\n") ?? "",
+                    person.starships?.joined(separator: "\n") ?? "",
+                    person.vehicles?.joined(separator: "\n") ?? "",
+                    person.created,
+                    person.edited
+                ]
+            case .Films:
+                guard let film = data as? Film else {
+                    return
+                }
+                
+                dataArray = [
+                    film.title,
+                    String(film.episode_id),
+                    film.opening_crawl,
+                    film.director,
+                    film.producer,
+                    film.release_date,
+                    film.species.joined(separator: "\n"),
+                    film.starships.joined(separator: "\n"),
+                    film.vehicles.joined(separator: "\n"),
+                    film.characters.joined(separator: "\n"),
+                    film.planets.joined(separator: "\n"),
+                    film.created,
+                    film.edited
+                ]
+            case .Planets:
+                guard let planet = data as? Planet else {
+                    return
+                }
+                
+                dataArray = [
+                    planet.name,
+                    planet.diameter,
+                    planet.rotation_period,
+                    planet.orbital_period,
+                    planet.gravity,
+                    planet.population,
+                    planet.climate,
+                    planet.terrain,
+                    planet.surface_water,
+                    planet.residents.joined(separator: "\n"),
+                    planet.films.joined(separator: "\n"),
+                    planet.created,
+                    planet.edited
+                ]
+            case .Species:
+                guard let kind = data as? Kind else {
+                    return
+                }
+                
+                dataArray = [
+                    kind.name,
+                    kind.classification,
+                    kind.designation,
+                    kind.average_height,
+                    kind.average_lifespan,
+                    kind.eye_colors,
+                    kind.hair_colors,
+                    kind.skin_colors,
+                    kind.language,
+                    kind.people.joined(separator: "\n"),
+                    kind.films.joined(separator: "\n"),
+                    kind.created,
+                    kind.edited
+                ]
+            case .Starships:
+                guard let starship = data as? Starship else {
+                    return
+                }
+                
+                dataArray = [
+                    starship.name,
+                    starship.model,
+                    starship.starship_class,
+                    starship.manufacturer,
+                    starship.cost_in_credits,
+                    starship.length,
+                    starship.crew,
+                    starship.passengers,
+                    starship.max_atmosphering_speed,
+                    starship.hyperdrive_rating,
+                    starship.MGLT,
+                    starship.cargo_capacity,
+                    starship.consumables,
+                    starship.films.joined(separator: "\n"),
+                    starship.pilots.joined(separator: "\n"),
+                    starship.created,
+                    starship.edited
+                ]
+            case .Vehicles:
+                guard let vehicle = data as? Vehicle else {
+                    return
+                }
+                
+                dataArray = [
+                    vehicle.name,
+                    vehicle.model,
+                    vehicle.vehicle_class,
+                    vehicle.manufacturer,
+                    vehicle.length,
+                    vehicle.cost_in_credits,
+                    vehicle.crew,
+                    vehicle.passengers,
+                    vehicle.max_atmosphering_speed,
+                    vehicle.cargo_capacity,
+                    vehicle.consumables,
+                    vehicle.films.joined(separator: "\n"),
+                    vehicle.pilots.joined(separator: "\n"),
+                    vehicle.created,
+                    vehicle.edited
+                ]
+            }
+        }
+    }
+}
+
+extension DetailsViewModel {
+    func dataForRow(at indexPath: IndexPath) -> String {
+        return dataArray[indexPath.section]
+    }
+    
+    func sectionTitle(for index: Int) -> String {
+        return dataSectionTitles[index]
+    }
+}
+
+extension DetailsViewModel {
     var dataSectionTitles: [String] {
         switch dataType {
         case .People:
             return ["Name", "Birth year", "Eye Color", "Gender", "Hair color", "Height", "Mass", "Skin color", "Homeworld", "Films",
-            "Species", "Starships", "Vehicles", "Created", "Edited"]
+                    "Species", "Starships", "Vehicles", "Created", "Edited"]
         case .Films:
             return ["Title", "Episode", "Opening", "Director", "Producer", "Release date", "Species", "Starships", "Vehicles", "Characters", "Planets", "Created", "Edited"]
         case .Planets:
@@ -36,158 +182,6 @@ internal class DetailsViewModel: DetailsViewModelType {
             return ["Name", "Model", "Starship class", "Manufacturer", "Cost in credits", "Length", "Crew", "Passengers", "Max atmosphering speed", "Hyperdrive rating", "MGLT", "Cargo capacity", "Consumables", "Films", "Pilots", "Created", "Edited"]
         case .Vehicles:
             return ["Name", "Model", "Vehicle class", "Manufacturer", "Length", "Cost in credits", "Crew", "Passengers", "Max atmosphering speed", "Cargo capacity", "Consumables", "Films", "Pilots", "Created", "Edited"]
-        }
-    }
-    
-    let controllerTitle = "Details"
-    let numberOfRowsInSection: Int = 1
-    
-    func sectionTitle(for index: Int) -> String {
-        return dataSectionTitles[index]
-    }
-    
-    func dataForRow(at indexPath: IndexPath) -> String {
-        switch dataType {
-        case .People:
-            guard let person = data as? Person else {
-                return ""
-            }
-            
-            let dataArray = [
-                person.name,
-                person.birth_year,
-                person.eye_color,
-                person.gender,
-                person.hair_color,
-                person.height,
-                person.mass,
-                person.skin_color,
-                person.homeworld,
-                person.films?.joined(separator: "\n") ?? "",
-                person.species?.joined(separator: "\n") ?? "",
-                person.starships?.joined(separator: "\n") ?? "",
-                person.vehicles?.joined(separator: "\n") ?? "",
-                person.created,
-                person.edited
-            ]
-            
-            return dataArray[indexPath.section]
-        case .Films:
-            guard let film = data as? Film else {
-                return ""
-            }
-            
-            let dataArray = [
-                film.title,
-                String(film.episode_id),
-                film.opening_crawl,
-                film.director,
-                film.producer,
-                film.release_date,
-                film.species.joined(separator: "\n"),
-                film.starships.joined(separator: "\n"),
-                film.vehicles.joined(separator: "\n"),
-                film.characters.joined(separator: "\n"),
-                film.planets.joined(separator: "\n"),
-                film.created,
-                film.edited
-            ]
-            
-            return dataArray[indexPath.section]
-        case .Planets:
-            guard let planet = data as? Planet else {
-                return ""
-            }
-            
-            let dataArray = [
-                planet.name,
-                planet.diameter,
-                planet.rotation_period,
-                planet.orbital_period,
-                planet.gravity,
-                planet.population,
-                planet.climate,
-                planet.terrain,
-                planet.surface_water,
-                planet.residents.joined(separator: "\n"),
-                planet.films.joined(separator: "\n"),
-                planet.created,
-                planet.edited
-            ]
-            
-            return dataArray[indexPath.section]
-        case .Species:
-            guard let kind = data as? Kind else {
-                return ""
-            }
-            
-            let dataArray = [
-                kind.name,
-                kind.classification,
-                kind.designation,
-                kind.average_height,
-                kind.average_lifespan,
-                kind.eye_colors,
-                kind.hair_colors,
-                kind.skin_colors,
-                kind.language,
-                kind.people.joined(separator: "\n"),
-                kind.films.joined(separator: "\n"),
-                kind.created,
-                kind.edited
-            ]
-            
-            return dataArray[indexPath.section]
-        case .Starships:
-            guard let starship = data as? Starship else {
-                return ""
-            }
-            
-            let dataArray = [
-                starship.name,
-                starship.model,
-                starship.starship_class,
-                starship.manufacturer,
-                starship.cost_in_credits,
-                starship.length,
-                starship.crew,
-                starship.passengers,
-                starship.max_atmosphering_speed,
-                starship.hyperdrive_rating,
-                starship.MGLT,
-                starship.cargo_capacity,
-                starship.consumables,
-                starship.films.joined(separator: "\n"),
-                starship.pilots.joined(separator: "\n"),
-                starship.created,
-                starship.edited
-            ]
-            
-            return dataArray[indexPath.section]
-        case .Vehicles:
-            guard let vehicle = data as? Vehicle else {
-                return ""
-            }
-            
-            let dataArray = [
-                vehicle.name,
-                vehicle.model,
-                vehicle.vehicle_class,
-                vehicle.manufacturer,
-                vehicle.length,
-                vehicle.cost_in_credits,
-                vehicle.crew,
-                vehicle.passengers,
-                vehicle.max_atmosphering_speed,
-                vehicle.cargo_capacity,
-                vehicle.consumables,
-                vehicle.films.joined(separator: "\n"),
-                vehicle.pilots.joined(separator: "\n"),
-                vehicle.created,
-                vehicle.edited
-            ]
-            
-            return dataArray[indexPath.section]
         }
     }
 }

@@ -19,6 +19,10 @@ internal class DetailsViewController: UIViewController {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     private func setupTable() {
         tableView.dataSource = self
         tableView.delegate = self

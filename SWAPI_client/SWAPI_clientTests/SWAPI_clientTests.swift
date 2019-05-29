@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SWAPI_client
+@testable import Holocron
 
 // swiftlint:disable type_name
 class SWAPI_clientTests: XCTestCase {

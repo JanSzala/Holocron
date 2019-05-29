@@ -1,0 +1,13 @@
+{
+  "commitish" : "1.15.1",
+  "iOS" : [
+    {
+      "name" : "OCMock",
+      "hash" : "14fced629198078836bfaf2e1f13b247a79ac34072974ae160f076f2c6290a86"
+    },
+    {
+      "name" : "EarlGrey",
+      "hash" : "55f244577af890adbee97b686dc61c37addb9040353cf51163801ad178c8bde7"
+    }
+  ]
+}

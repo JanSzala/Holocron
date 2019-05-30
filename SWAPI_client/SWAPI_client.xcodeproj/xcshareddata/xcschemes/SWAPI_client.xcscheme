@@ -68,8 +68,6 @@
             ReferencedContainer = "container:SWAPI_client.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "DYLD_INSERT_LIBRARIES"
@@ -77,6 +75,8 @@
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

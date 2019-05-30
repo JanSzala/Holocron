@@ -6,6 +6,21 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
+internal protocol FilmType: ItemBaseType {
+    var birth_year: String { get }
+    var eye_color: String { get }
+    var gender: String { get }
+    var hair_color: String { get }
+    var height: String { get }
+    var mass: String { get }
+    var skin_color: String { get }
+    var homeworld: String { get }
+    var films: [String]? { get }
+    var species: [String]? { get }
+    var starships: [String]? { get }
+    var vehicles: [String]? { get }
+}
+
 internal class Film: Decodable {
     let title: String
     let episode_id: Int

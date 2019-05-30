@@ -6,22 +6,24 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal protocol FilmType: ItemBaseType {
-    var birth_year: String { get }
-    var eye_color: String { get }
-    var gender: String { get }
-    var hair_color: String { get }
-    var height: String { get }
-    var mass: String { get }
-    var skin_color: String { get }
-    var homeworld: String { get }
-    var films: [String]? { get }
-    var species: [String]? { get }
-    var starships: [String]? { get }
-    var vehicles: [String]? { get }
+internal protocol FilmType {
+    var title: String { get }
+    var episode_id: Int { get }
+    var opening_crawl: String { get }
+    var director: String { get }
+    var producer: String { get }
+    var release_date: String { get }
+    var species: [String] { get }
+    var starships: [String] { get }
+    var vehicles: [String] { get }
+    var characters: [String] { get }
+    var planets: [String] { get }
+    var url: String { get }
+    var created: String { get }
+    var edited: String { get }
 }
 
-internal class Film: Decodable {
+internal class Film: FilmType, Decodable {
     let title: String
     let episode_id: Int
     let opening_crawl: String
@@ -37,20 +39,71 @@ internal class Film: Decodable {
     let created: String
     let edited: String
     
-    init(json: [String: Any]) {
-        title = json["title"] as? String ?? ""
-        episode_id = json["episode_id"] as? Int ?? 0
-        opening_crawl = json["opening_crawl"] as? String ?? ""
-        director = json["director"] as? String ?? ""
-        producer = json["producer"] as? String ?? ""
-        release_date = json["release_date"] as? String ?? ""
-        species = json["species"] as? [String] ?? [""]
-        starships = json["starships"] as? [String] ?? [""]
-        vehicles = json["vehicles"] as? [String] ?? [""]
-        characters = json["characters"] as? [String] ?? [""]
-        planets = json["planets"] as? [String] ?? [""]
-        url = json["url"] as? String ?? ""
-        created = json["created"] as? String ?? ""
-        edited = json["edited"] as? String ?? ""
+    private enum CodingKeys: CodingKey {
+        case title
+        case episode_id
+        case opening_crawl
+        case director
+        case producer
+        case release_date
+        case species
+        case starships
+        case vehicles
+        case characters
+        case planets
+        case url
+        case created
+        case edited
+    }
+    
+    // MARK: - Initializers
+    
+    init(title: String,
+         episode_id: Int,
+         opening_crawl: String,
+         director: String,
+         producer: String,
+         release_date: String,
+         species: [String],
+         starships: [String],
+         vehicles: [String],
+         characters: [String],
+         planets: [String],
+         url: String,
+         created: String,
+         edited: String) {
+        self.title = title
+        self.episode_id = episode_id
+        self.opening_crawl = opening_crawl
+        self.director = director
+        self.producer = producer
+        self.release_date = release_date
+        self.species = species
+        self.starships = starships
+        self.vehicles = vehicles
+        self.characters = characters
+        self.planets = planets
+        self.url = url
+        self.created = created
+        self.edited = edited
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        title = try container.decode(.title)
+        episode_id = try container.decode(.episode_id)
+        opening_crawl = try container.decode(.opening_crawl)
+        director = try container.decode(.director)
+        producer = try container.decode(.producer)
+        release_date = try container.decode(.release_date)
+        species = try container.decode(.species)
+        starships = try container.decode(.starships)
+        vehicles = try container.decode(.vehicles)
+        characters = try container.decode(.characters)
+        planets = try container.decode(.planets)
+        url = try container.decode(.url)
+        created = try container.decode(.created)
+        edited = try container.decode(.edited)
     }
 }

@@ -31,18 +31,18 @@ extension DetailsViewModel {
     var dataSectionTitles: [String] {
         switch dataType {
         case .People:
-            return ["Name", "Birth year", "Eye Color", "Gender", "Hair color", "Height", "Mass", "Skin color", "Homeworld", "Films",
-                    "Species", "Starships", "Vehicles", "Created", "Edited"]
+            return ["Name:", "Birth year:", "Eye Color:", "Gender:", "Hair color:", "Height in centimeters:", "Mass in kilograms:", "Skin color:", "Homeworld:", "Films:",
+                    "Species:", "Starships:", "Vehicles:", "Created:", "Edited:"]
         case .Films:
-            return ["Title", "Episode", "Opening", "Director", "Producer", "Release date", "Species", "Starships", "Vehicles", "Characters", "Planets", "Created", "Edited"]
+            return ["Title:", "Episode:", "Opening:", "Director:", "Producer:", "Release date:", "Species:", "Starships:", "Vehicles:", "Characters:", "Planets:", "Created:", "Edited:"]
         case .Planets:
-            return ["Name", "Diameter", "Rotation period", "Orbital period", "Gravity", "Population", "Climate", "Terrain", "Surface water", "Residents", "Films", "Created", "Edited"]
+            return ["Name:", "Diameter in kilometers:", "Rotation period in hours:", "Orbital period in days:", "Gravity where '1' is normal or 1 standard G:", "Population:", "Climate:", "Terrain:", "Surface water:", "Residents:", "Films:", "Created:", "Edited:"]
         case .Species:
-            return ["Name", "Classification", "Designation", "Average height", "Average lifespan", "Eye colors", "Hair colors", "Skin colors", "Language", "People", "Films", "Ereated", "Edited"]
+            return ["Name:", "Classification:", "Designation:", "Average height in centimeters:", "Average lifespan in years:", "Eye colors:", "Hair colors:", "Skin colors:", "Language:", "People:", "Films:", "Created:", "Edited:"]
         case .Starships:
-            return ["Name", "Model", "Starship class", "Manufacturer", "Cost in credits", "Length", "Crew", "Passengers", "Max atmosphering speed", "Hyperdrive rating", "MGLT", "Cargo capacity", "Consumables", "Films", "Pilots", "Created", "Edited"]
+            return ["Name:", "Model:", "Starship class:", "Manufacturer:", "Cost in credits:", "Length in meters:", "Crew:", "Passengers:", "Max atmosphering speed", "Hyperdrive rating", "The Maximum number of Megalights this starship can travel in a standard hour:", "Cargo capacity in kilograms:", "Consumables:", "Films:", "Pilots:", "Created:", "Edited:"]
         case .Vehicles:
-            return ["Name", "Model", "Vehicle class", "Manufacturer", "Length", "Cost in credits", "Crew", "Passengers", "Max atmosphering speed", "Cargo capacity", "Consumables", "Films", "Pilots", "Created", "Edited"]
+            return ["Name:", "Model:", "Vehicle class:", "Manufacturer:", "Length in meters:", "Cost in credits:", "Crew:", "Passengers:", "Max atmosphering speed:", "Cargo capacity in kilograms:", "Consumables:", "Films:", "Pilots:", "Created:", "Edited:"]
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  mainMenuSquareView.swift
+//  MainMenuSquareView.swift
 //  SWAPI_client
 //
 //  Created by JanSzala on 05/01/2019.
@@ -35,7 +35,7 @@ internal class MainMenuSquareView: UIView {
     }
     
     func commonInit() {
-        Bundle.main.loadNibNamed("mainMenuSquareView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("MainMenuSquareView", owner: self, options: nil)
         sceneView.fixInView(self)
     }
 }

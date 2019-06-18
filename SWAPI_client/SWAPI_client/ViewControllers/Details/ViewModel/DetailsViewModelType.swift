@@ -17,5 +17,4 @@ internal protocol DetailsViewModelType: class {
     
     func sectionTitle(for index: Int) -> String
     func dataForRow(at indexPath: IndexPath) -> String
-
 }

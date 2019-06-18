@@ -9,13 +9,12 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
+extension NSObject {
     func darkModeColor(reversedColors: Bool = false) -> UIColor {
         if reversedColors {
             return UserDefaults.standard.bool(forKey: "isDarkModeOn") ? .white : .black
         } else {
             return UserDefaults.standard.bool(forKey: "isDarkModeOn") ? .black : .white
         }
-        
     }
 }

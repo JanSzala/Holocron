@@ -38,7 +38,6 @@ internal class FlowController: NSObject, FlowControllerType {
         super.init()
         
         navigationController.viewControllers = [mainMenuViewController]
-        
     }
 }
 

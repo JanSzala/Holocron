@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 internal protocol APIClientType: class {
-    func getPeople(endPoint: DataType, page: Int, onSuccess: @escaping (People) -> (), onFailure: @escaping  () -> ())
-    func getFilms(endPoint: DataType, page: Int, onSuccess: @escaping (Films) -> (), onFailure: @escaping  () -> ())
-    func getSpecies(endPoint: DataType, page: Int, onSuccess: @escaping (Species) -> (), onFailure: @escaping  () -> ())
-    func getStarships(endPoint: DataType, page: Int, onSuccess: @escaping (Starships) -> (), onFailure: @escaping  () -> ())
-    func getVehicles(endPoint: DataType, page: Int, onSuccess: @escaping (Vehicles) -> (), onFailure: @escaping  () -> ())
-    func getPlanets(endPoint: DataType, page: Int, onSuccess: @escaping (Planets) -> (), onFailure: @escaping  () -> ())
+    func getPeople(page: Int, onSuccess: @escaping (People) -> (), onFailure: @escaping  () -> ())
+    func getFilms(page: Int, onSuccess: @escaping (Films) -> (), onFailure: @escaping  () -> ())
+    func getSpecies(page: Int, onSuccess: @escaping (Species) -> (), onFailure: @escaping  () -> ())
+    func getStarships(page: Int, onSuccess: @escaping (Starships) -> (), onFailure: @escaping  () -> ())
+    func getVehicles(page: Int, onSuccess: @escaping (Vehicles) -> (), onFailure: @escaping  () -> ())
+    func getPlanets(page: Int, onSuccess: @escaping (Planets) -> (), onFailure: @escaping  () -> ())
 }
 
 internal class APIClient: APIClientType {
@@ -29,8 +29,8 @@ internal class APIClient: APIClientType {
         self.urlSessionCreator = urlSessionCreator
     }
     
-    func getPeople(endPoint: DataType, page: Int, onSuccess: @escaping (People) -> (), onFailure: @escaping  () -> ()) {
-        self.urlSessionCreator.createURLSession(pageAddress: router.route(endPoint, page), onSuccess: { data in
+    func getPeople(page: Int, onSuccess: @escaping (People) -> (), onFailure: @escaping  () -> ()) {
+        self.urlSessionCreator.createURLSession(pageAddress: router.route(.People, page), onSuccess: { data in
             self.apiParser.parsePeople(data: data, onSuccess: { fetchedData in
                     onSuccess(fetchedData)
             }, onFailure: {
@@ -43,8 +43,8 @@ internal class APIClient: APIClientType {
         })
     }
     
-    func getFilms(endPoint: DataType, page: Int, onSuccess: @escaping (Films) -> (), onFailure: @escaping  () -> ()) {
-        self.urlSessionCreator.createURLSession(pageAddress: router.route(endPoint, page), onSuccess: { data in
+    func getFilms(page: Int, onSuccess: @escaping (Films) -> (), onFailure: @escaping  () -> ()) {
+        self.urlSessionCreator.createURLSession(pageAddress: router.route(.Films, page), onSuccess: { data in
             self.apiParser.parseFilms(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
@@ -57,8 +57,8 @@ internal class APIClient: APIClientType {
         })
     }
     
-    func getSpecies(endPoint: DataType, page: Int, onSuccess: @escaping (Species) -> (), onFailure: @escaping  () -> ()) {
-        self.urlSessionCreator.createURLSession(pageAddress: router.route(endPoint, page), onSuccess: { data in
+    func getSpecies(page: Int, onSuccess: @escaping (Species) -> (), onFailure: @escaping  () -> ()) {
+        self.urlSessionCreator.createURLSession(pageAddress: router.route(.Species, page), onSuccess: { data in
             self.apiParser.parseSpecies(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
@@ -71,8 +71,8 @@ internal class APIClient: APIClientType {
         })
     }
     
-    func getStarships(endPoint: DataType, page: Int, onSuccess: @escaping (Starships) -> (), onFailure: @escaping  () -> ()) {
-        self.urlSessionCreator.createURLSession(pageAddress: router.route(endPoint, page), onSuccess: { data in
+    func getStarships(page: Int, onSuccess: @escaping (Starships) -> (), onFailure: @escaping  () -> ()) {
+        self.urlSessionCreator.createURLSession(pageAddress: router.route(.Starships, page), onSuccess: { data in
             self.apiParser.parseStarships(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
@@ -85,8 +85,8 @@ internal class APIClient: APIClientType {
         })
     }
     
-    func getVehicles(endPoint: DataType, page: Int, onSuccess: @escaping (Vehicles) -> (), onFailure: @escaping  () -> ()) {
-        self.urlSessionCreator.createURLSession(pageAddress: router.route(endPoint, page), onSuccess: { data in
+    func getVehicles(page: Int, onSuccess: @escaping (Vehicles) -> (), onFailure: @escaping  () -> ()) {
+        self.urlSessionCreator.createURLSession(pageAddress: router.route(.Vehicles, page), onSuccess: { data in
             self.apiParser.parseVehicles(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {
@@ -99,8 +99,8 @@ internal class APIClient: APIClientType {
         })
     }
     
-    func getPlanets(endPoint: DataType, page: Int, onSuccess: @escaping (Planets) -> (), onFailure: @escaping  () -> ()) {
-        self.urlSessionCreator.createURLSession(pageAddress: router.route(endPoint, page), onSuccess: { data in
+    func getPlanets(page: Int, onSuccess: @escaping (Planets) -> (), onFailure: @escaping  () -> ()) {
+        self.urlSessionCreator.createURLSession(pageAddress: router.route(.Planets, page), onSuccess: { data in
             self.apiParser.parsePlanets(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {

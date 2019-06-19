@@ -10,11 +10,14 @@ import Foundation
 
 internal protocol DependencyContainerType {
     var mainMenuViewController: MainMenuViewController { get }
-    var mainTableViewController: MainTableViewController { get }
     var optionsViewController: OptionsViewController { get }
-    var detailsViewController: DetailsViewController { get }
     
+    var filmsViewController: FilmsViewController { get }
     var peopleViewController: PeopleViewController { get }
+    var planetsViewController: PlanetsViewController { get }
+    var speciesViewController: SpeciesViewController { get }
+    var shipsViewController: ShipsViewController { get }
+    var vehiclesViewController: VehiclesViewController { get }
     
     func personViewController(with viewModel: PersonViewModelType) -> PersonViewController
     func personViewModel(person: Person) -> PersonViewModelType

@@ -19,16 +19,12 @@ internal class FlowController: NSObject, FlowControllerType {
     private lazy var mainMenuViewController: MainMenuViewController = {
         let controller = dependencyContainer.mainMenuViewController
         
-//        controller.viewModel.onTapped = { dataType, title in
-//            self.showMainTable(dataType, title)
-//        }
-        
         controller.viewModel.onOptions = {
             self.showOptions()
         }
         
         controller.viewModel.onFilms = {
-            self.showPeopleViewController()
+            self.showFilmsViewController()
         }
         
         controller.viewModel.onPeople = {
@@ -36,19 +32,19 @@ internal class FlowController: NSObject, FlowControllerType {
         }
         
         controller.viewModel.onPlanets = {
-            self.showPeopleViewController()
+            self.showPlanetsViewController()
         }
         
         controller.viewModel.onSpecies = {
-            self.showPeopleViewController()
+            self.showSpeciesViewController()
         }
         
         controller.viewModel.onShips = {
-            self.showPeopleViewController()
+            self.showShipsViewController()
         }
         
         controller.viewModel.onVehicles = {
-            self.showPeopleViewController()
+            self.showVehiclesViewController()
         }
                 
         return controller
@@ -66,46 +62,54 @@ internal class FlowController: NSObject, FlowControllerType {
 }
 
 extension FlowController {
-    func showMainMenu() {
-        navigationController.pushViewController(mainMenuViewController, animated: true)
-    }
-    
-//    func showMainTable(_ dataType: DataType, _ title: String) {
-//        let controller = dependencyContainer.mainTableViewController
-//        controller.viewModel.dataType = dataType
-//        controller.viewModel.controllerTitle = title
-//
-//        controller.viewModel.showDetails = { data, dataType in
-//            self.showDetails(for: data, dataType: dataType)
-//        }
-//
-//        navigationController.pushViewController(controller, animated: true)
-//    }
-    
     func showOptions() {
         let controller = dependencyContainer.optionsViewController
         
         navigationController.pushViewController(controller, animated: true)
     }
     
-//    func showDetails(for data: Any, dataType: DataType) {
-//        let controller = dependencyContainer.detailsViewController
-//        controller.viewModel.dataType = dataType
-//        controller.viewModel.data = data
-//
-//        navigationController.pushViewController(controller, animated: true)
-//    }
+    func showFilmsViewController() {
+        let controller = dependencyContainer.filmsViewController
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
     
     func showPeopleViewController() {
         let controller = dependencyContainer.peopleViewController
         
-        controller.viewModel.showPersonDetails = { person in
+        controller.viewModel.showDetails = { person in
             self.showPersonDetails(person: person)
         }
         
         navigationController.pushViewController(controller, animated: true)
     }
     
+    func showPlanetsViewController() {
+        let controller = dependencyContainer.planetsViewController
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func showSpeciesViewController() {
+        let controller = dependencyContainer.speciesViewController
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func showShipsViewController() {
+        let controller = dependencyContainer.shipsViewController
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func showVehiclesViewController() {
+        let controller = dependencyContainer.vehiclesViewController
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
+}
+
+extension FlowController {
     func showPersonDetails(person: Person) {
         let viewModel = dependencyContainer.personViewModel(person: person)
         let controller = dependencyContainer.personViewController(with: viewModel)

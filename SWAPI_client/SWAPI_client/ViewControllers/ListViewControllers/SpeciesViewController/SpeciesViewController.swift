@@ -1,14 +1,14 @@
 //
-//  MainTableViewController.swift
+//  SpeciesViewController.swift
 //  SWAPI_client
 //
-//  Created by JanSzala on 12/01/2019.
+//  Created by GLaDOS on 19/06/2019.
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
 import UIKit
 
-internal class MainTableViewController: UIViewController {
+class SpeciesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emptyListView: UIView!
@@ -83,13 +83,13 @@ internal class MainTableViewController: UIViewController {
     }
 }
 
-extension MainTableViewController: UITableViewDataSource {
+extension SpeciesViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.peopleArrayCount
+        return viewModel.itemsArrayCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -111,10 +111,10 @@ extension MainTableViewController: UITableViewDataSource {
     }
 }
 
-extension MainTableViewController: UITableViewDelegate {
+extension SpeciesViewController: UITableViewDelegate {
 }
 
-extension MainTableViewController: ViewModelOwner {
-    func viewModelWasSet(viewModel: MainTableViewModelType) {
+extension SpeciesViewController: ViewModelOwner {
+    func viewModelWasSet(viewModel: SpeciesViewModelType) {
     }
 }

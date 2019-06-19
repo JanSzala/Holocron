@@ -1,5 +1,5 @@
 //
-//  PeopleViewModel.swift
+//  FilmsViewModelType.swift
 //  SWAPI_client
 //
 //  Created by GLaDOS on 19/06/2019.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-internal protocol PeopleViewModelType: class {
-    var showDetails: ((Person) -> ())? { get set }
+internal protocol FilmsViewModelType: class {
+    var showDetails: ((Film) -> ())? { get set }
     
     var controllerTitle: String { get set }
     var currentPage: Int { get }

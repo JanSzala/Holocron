@@ -1,5 +1,5 @@
 //
-//  PeopleViewController.swift
+//  VehiclesViewController.swift
 //  SWAPI_client
 //
 //  Created by GLaDOS on 19/06/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PeopleViewController: UIViewController {
+class VehiclesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emptyListView: UIView!
@@ -83,7 +83,7 @@ class PeopleViewController: UIViewController {
     }
 }
 
-extension PeopleViewController: UITableViewDataSource {
+extension VehiclesViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections
     }
@@ -111,10 +111,10 @@ extension PeopleViewController: UITableViewDataSource {
     }
 }
 
-extension PeopleViewController: UITableViewDelegate {
+extension VehiclesViewController: UITableViewDelegate {
 }
 
-extension PeopleViewController: ViewModelOwner {
-    func viewModelWasSet(viewModel: PeopleViewModelType) {
+extension VehiclesViewController: ViewModelOwner {
+    func viewModelWasSet(viewModel: VehicleViewModelType) {
     }
 }

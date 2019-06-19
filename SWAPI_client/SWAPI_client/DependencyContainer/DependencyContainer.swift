@@ -47,21 +47,26 @@ extension DependencyContainer {
         return controller
     }
     
-    var mainTableViewController: MainTableViewController {
-        let controller = MainTableViewController()
-        controller.viewModel = MainTableViewModel(apiClient: apiClient)
-        return controller
-    }
-    
     var optionsViewController: OptionsViewController {
         let controller = OptionsViewController()
         controller.viewModel = OptionsViewModel()
         return controller
     }
     
-    var detailsViewController: DetailsViewController {
-        let controller = DetailsViewController()
-        controller.viewModel = DetailsViewModel()
+
+    
+    func personViewController(with viewModel: PersonViewModelType) -> PersonViewController {
+        let viewController = PersonViewController()
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
+}
+
+extension DependencyContainer {
+    var filmsViewController: FilmsViewController {
+        let controller = FilmsViewController()
+        controller.viewModel = FilmsViewModel(apiClient: apiClient)
         return controller
     }
     
@@ -71,11 +76,28 @@ extension DependencyContainer {
         return controller
     }
     
-    func personViewController(with viewModel: PersonViewModelType) -> PersonViewController {
-        let viewController = PersonViewController()
-        viewController.viewModel = viewModel
-        
-        return viewController
+    var planetsViewController: PlanetsViewController {
+        let controller = PlanetsViewController()
+        controller.viewModel = PlanetsViewModel(apiClient: apiClient)
+        return controller
+    }
+    
+    var speciesViewController: SpeciesViewController {
+        let controller = SpeciesViewController()
+        controller.viewModel = SpeciesViewModel(apiClient: apiClient)
+        return controller
+    }
+    
+    var shipsViewController: ShipsViewController {
+        let controller = ShipsViewController()
+        controller.viewModel = ShipsViewModel(apiClient: apiClient)
+        return controller
+    }
+    
+    var vehiclesViewController: VehiclesViewController {
+        let controller = VehiclesViewController()
+        controller.viewModel = VehiclesViewModel(apiClient: apiClient)
+        return controller
     }
 }
 

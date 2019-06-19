@@ -1,21 +1,20 @@
 //
-//  MainTableViewModelType.swift
+//  VehicleViewModelType.swift
 //  SWAPI_client
 //
-//  Created by JanSzala on 12/01/2019.
+//  Created by GLaDOS on 19/06/2019.
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
 import Foundation
 
-internal protocol MainTableViewModelType: class {
-    var showDetails: ((Any, DataType) -> ())? { get set }
+internal protocol VehicleViewModelType: class {
+    var showDetails: ((Vehicle) -> ())? { get set }
     
-    var dataType: DataType { get set }
     var controllerTitle: String { get set }
     var currentPage: Int { get }
     var shouldFetchData: Bool { get }
-    var peopleArrayCount: Int { get }
+    var itemsArrayCount: Int { get }
     var numberOfSections: Int { get }
     var emptyListLabel: NSAttributedString { get }
     

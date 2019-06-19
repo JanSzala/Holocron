@@ -1,5 +1,5 @@
 //
-//  PeopleViewModel.swift
+//  SpeciesViewModelType.swift
 //  SWAPI_client
 //
 //  Created by GLaDOS on 19/06/2019.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-internal protocol PeopleViewModelType: class {
-    var showDetails: ((Person) -> ())? { get set }
+internal protocol SpeciesViewModelType: class {
+    var showDetails: ((Kind) -> ())? { get set }
     
     var controllerTitle: String { get set }
     var currentPage: Int { get }

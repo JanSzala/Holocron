@@ -1,5 +1,6 @@
+
 //
-//  PeopleViewModelType.swift
+//  SpeciesViewModel.swift
 //  SWAPI_client
 //
 //  Created by GLaDOS on 19/06/2019.
@@ -8,13 +9,13 @@
 
 import UIKit
 
-internal class PeopleViewModel: PeopleViewModelType {
-    var showDetails: ((Person) -> ())?
+internal class SpeciesViewModel: SpeciesViewModelType {
+    var showDetails: ((Kind) -> ())?
     
-    var controllerTitle: String = "People"
+    var controllerTitle: String = "Species"
     var currentPage: Int = 1
     var shouldFetchData: Bool = true
-    var itemsArray = [Person]()
+    var itemsArray = [Kind]()
     
     var itemsArrayCount: Int {
         return itemsArray.count
@@ -48,7 +49,7 @@ internal class PeopleViewModel: PeopleViewModelType {
             return
         }
         
-        apiClient.getPeople(page: currentPage, onSuccess: { data in
+        apiClient.getSpecies(page: currentPage, onSuccess: { data in
             self.currentPage += 1
             
             guard let arrayOfData = data.results else {
@@ -65,3 +66,4 @@ internal class PeopleViewModel: PeopleViewModelType {
         })
     }
 }
+

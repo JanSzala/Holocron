@@ -16,6 +16,10 @@ internal class MainMenuViewController: UIViewController {
         super.viewDidLoad()
         viewModel.isInternetConnected() ? nil : presentAlert()
         
+        mainMenuAnimatedView.onOptions = {
+            self.viewModel.onOptions?()
+        }
+        
         mainMenuAnimatedView.onFilms = {
             self.viewModel.onFilms?()
         }

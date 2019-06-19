@@ -16,12 +16,28 @@ internal class MainMenuViewController: UIViewController {
         super.viewDidLoad()
         viewModel.isInternetConnected() ? nil : presentAlert()
         
-        mainMenuAnimatedView.onOptions = {
-            self.viewModel.onOptions?()
+        mainMenuAnimatedView.onFilms = {
+            self.viewModel.onFilms?()
         }
         
-        mainMenuAnimatedView.onTapped = { dataType, title in
-            self.viewModel.onTapped?(dataType, title)
+        mainMenuAnimatedView.onPeople = {
+            self.viewModel.onPeople?()
+        }
+        
+        mainMenuAnimatedView.onPlanets = {
+            self.viewModel.onPlanets?()
+        }
+        
+        mainMenuAnimatedView.onSpecies = {
+            self.viewModel.onSpecies?()
+        }
+        
+        mainMenuAnimatedView.onShips = {
+            self.viewModel.onShips?()
+        }
+        
+        mainMenuAnimatedView.onVehicles = {
+            self.viewModel.onVehicles?()
         }
     }
     

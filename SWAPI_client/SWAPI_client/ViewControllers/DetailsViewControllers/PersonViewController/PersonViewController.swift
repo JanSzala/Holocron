@@ -1,49 +1,50 @@
 //
-//  DetailsViewController.swift
+//  PersonViewController.swift
 //  SWAPI_client
 //
-//  Created by JanSzala on 12/02/2019.
+//  Created by GLaDOS on 19/06/2019.
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
 import UIKit
 
-internal class DetailsViewController: UIViewController {
+class PersonViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        setupTable()
-//        registerCells()
-//        setupUI()
-//    }
-//
-//    override func viewDidAppear(_ animated: Bool) {
-//        tableView.reloadData()
-//    }
-//
-//    private func setupTable() {
-//        tableView.dataSource = self
-//        tableView.delegate = self
-//        tableView.tableFooterView = UIView()
-//    }
-//
-//    private func setupUI() {
-//        title = viewModel.controllerTitle
-//    }
-//
-//    private func registerCells() {
-//        tableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "mainTableViewCell")
-//        tableView.register(UINib(nibName: "BasicHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "basicHeaderView")
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        tableView.backgroundColor = self.darkModeColor()
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupTable()
+        registerCells()
+        setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    private func setupTable() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableFooterView = UIView()
+    }
+    
+    private func setupUI() {
+        title = viewModel.controllerTitle
+    }
+    
+    private func registerCells() {
+        tableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "mainTableViewCell")
+        tableView.register(UINib(nibName: "BasicHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "basicHeaderView")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.backgroundColor = self.darkModeColor()
+    }
 }
 
-extension DetailsViewController: UITableViewDataSource {
+extension PersonViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.sectionsCount
     }
@@ -81,10 +82,10 @@ extension DetailsViewController: UITableViewDataSource {
     }
 }
 
-extension DetailsViewController: UITableViewDelegate {
+extension PersonViewController: UITableViewDelegate {
 }
 
-extension DetailsViewController: ViewModelOwner {
-    func viewModelWasSet(viewModel: DetailsViewModelType) {
+extension PersonViewController: ViewModelOwner {
+    func viewModelWasSet(viewModel: PersonViewModelType) {
     }
 }

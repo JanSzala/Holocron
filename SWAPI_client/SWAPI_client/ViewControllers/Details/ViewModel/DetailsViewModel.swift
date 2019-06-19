@@ -13,7 +13,6 @@ internal class DetailsViewModel: DetailsViewModelType {
     var dataType: DataType = .People
     var dataArray = [String]()
     
-    let controllerTitle = "Details"
     let numberOfRowsInSection: Int = 1
     
     var sectionsCount: Int {

@@ -12,6 +12,12 @@ import UIKit
 internal class MainMenuViewModel: MainMenuViewModelType {
     var onTapped: ((DataType, String) -> ())?
     var onOptions: (() -> ())?
+    var onFilms: (() -> ())?
+    var onPeople: (() -> ())?
+    var onPlanets: (() -> ())?
+    var onSpecies: (() -> ())?
+    var onShips: (() -> ())?
+    var onVehicles: (() -> ())?
     
     var alert: UIAlertController {
         let alert = UIAlertController(title: NSLocalizedString("No internet connection", comment: ""),

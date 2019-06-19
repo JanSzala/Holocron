@@ -32,6 +32,26 @@ internal class MainMenuAnimatedView: UIView {
     @IBOutlet weak var mainMenuButton: MainMenuSquareView!
     
     var onOptions: () -> () = {}
+    
+    var onFilms: () -> () = {
+        print("dupa")
+    }
+    var onPeople: () -> () = {
+        print("dupa")
+    }
+    var onPlanets: () -> () = {
+        print("dupa")
+    }
+    var onSpecies: () -> () = {
+        print("dupa")
+    }
+    var onShips: () -> () = {
+        print("dupa")
+    }
+    var onVehicles: () -> () = {
+        print("dupa")
+    }
+    
     var onTapped: ((DataType, String) -> ())?
     var views = [MainMenuSquareView]()
     
@@ -44,12 +64,14 @@ internal class MainMenuAnimatedView: UIView {
     let placingAnimationDuration: TimeInterval = 0.3
     let animationDelay: TimeInterval = 0.5
     
-    var buttonTitlesArray: [(String, DataType)] = [(NSLocalizedString("Films", comment: ""), .Films),
-                                                   (NSLocalizedString("People", comment: ""), .People),
-                                                   (NSLocalizedString("Planets", comment: ""), .Planets),
-                                                   (NSLocalizedString("Species", comment: ""), .Species),
-                                                   (NSLocalizedString("Ships", comment: ""), .Starships),
-                                                   (NSLocalizedString("Vehicles", comment: ""), .Vehicles)]
+    lazy var closures: [() -> ()] = [onFilms, onPeople, onPlanets, onSpecies, onShips, onVehicles]
+    
+    var buttonTitlesArray: [String] = [NSLocalizedString("Films", comment: ""),
+                                       NSLocalizedString("People", comment: ""),
+                                       NSLocalizedString("Planets", comment: ""),
+                                       NSLocalizedString("Species", comment: ""),
+                                       NSLocalizedString("Ships", comment: ""),
+                                       NSLocalizedString("Vehicles", comment: "")]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -100,14 +122,14 @@ extension MainMenuAnimatedView {
     
     private func createView(delay: TimeInterval, viewPlacing: ViewPlacing, index: Int) {
         let view = MainMenuSquareView(frame: mainMenuButton.frame)
-        view.button.setTitle(buttonTitlesArray[index].0, for: .normal)
+        view.button.setTitle(buttonTitlesArray[index], for: .normal)
         containerView.insertSubview(view, belowSubview: mainMenuButton)
         
         view.mainView.backgroundColor = darkModeColor(reversedColors: true)
         view.button.setTitleColor(darkModeColor(), for: .normal)
         
         view.onButton = {
-            self.onTapped?(self.buttonTitlesArray[index].1, self.buttonTitlesArray[index].0)
+            self.closures[index]()
         }
         
         views.append(view)

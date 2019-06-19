@@ -22,9 +22,7 @@ internal class DependencyContainer: DependencyContainerType {
     internal lazy var appearanceConfig: AppearanceConfigType = AppearanceConfig()
 }
 
-// MARK: DependencyContainerViewControllers
-
-extension DependencyContainer: DependencyContainerViewControllers {
+extension DependencyContainer {
     var apiClient: APIClientType {
         return APIClient(apiParser: apiParser, router: router, urlSessionCreator: urlSessionCreator)
     }
@@ -40,7 +38,9 @@ extension DependencyContainer: DependencyContainerViewControllers {
     var urlSessionCreator: URLSessionCreatorType {
         return URLSessionCreator()
     }
-    
+}
+
+extension DependencyContainer {
     var mainMenuViewController: MainMenuViewController {
         let controller = MainMenuViewController()
         controller.viewModel = MainMenuViewModel()
@@ -63,5 +63,24 @@ extension DependencyContainer: DependencyContainerViewControllers {
         let controller = DetailsViewController()
         controller.viewModel = DetailsViewModel()
         return controller
+    }
+    
+    var peopleViewController: PeopleViewController {
+        let controller = PeopleViewController()
+        controller.viewModel = PeopleViewModel(apiClient: apiClient)
+        return controller
+    }
+    
+    func personViewController(with viewModel: PersonViewModelType) -> PersonViewController {
+        let viewController = PersonViewController()
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
+}
+
+extension DependencyContainer {
+    func personViewModel(person: Person) -> PersonViewModelType {
+        return PersonViewModel(person: person)
     }
 }

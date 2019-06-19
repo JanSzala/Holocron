@@ -16,6 +16,14 @@
 		22AAC33422A01E9A007EE666 /* KeyedDecodingContainer+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AAC33322A01E9A007EE666 /* KeyedDecodingContainer+Decode.swift */; };
 		22AAC33622A01F51007EE666 /* ItemBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AAC33522A01F51007EE666 /* ItemBase.swift */; };
 		22AAC33822A02184007EE666 /* PageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AAC33722A02184007EE666 /* PageBase.swift */; };
+		22E4131922BA4C0600D44776 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4131722BA4C0600D44776 /* PersonViewController.swift */; };
+		22E4131A22BA4C0600D44776 /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4131822BA4C0600D44776 /* PersonViewController.xib */; };
+		22E4131D22BA4C3100D44776 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4131C22BA4C3100D44776 /* PersonViewModel.swift */; };
+		22E4131F22BA4C3B00D44776 /* PersonViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4131E22BA4C3B00D44776 /* PersonViewModelType.swift */; };
+		22E4132422BA99B400D44776 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4132222BA99B400D44776 /* PeopleViewController.swift */; };
+		22E4132522BA99B400D44776 /* PeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4132322BA99B400D44776 /* PeopleViewController.xib */; };
+		22E4132822BA99F700D44776 /* PeopleViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4132722BA99F700D44776 /* PeopleViewModelType.swift */; };
+		22E4132A22BA99FF00D44776 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4132922BA99FF00D44776 /* PeopleViewModel.swift */; };
 		6709F46621E0E44100056F80 /* MainMenuSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709F46421E0E44100056F80 /* MainMenuSquareView.swift */; };
 		6709F46721E0E44100056F80 /* MainMenuSquareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6709F46521E0E44100056F80 /* MainMenuSquareView.xib */; };
 		6709F46B21E0EEDE00056F80 /* UIView+fixInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709F46A21E0EEDE00056F80 /* UIView+fixInView.swift */; };
@@ -130,6 +138,14 @@
 		22AAC33322A01E9A007EE666 /* KeyedDecodingContainer+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Decode.swift"; sourceTree = "<group>"; };
 		22AAC33522A01F51007EE666 /* ItemBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBase.swift; sourceTree = "<group>"; };
 		22AAC33722A02184007EE666 /* PageBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBase.swift; sourceTree = "<group>"; };
+		22E4131722BA4C0600D44776 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		22E4131822BA4C0600D44776 /* PersonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
+		22E4131C22BA4C3100D44776 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		22E4131E22BA4C3B00D44776 /* PersonViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModelType.swift; sourceTree = "<group>"; };
+		22E4132222BA99B400D44776 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		22E4132322BA99B400D44776 /* PeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewController.xib; sourceTree = "<group>"; };
+		22E4132722BA99F700D44776 /* PeopleViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelType.swift; sourceTree = "<group>"; };
+		22E4132922BA99FF00D44776 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		6709F46421E0E44100056F80 /* MainMenuSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuSquareView.swift; sourceTree = "<group>"; };
 		6709F46521E0E44100056F80 /* MainMenuSquareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuSquareView.xib; sourceTree = "<group>"; };
 		6709F46A21E0EEDE00056F80 /* UIView+fixInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fixInView.swift"; sourceTree = "<group>"; };
@@ -291,6 +307,60 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		22E4131522BA4B8900D44776 /* DetailsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				22E4131622BA4BB500D44776 /* PersonViewController */,
+			);
+			path = DetailsViewControllers;
+			sourceTree = "<group>";
+		};
+		22E4131622BA4BB500D44776 /* PersonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22E4131B22BA4C1E00D44776 /* ViewModel */,
+				22E4131722BA4C0600D44776 /* PersonViewController.swift */,
+				22E4131822BA4C0600D44776 /* PersonViewController.xib */,
+			);
+			path = PersonViewController;
+			sourceTree = "<group>";
+		};
+		22E4131B22BA4C1E00D44776 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22E4131E22BA4C3B00D44776 /* PersonViewModelType.swift */,
+				22E4131C22BA4C3100D44776 /* PersonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22E4132022BA96A700D44776 /* ListViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				22E4132122BA999F00D44776 /* PeopleViewController */,
+			);
+			path = ListViewControllers;
+			sourceTree = "<group>";
+		};
+		22E4132122BA999F00D44776 /* PeopleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22E4132622BA99EA00D44776 /* ViewModel */,
+				22E4132222BA99B400D44776 /* PeopleViewController.swift */,
+				22E4132322BA99B400D44776 /* PeopleViewController.xib */,
+			);
+			path = PeopleViewController;
+			sourceTree = "<group>";
+		};
+		22E4132622BA99EA00D44776 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22E4132722BA99F700D44776 /* PeopleViewModelType.swift */,
+				22E4132922BA99FF00D44776 /* PeopleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6709F46921E0EEBC00056F80 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +476,8 @@
 		671416E221B055B000B90FD9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				22E4132022BA96A700D44776 /* ListViewControllers */,
+				22E4131522BA4B8900D44776 /* DetailsViewControllers */,
 				67BDB61F2213401400E91086 /* Details */,
 				67E8FC81220EF3CB00CB9B40 /* Options */,
 				679C8A7821EA690D001ECDEC /* MainTable */,
@@ -741,6 +813,7 @@
 				671416AD21B053AA00B90FD9 /* LaunchScreen.storyboard in Resources */,
 				6742C5012233D8A50076A3BA /* Localizable.strings in Resources */,
 				6742C5092233ED860076A3BA /* BasicHeaderView.xib in Resources */,
+				22E4132522BA99B400D44776 /* PeopleViewController.xib in Resources */,
 				671416E821B055E200B90FD9 /* MainMenuViewController.xib in Resources */,
 				675438E121FE167900900D30 /* MainTableViewCell.xib in Resources */,
 				671416AA21B053AA00B90FD9 /* Assets.xcassets in Resources */,
@@ -748,6 +821,7 @@
 				679C8A7D21EA693B001ECDEC /* MainTableViewController.xib in Resources */,
 				67E8FC91220EFE2E00CB9B40 /* OptionsCellWithSwitch.xib in Resources */,
 				226ACA4322B908B000CED67B /* MainMenuAnimatedView.xib in Resources */,
+				22E4131A22BA4C0600D44776 /* PersonViewController.xib in Resources */,
 				67CA0744221340D5001B55BB /* DetailsViewController.xib in Resources */,
 				6709F46721E0E44100056F80 /* MainMenuSquareView.xib in Resources */,
 			);
@@ -826,20 +900,25 @@
 				67969D9B21F3701D00B0A6EE /* APIClient.swift in Sources */,
 				671416A821B053A800B90FD9 /* SWAPI_client.xcdatamodeld in Sources */,
 				67BE63C5220CA414002347E4 /* APIParser.swift in Sources */,
+				22E4131F22BA4C3B00D44776 /* PersonViewModelType.swift in Sources */,
 				679C8A7F21EA6A48001ECDEC /* MainTableViewModelType.swift in Sources */,
 				671416D321B0547400B90FD9 /* ViewModel.swift in Sources */,
 				6771D7C92205ED3500E1D031 /* Species.swift in Sources */,
 				67E8FC88220EF66900CB9B40 /* OptionsViewModel.swift in Sources */,
 				671416EC21B0564E00B90FD9 /* MainMenuViewModelType.swift in Sources */,
 				67D3CBBA224BEDA6001B5402 /* Logger.swift in Sources */,
+				22E4131D22BA4C3100D44776 /* PersonViewModel.swift in Sources */,
 				67B714E32249404B0033C249 /* Apperance.swift in Sources */,
 				6771D7C72205EB5F00E1D031 /* Kind.swift in Sources */,
 				22AAC33822A02184007EE666 /* PageBase.swift in Sources */,
 				671416EF21B056C500B90FD9 /* DependencyContainer.swift in Sources */,
 				671416A021B053A800B90FD9 /* AppDelegate.swift in Sources */,
 				6771D7C52205EA8700E1D031 /* Films.swift in Sources */,
+				22E4132A22BA99FF00D44776 /* PeopleViewModel.swift in Sources */,
 				671416E721B055E200B90FD9 /* MainMenuViewController.swift in Sources */,
 				6771D7CB2205ED8600E1D031 /* Starship.swift in Sources */,
+				22E4132422BA99B400D44776 /* PeopleViewController.swift in Sources */,
+				22E4131922BA4C0600D44776 /* PersonViewController.swift in Sources */,
 				671416D721B054B000B90FD9 /* associatedObject.swift in Sources */,
 				671416DA21B054DA00B90FD9 /* NavigationController.swift in Sources */,
 				22AAC33422A01E9A007EE666 /* KeyedDecodingContainer+Decode.swift in Sources */,
@@ -849,6 +928,7 @@
 				6709F46B21E0EEDE00056F80 /* UIView+fixInView.swift in Sources */,
 				67E8FC84220EF40500CB9B40 /* OptionsViewController.swift in Sources */,
 				67B714E5224943F20033C249 /* NavigationBar.swift in Sources */,
+				22E4132822BA99F700D44776 /* PeopleViewModelType.swift in Sources */,
 				67969D9F21F496DE00B0A6EE /* People.swift in Sources */,
 				6771D7CF2205EF8800E1D031 /* Vehicles.swift in Sources */,
 				679C8A8121EA6A6B001ECDEC /* MainTableViewModel.swift in Sources */,

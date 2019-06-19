@@ -8,16 +8,18 @@
 
 import Foundation
 
-internal protocol DependencyContainerViewControllers {
+internal protocol DependencyContainerType {
     var mainMenuViewController: MainMenuViewController { get }
     var mainTableViewController: MainTableViewController { get }
     var optionsViewController: OptionsViewController { get }
     var detailsViewController: DetailsViewController { get }
     
+    var peopleViewController: PeopleViewController { get }
+    
+    func personViewController(with viewModel: PersonViewModelType) -> PersonViewController
+    func personViewModel(person: Person) -> PersonViewModelType
+    
     var apiClient: APIClientType { get }
     
     var appearanceConfig: AppearanceConfigType { get }
-}
-
-internal protocol DependencyContainerType: DependencyContainerViewControllers {
 }

@@ -12,6 +12,12 @@ import UIKit
 internal protocol MainMenuViewModelType: class {
     var onTapped: ((DataType, String) -> ())? { get set }
     var onOptions: (() -> ())? { get set }
+    var onFilms: (() -> ())? { get set }
+    var onPeople: (() -> ())? { get set }
+    var onPlanets: (() -> ())? { get set }
+    var onSpecies: (() -> ())? { get set }
+    var onShips: (() -> ())? { get set }
+    var onVehicles: (() -> ())? { get set }
 
     var alert: UIAlertController { get }
 

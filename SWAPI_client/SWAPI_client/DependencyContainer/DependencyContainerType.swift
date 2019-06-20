@@ -9,6 +9,8 @@
 import Foundation
 
 internal protocol DependencyContainerType {
+    var apiClient: APIClientType { get }
+    var appearanceConfig: AppearanceConfigType { get }
     var mainMenuViewController: MainMenuViewController { get }
     var optionsViewController: OptionsViewController { get }
     
@@ -19,10 +21,17 @@ internal protocol DependencyContainerType {
     var shipsViewController: ShipsViewController { get }
     var vehiclesViewController: VehiclesViewController { get }
     
+    func filmViewController(with viewModel: FilmViewModelType) -> FilmViewController
     func personViewController(with viewModel: PersonViewModelType) -> PersonViewController
+    func planetViewController(with viewModel: PlanetViewModelType) -> PlanetViewController
+    func kindViewController(with viewModel: KindViewModelType) -> KindViewController
+    func shipViewController(with viewModel: ShipViewModelType) -> ShipViewController
+    func vehicleViewController(with viewModel: VehicleViewModelType) -> VehicleViewController
+    
+    func filmViewModel(film: Film) -> FilmViewModelType
     func personViewModel(person: Person) -> PersonViewModelType
-    
-    var apiClient: APIClientType { get }
-    
-    var appearanceConfig: AppearanceConfigType { get }
+    func planetViewModel(planet: Planet) -> PlanetViewModelType
+    func kindViewModel(kind: Kind) -> KindViewModelType
+    func shipViewModel(ship: Starship) -> ShipViewModelType
+    func vehicleViewModel(vehicle: Vehicle) -> VehicleViewModelType
 }

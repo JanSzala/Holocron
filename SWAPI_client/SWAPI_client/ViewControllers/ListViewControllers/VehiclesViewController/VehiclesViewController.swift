@@ -115,6 +115,6 @@ extension VehiclesViewController: UITableViewDelegate {
 }
 
 extension VehiclesViewController: ViewModelOwner {
-    func viewModelWasSet(viewModel: VehicleViewModelType) {
+    func viewModelWasSet(viewModel: VehiclesViewModelType) {
     }
 }

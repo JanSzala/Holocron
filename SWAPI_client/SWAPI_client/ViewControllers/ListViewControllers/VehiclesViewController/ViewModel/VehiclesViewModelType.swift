@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol VehicleViewModelType: class {
+internal protocol VehiclesViewModelType: class {
     var showDetails: ((Vehicle) -> ())? { get set }
     
     var controllerTitle: String { get set }

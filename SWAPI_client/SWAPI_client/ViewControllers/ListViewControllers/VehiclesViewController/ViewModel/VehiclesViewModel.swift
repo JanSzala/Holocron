@@ -9,7 +9,7 @@
 
 import UIKit
 
-internal class VehiclesViewModel: VehicleViewModelType {
+internal class VehiclesViewModel: VehiclesViewModelType {
     var showDetails: ((Vehicle) -> ())?
     
     var controllerTitle: String = "Vehicles"

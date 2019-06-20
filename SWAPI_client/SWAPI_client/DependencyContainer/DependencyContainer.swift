@@ -52,15 +52,6 @@ extension DependencyContainer {
         controller.viewModel = OptionsViewModel()
         return controller
     }
-    
-
-    
-    func personViewController(with viewModel: PersonViewModelType) -> PersonViewController {
-        let viewController = PersonViewController()
-        viewController.viewModel = viewModel
-        
-        return viewController
-    }
 }
 
 extension DependencyContainer {
@@ -102,7 +93,71 @@ extension DependencyContainer {
 }
 
 extension DependencyContainer {
+    func filmViewController(with viewModel: FilmViewModelType) -> FilmViewController {
+        let viewController = FilmViewController()
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
+    
+    func personViewController(with viewModel: PersonViewModelType) -> PersonViewController {
+        let viewController = PersonViewController()
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
+    
+    func planetViewController(with viewModel: PlanetViewModelType) -> PlanetViewController {
+        let viewController = PlanetViewController()
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
+    
+    func kindViewController(with viewModel: KindViewModelType) -> KindViewController {
+        let viewController = KindViewController()
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
+    
+    func shipViewController(with viewModel: ShipViewModelType) -> ShipViewController {
+        let viewController = ShipViewController()
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
+    
+    func vehicleViewController(with viewModel: VehicleViewModelType) -> VehicleViewController {
+        let viewController = VehicleViewController()
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
+}
+
+extension DependencyContainer {
+    func filmViewModel(film: Film) -> FilmViewModelType {
+        return FilmViewModel(film: film)
+    }
+    
     func personViewModel(person: Person) -> PersonViewModelType {
         return PersonViewModel(person: person)
+    }
+    
+    func planetViewModel(planet: Planet) -> PlanetViewModelType {
+        return PlanetViewModel(planet: planet)
+    }
+    
+    func kindViewModel(kind: Kind) -> KindViewModelType {
+        return KindViewModel(kind: kind)
+    }
+    
+    func shipViewModel(ship: Starship) -> ShipViewModelType {
+        return ShipViewModel(starship: ship)
+    }
+    
+    func vehicleViewModel(vehicle: Vehicle) -> VehicleViewModelType {
+        return VehicleViewModel(vehicle: vehicle)
     }
 }

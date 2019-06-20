@@ -9,18 +9,15 @@
 import Foundation
 
 internal class PersonViewModel: PersonViewModelType {
-    
     var controllerTitle: String
-    
     var dataArray = [String]()
-    
-    let numberOfRowsInSection: Int = 1
+    var person: Person
     
     var sectionsCount: Int {
         return dataSectionTitles.count
     }
     
-    var person: Person
+    let numberOfRowsInSection: Int = 1
     
     init(person: Person) {
         self.person = person
@@ -59,22 +56,20 @@ extension PersonViewModel {
     }
     
     func updateSections(for person: Person) {
-        dataArray = [
-            person.name,
-            person.birth_year,
-            person.eye_color,
-            person.gender,
-            person.hair_color,
-            person.height,
-            person.mass,
-            person.skin_color,
-            person.homeworld,
-            person.films?.joined(separator: "\n") ?? "",
-            person.species?.joined(separator: "\n") ?? "",
-            person.starships?.joined(separator: "\n") ?? "",
-            person.vehicles?.joined(separator: "\n") ?? "",
-            person.created,
-            person.edited
-        ]
+        dataArray = [person.name,
+                     person.birth_year,
+                     person.eye_color,
+                     person.gender,
+                     person.hair_color,
+                     person.height,
+                     person.mass,
+                     person.skin_color,
+                     person.homeworld,
+                     person.films?.joined(separator: "\n") ?? "",
+                     person.species?.joined(separator: "\n") ?? "",
+                     person.starships?.joined(separator: "\n") ?? "",
+                     person.vehicles?.joined(separator: "\n") ?? "",
+                     person.created,
+                     person.edited]
     }
 }

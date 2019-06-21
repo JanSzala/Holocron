@@ -65,7 +65,7 @@ extension KindViewModel {
                      kind.language,
                      kind.people.joined(separator: "\n"),
                      kind.films.joined(separator: "\n"),
-                     kind.created,
-                     kind.edited]
+                     kind.createdDateHumanReadable,
+                     kind.editedDateHumanReadable]
     }
 }

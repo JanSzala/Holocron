@@ -65,7 +65,7 @@ extension PlanetViewModel {
                      planet.surface_water,
                      planet.residents.joined(separator: "\n"),
                      planet.films.joined(separator: "\n"),
-                     planet.created,
-                     planet.edited]
+                     planet.createdDateHumanReadable,
+                     planet.editedDateHumanReadable]
     }
 }

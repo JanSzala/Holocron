@@ -69,7 +69,7 @@ extension PersonViewModel {
                      person.species?.joined(separator: "\n") ?? "",
                      person.starships?.joined(separator: "\n") ?? "",
                      person.vehicles?.joined(separator: "\n") ?? "",
-                     person.created,
-                     person.edited]
+                     person.createdDateHumanReadable,
+                     person.editedDateHumanReadable]
     }
 }

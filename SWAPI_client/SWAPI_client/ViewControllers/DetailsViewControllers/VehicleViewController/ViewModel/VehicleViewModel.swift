@@ -69,7 +69,7 @@ extension VehicleViewModel {
                      vehicle.consumables,
                      vehicle.films.joined(separator: "\n"),
                      vehicle.pilots.joined(separator: "\n"),
-                     vehicle.created,
-                     vehicle.edited]
+                     vehicle.createdDateHumanReadable,
+                     vehicle.editedDateHumanReadable]
     }
 }

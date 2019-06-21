@@ -44,3 +44,27 @@ internal class ItemBase: ItemBaseType, Decodable {
         edited = try container.decode(.edited)
     }
 }
+
+extension ItemBase {
+    var createdDateHumanReadable: String {
+        return formatDate(iso8601Date: created)
+    }
+    
+    var editedDateHumanReadable: String {
+        return formatDate(iso8601Date: edited)
+    }
+}
+
+extension ItemBase {
+    func formatDate(iso8601Date: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        
+        guard let date = formatter.date(from: iso8601Date) else {
+            return "Error during parsing date"
+        }
+        
+        formatter.dateFormat = "dd-MM-yyyy"
+        return formatter.string(from: date)
+    }
+}

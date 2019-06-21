@@ -73,7 +73,7 @@ extension ShipViewModel {
                      starship.consumables,
                      starship.films.joined(separator: "\n"),
                      starship.pilots.joined(separator: "\n"),
-                     starship.created,
-                     starship.edited]
+                     starship.createdDateHumanReadable,
+                     starship.editedDateHumanReadable]
     }
 }

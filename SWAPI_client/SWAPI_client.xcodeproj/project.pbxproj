@@ -989,13 +989,16 @@
 					};
 					6714169B21B053A800B90FD9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					671416B221B053AA00B90FD9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6714169B21B053A800B90FD9;
 					};
 					671416BD21B053AA00B90FD9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6714169B21B053A800B90FD9;
 					};
 				};
@@ -1446,7 +1449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "janszala.SWAPI-client";
 				PRODUCT_NAME = Holocron;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1471,7 +1474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "janszala.SWAPI-client";
 				PRODUCT_NAME = Holocron;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1490,9 +1493,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "janszala.SWAPI-clientTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWAPI_client.app/SWAPI_client";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holocron.app/Holocron";
 			};
 			name = Debug;
 		};
@@ -1510,9 +1513,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "janszala.SWAPI-clientTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWAPI_client.app/SWAPI_client";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holocron.app/Holocron";
 			};
 			name = Release;
 		};
@@ -1529,7 +1532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "janszala.SWAPI-clientUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SWAPI_client;
 			};
@@ -1548,7 +1551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "janszala.SWAPI-clientUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SWAPI_client;
 			};

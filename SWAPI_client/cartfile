@@ -1,2 +1,18 @@
 #EarlGrey
 github "google/EarlGrey"
+
+# LifetimeTracker
+github "krzysztofzablocki/LifetimeTracker" ~> 1.6
+
+# Snapshot
+github "pointfreeco/swift-snapshot-testing" ~> 1.5
+
+# Nimble
+github "Quick/Nimble" ~> 8.0
+
+# Quick
+github "Quick/Quick" ~> 2.1
+
+# Alamofire
+github "Alamofire/Alamofire" ~> 4.8.0
+github "konkab/AlamofireNetworkActivityLogger" ~> 2.4

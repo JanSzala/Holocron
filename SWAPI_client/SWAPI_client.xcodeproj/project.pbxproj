@@ -103,6 +103,13 @@
 		6771D7D12205EF9100E1D031 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7D02205EF9100E1D031 /* Vehicle.swift */; };
 		6771D7D3220654CB00E1D031 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7D2220654CB00E1D031 /* Planet.swift */; };
 		6771D7D5220654D400E1D031 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7D4220654D400E1D031 /* Planets.swift */; };
+		677AD63E22D8A64000DBD8C1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63A22D8A64000DBD8C1 /* Quick.framework */; };
+		677AD64022D8A64000DBD8C1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63C22D8A64000DBD8C1 /* Nimble.framework */; };
+		677AD64122D8A64000DBD8C1 /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63D22D8A64000DBD8C1 /* LifetimeTracker.framework */; };
+		677AD64422D8A91E00DBD8C1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD64322D8A91E00DBD8C1 /* Alamofire.framework */; };
+		677AD64622D8AA3900DBD8C1 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD64522D8AA3900DBD8C1 /* AlamofireNetworkActivityLogger.framework */; };
+		677AD64E22D8AB9C00DBD8C1 /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AD64D22D8AB9C00DBD8C1 /* SnapshotTests.swift */; };
+		677AD65622D8ABC300DBD8C1 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63B22D8A64000DBD8C1 /* SnapshotTesting.framework */; };
 		67969D9621F35AEB00B0A6EE /* InternetReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9521F35AEB00B0A6EE /* InternetReachability.swift */; };
 		67969D9B21F3701D00B0A6EE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9A21F3701D00B0A6EE /* APIClient.swift */; };
 		67969D9D21F494A800B0A6EE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9C21F494A800B0A6EE /* Person.swift */; };
@@ -137,6 +144,13 @@
 			remoteInfo = SWAPI_client;
 		};
 		671416BF21B053AA00B90FD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6714169421B053A800B90FD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6714169B21B053A800B90FD9;
+			remoteInfo = SWAPI_client;
+		};
+		677AD65022D8AB9C00DBD8C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6714169421B053A800B90FD9 /* Project object */;
 			proxyType = 1;
@@ -265,6 +279,15 @@
 		6771D7D02205EF9100E1D031 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		6771D7D2220654CB00E1D031 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		6771D7D4220654D400E1D031 /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
+		677AD63A22D8A64000DBD8C1 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		677AD63B22D8A64000DBD8C1 /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Carthage/Build/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
+		677AD63C22D8A64000DBD8C1 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		677AD63D22D8A64000DBD8C1 /* LifetimeTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LifetimeTracker.framework; path = Carthage/Build/iOS/LifetimeTracker.framework; sourceTree = "<group>"; };
+		677AD64322D8A91E00DBD8C1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		677AD64522D8AA3900DBD8C1 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
+		677AD64B22D8AB9C00DBD8C1 /* SnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		677AD64D22D8AB9C00DBD8C1 /* SnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTests.swift; sourceTree = "<group>"; };
+		677AD64F22D8AB9C00DBD8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67969D9521F35AEB00B0A6EE /* InternetReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetReachability.swift; sourceTree = "<group>"; };
 		67969D9A21F3701D00B0A6EE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		67969D9C21F494A800B0A6EE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -296,6 +319,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677AD64622D8AA3900DBD8C1 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
+				677AD64422D8A91E00DBD8C1 /* Alamofire.framework in Frameworks */,
+				677AD63E22D8A64000DBD8C1 /* Quick.framework in Frameworks */,
+				677AD64022D8A64000DBD8C1 /* Nimble.framework in Frameworks */,
+				677AD64122D8A64000DBD8C1 /* LifetimeTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +341,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		677AD64822D8AB9C00DBD8C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677AD65622D8ABC300DBD8C1 /* SnapshotTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		22554B6E229F2EC100ED428C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				677AD64522D8AA3900DBD8C1 /* AlamofireNetworkActivityLogger.framework */,
+				677AD64322D8A91E00DBD8C1 /* Alamofire.framework */,
+				677AD63D22D8A64000DBD8C1 /* LifetimeTracker.framework */,
+				677AD63C22D8A64000DBD8C1 /* Nimble.framework */,
+				677AD63A22D8A64000DBD8C1 /* Quick.framework */,
+				677AD63B22D8A64000DBD8C1 /* SnapshotTesting.framework */,
 				22554B6F229F2EC200ED428C /* EarlGrey.framework */,
 			);
 			name = Frameworks;
@@ -644,6 +686,7 @@
 				671416B621B053AA00B90FD9 /* SWAPI_clientTests */,
 				671416C121B053AA00B90FD9 /* SWAPI_clientUITests */,
 				22554B77229F342800ED428C /* EarlGreyTests */,
+				677AD64C22D8AB9C00DBD8C1 /* SnapshotTests */,
 				6714169D21B053A800B90FD9 /* Products */,
 				22554B6E229F2EC100ED428C /* Frameworks */,
 			);
@@ -656,6 +699,7 @@
 				671416B321B053AA00B90FD9 /* SWAPI_clientTests.xctest */,
 				671416BE21B053AA00B90FD9 /* SWAPI_clientUITests.xctest */,
 				22554B76229F342700ED428C /* EarlGreyTests.xctest */,
+				677AD64B22D8AB9C00DBD8C1 /* SnapshotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -803,6 +847,15 @@
 			path = MainTableViewCell;
 			sourceTree = "<group>";
 		};
+		677AD64C22D8AB9C00DBD8C1 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				677AD64D22D8AB9C00DBD8C1 /* SnapshotTests.swift */,
+				677AD64F22D8AB9C00DBD8C1 /* Info.plist */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
 		67969D9421F35AD800B0A6EE /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -927,6 +980,7 @@
 				6714169821B053A800B90FD9 /* Sources */,
 				6714169921B053A800B90FD9 /* Frameworks */,
 				6714169A21B053A800B90FD9 /* Resources */,
+				677AD64222D8A64400DBD8C1 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -973,6 +1027,25 @@
 			productReference = 671416BE21B053AA00B90FD9 /* SWAPI_clientUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		677AD64A22D8AB9C00DBD8C1 /* SnapshotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 677AD65222D8AB9C00DBD8C1 /* Build configuration list for PBXNativeTarget "SnapshotTests" */;
+			buildPhases = (
+				677AD64722D8AB9C00DBD8C1 /* Sources */,
+				677AD64822D8AB9C00DBD8C1 /* Frameworks */,
+				677AD64922D8AB9C00DBD8C1 /* Resources */,
+				677AD65522D8ABA200DBD8C1 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				677AD65122D8AB9C00DBD8C1 /* PBXTargetDependency */,
+			);
+			name = SnapshotTests;
+			productName = SnapshotTests;
+			productReference = 677AD64B22D8AB9C00DBD8C1 /* SnapshotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1001,6 +1074,10 @@
 						LastSwiftMigration = 1020;
 						TestTargetID = 6714169B21B053A800B90FD9;
 					};
+					677AD64A22D8AB9C00DBD8C1 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 6714169B21B053A800B90FD9;
+					};
 				};
 			};
 			buildConfigurationList = 6714169721B053A800B90FD9 /* Build configuration list for PBXProject "SWAPI_client" */;
@@ -1021,6 +1098,7 @@
 				671416B221B053AA00B90FD9 /* SWAPI_clientTests */,
 				671416BD21B053AA00B90FD9 /* SWAPI_clientUITests */,
 				22554B75229F342700ED428C /* EarlGreyTests */,
+				677AD64A22D8AB9C00DBD8C1 /* SnapshotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1076,6 +1154,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		677AD64922D8AB9C00DBD8C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1088,6 +1173,48 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/EarlGrey.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		677AD64222D8A64400DBD8C1 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LifetimeTracker.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		677AD65522D8ABA200DBD8C1 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapshotTesting.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1217,6 +1344,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		677AD64722D8AB9C00DBD8C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677AD64E22D8AB9C00DBD8C1 /* SnapshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1234,6 +1369,11 @@
 			isa = PBXTargetDependency;
 			target = 6714169B21B053A800B90FD9 /* SWAPI_client */;
 			targetProxy = 671416BF21B053AA00B90FD9 /* PBXContainerItemProxy */;
+		};
+		677AD65122D8AB9C00DBD8C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6714169B21B053A800B90FD9 /* SWAPI_client */;
+			targetProxy = 677AD65022D8AB9C00DBD8C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1557,6 +1697,54 @@
 			};
 			name = Release;
 		};
+		677AD65322D8AB9C00DBD8C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SnapshotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = janszala.SnapshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holocron.app/Holocron";
+			};
+			name = Debug;
+		};
+		677AD65422D8AB9C00DBD8C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SnapshotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = janszala.SnapshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holocron.app/Holocron";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1601,6 +1789,15 @@
 			buildConfigurations = (
 				671416CE21B053AA00B90FD9 /* Debug */,
 				671416CF21B053AA00B90FD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		677AD65222D8AB9C00DBD8C1 /* Build configuration list for PBXNativeTarget "SnapshotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				677AD65322D8AB9C00DBD8C1 /* Debug */,
+				677AD65422D8AB9C00DBD8C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

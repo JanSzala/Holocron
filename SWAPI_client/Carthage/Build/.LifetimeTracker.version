@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.6.1",
+  "iOS" : [
+    {
+      "name" : "LifetimeTracker",
+      "hash" : "51edf3e46c64dc8607c065840b052ffdcc36d052b108915018b658110235442b",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}

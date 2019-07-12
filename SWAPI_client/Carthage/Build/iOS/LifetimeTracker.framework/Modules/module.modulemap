@@ -1,0 +1,4 @@
+framework module LifetimeTracker {
+  header "LifetimeTracker-Swift.h"
+  requires objc
+}

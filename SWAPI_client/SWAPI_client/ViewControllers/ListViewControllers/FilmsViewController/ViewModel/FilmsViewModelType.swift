@@ -8,15 +8,15 @@
 
 import Foundation
 
-internal protocol FilmsViewModelType: class {
+internal protocol FilmsViewModelType: ListViewModelType {
     var showDetails: ((Film) -> ())? { get set }
     
     var controllerTitle: String { get set }
     var currentPage: Int { get }
     var shouldFetchData: Bool { get }
     var itemsArrayCount: Int { get }
-    var numberOfSections: Int { get }
-    var emptyListLabel: NSAttributedString { get }
+//    var numberOfSections: Int { get }
+//    var emptyListLabel: NSAttributedString { get }
     
     func title(for indexPath: IndexPath) -> String?
     func presentDetails(for indexPath: IndexPath)

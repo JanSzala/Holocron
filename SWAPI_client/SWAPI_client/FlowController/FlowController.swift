@@ -71,9 +71,9 @@ extension FlowController {
     func showFilmsViewController() {
         let controller = dependencyContainer.filmsViewController
         
-        controller.viewModel.showDetails = { film in
-            self.showFilmDetails(film: film)
-        }
+//        controller.filmsViewModel.showDetails = { film in
+//            self.showFilmDetails(film: film)
+//        }
         
         navigationController.pushViewController(controller, animated: true)
     }

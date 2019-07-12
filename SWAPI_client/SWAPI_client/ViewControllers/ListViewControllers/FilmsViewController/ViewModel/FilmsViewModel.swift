@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class FilmsViewModel: FilmsViewModelType {
+internal class FilmsViewModel: ListViewModel {
     var showDetails: ((Film) -> ())?
     
     var controllerTitle: String = "Films"
@@ -16,33 +16,19 @@ internal class FilmsViewModel: FilmsViewModelType {
     var shouldFetchData: Bool = true
     var itemsArray = [Film]()
     
-    var itemsArrayCount: Int {
+    override func itemsArrayCount() -> Int {
         return itemsArray.count
     }
-    
-    var emptyListLabel: NSAttributedString {
-        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 35),
-                                                         NSAttributedString.Key.foregroundColor: UIColor.red]
-        return NSAttributedString(string: "I couldn't download data", attributes: attributes)
-    }
-    
-    let numberOfSections: Int = 1
-    
-    let apiClient: APIClientType
-    
-    init(apiClient: APIClientType) {
-        self.apiClient = apiClient
-    }
-    
-    func presentDetails(for indexPath: IndexPath) {
+        
+    override func presentDetails(for indexPath: IndexPath) {
         showDetails?(itemsArray[indexPath.row])
     }
     
-    func title(for indexPath: IndexPath) -> String? {
+    override func title(for indexPath: IndexPath) -> String? {
         return itemsArray[indexPath.row].title
     }
     
-    func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ()) {
+    override func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ()) {
         guard shouldFetchData == true else {
             noMoreData()
             return

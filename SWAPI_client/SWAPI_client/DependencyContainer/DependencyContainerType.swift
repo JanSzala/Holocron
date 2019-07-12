@@ -14,6 +14,8 @@ internal protocol DependencyContainerType {
     var mainMenuViewController: MainMenuViewController { get }
     var optionsViewController: OptionsViewController { get }
     
+    var listViewController: ListViewController { get }
+    
     var filmsViewController: FilmsViewController { get }
     var peopleViewController: PeopleViewController { get }
     var planetsViewController: PlanetsViewController { get }

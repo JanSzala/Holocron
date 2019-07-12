@@ -103,13 +103,13 @@
 		6771D7D12205EF9100E1D031 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7D02205EF9100E1D031 /* Vehicle.swift */; };
 		6771D7D3220654CB00E1D031 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7D2220654CB00E1D031 /* Planet.swift */; };
 		6771D7D5220654D400E1D031 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7D4220654D400E1D031 /* Planets.swift */; };
-		677AD63E22D8A64000DBD8C1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63A22D8A64000DBD8C1 /* Quick.framework */; };
-		677AD64022D8A64000DBD8C1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63C22D8A64000DBD8C1 /* Nimble.framework */; };
 		677AD64122D8A64000DBD8C1 /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63D22D8A64000DBD8C1 /* LifetimeTracker.framework */; };
 		677AD64422D8A91E00DBD8C1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD64322D8A91E00DBD8C1 /* Alamofire.framework */; };
 		677AD64622D8AA3900DBD8C1 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD64522D8AA3900DBD8C1 /* AlamofireNetworkActivityLogger.framework */; };
 		677AD64E22D8AB9C00DBD8C1 /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AD64D22D8AB9C00DBD8C1 /* SnapshotTests.swift */; };
 		677AD65622D8ABC300DBD8C1 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63B22D8A64000DBD8C1 /* SnapshotTesting.framework */; };
+		677AD65822D8AF3B00DBD8C1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63C22D8A64000DBD8C1 /* Nimble.framework */; };
+		677AD65922D8AF3B00DBD8C1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AD63A22D8A64000DBD8C1 /* Quick.framework */; };
 		67969D9621F35AEB00B0A6EE /* InternetReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9521F35AEB00B0A6EE /* InternetReachability.swift */; };
 		67969D9B21F3701D00B0A6EE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9A21F3701D00B0A6EE /* APIClient.swift */; };
 		67969D9D21F494A800B0A6EE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969D9C21F494A800B0A6EE /* Person.swift */; };
@@ -321,8 +321,6 @@
 			files = (
 				677AD64622D8AA3900DBD8C1 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
 				677AD64422D8A91E00DBD8C1 /* Alamofire.framework in Frameworks */,
-				677AD63E22D8A64000DBD8C1 /* Quick.framework in Frameworks */,
-				677AD64022D8A64000DBD8C1 /* Nimble.framework in Frameworks */,
 				677AD64122D8A64000DBD8C1 /* LifetimeTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +329,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677AD65822D8AF3B00DBD8C1 /* Nimble.framework in Frameworks */,
+				677AD65922D8AF3B00DBD8C1 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +998,7 @@
 				671416AF21B053AA00B90FD9 /* Sources */,
 				671416B021B053AA00B90FD9 /* Frameworks */,
 				671416B121B053AA00B90FD9 /* Resources */,
+				677AD65722D8AF0D00DBD8C1 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -1192,8 +1193,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/LifetimeTracker.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
 			);
@@ -1224,6 +1223,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		677AD65722D8AF0D00DBD8C1 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1625,6 +1644,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SWAPI_clientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1645,6 +1668,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SWAPI_clientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -15,9 +15,22 @@ internal protocol APIParserType: class {
     func parseStarships(data: Data, onSuccess: @escaping (Starships) -> (), onFailure: @escaping () -> ())
     func parseVehicles(data: Data, onSuccess: @escaping (Vehicles) -> (), onFailure: @escaping () -> ())
     func parsePlanets(data: Data, onSuccess: @escaping (Planets) -> (), onFailure: @escaping () -> ())
+    
+    func parseData<T: Decodable>(data: Data, onSuccess: @escaping (T) -> (), onFailure: @escaping () -> ())
 }
 
 internal class APIParser: APIParserType {
+    func parseData<T: Decodable>(data: Data, onSuccess: @escaping (T) -> (), onFailure: @escaping () -> ()) {
+        do {
+            let json = try JSONDecoder().decode(T.self, from: data)
+            onSuccess(json)
+            
+        } catch let error {
+            logMsg("Error during serialization of JSON: \(error)")
+            onFailure()
+        }
+    }
+    
     func parsePeople(data: Data, onSuccess: @escaping (People) -> (), onFailure: @escaping () -> ()) {
         do {
             let json = try JSONDecoder().decode(People.self, from: data)

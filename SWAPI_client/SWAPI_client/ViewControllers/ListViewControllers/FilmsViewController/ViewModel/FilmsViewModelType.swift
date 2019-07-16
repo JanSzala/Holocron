@@ -14,9 +14,6 @@ internal protocol FilmsViewModelType: ListViewModelType {
     var controllerTitle: String { get set }
     var currentPage: Int { get }
     var shouldFetchData: Bool { get }
-    var itemsArrayCount: Int { get }
-//    var numberOfSections: Int { get }
-//    var emptyListLabel: NSAttributedString { get }
     
     func title(for indexPath: IndexPath) -> String?
     func presentDetails(for indexPath: IndexPath)

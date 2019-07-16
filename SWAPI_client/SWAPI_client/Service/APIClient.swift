@@ -16,6 +16,8 @@ internal protocol APIClientType: class {
     func getStarships(page: Int, onSuccess: @escaping (Starships) -> (), onFailure: @escaping  () -> ())
     func getVehicles(page: Int, onSuccess: @escaping (Vehicles) -> (), onFailure: @escaping  () -> ())
     func getPlanets(page: Int, onSuccess: @escaping (Planets) -> (), onFailure: @escaping  () -> ())
+    
+    func getData<T: Decodable>(page: Int, type: DataType, onSuccess: @escaping (T) -> (), onFailure: @escaping  () -> ())
 }
 
 internal class APIClient: APIClientType {
@@ -27,6 +29,20 @@ internal class APIClient: APIClientType {
         self.apiParser = apiParser
         self.router = router
         self.urlSessionCreator = urlSessionCreator
+    }
+    
+    func getData<T: Decodable>(page: Int, type: DataType, onSuccess: @escaping (T) -> (), onFailure: @escaping  () -> ()) {
+        self.urlSessionCreator.createURLSession(pageAddress: router.route(type, page), onSuccess: { data in
+            self.apiParser.parseData(data: data, onSuccess: { fetchedData in
+                onSuccess(fetchedData)
+            }, onFailure: {
+                logMsg("Failure parsing data")
+                onFailure()
+            })
+        }, onFailure: {
+            logMsg("Failure fetching data")
+            onFailure()
+        })
     }
     
     func getPeople(page: Int, onSuccess: @escaping (People) -> (), onFailure: @escaping  () -> ()) {

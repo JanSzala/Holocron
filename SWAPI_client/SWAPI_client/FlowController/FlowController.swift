@@ -71,6 +71,10 @@ extension FlowController {
     func showFilmsViewController() {
         let controller = dependencyContainer.filmsViewController
         
+        controller.filmsViewModel.showDetails = { film in
+            self.showFilmDetails(film: film)
+        }
+        
 //        controller.filmsViewModel.showDetails = { film in
 //            self.showFilmDetails(film: film)
 //        }

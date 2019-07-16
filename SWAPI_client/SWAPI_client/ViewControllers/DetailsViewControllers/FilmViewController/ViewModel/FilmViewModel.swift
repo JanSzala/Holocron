@@ -31,8 +31,8 @@ internal class FilmViewModel: FilmViewModelType {
 extension FilmViewModel {
     var dataSectionTitles: [String] {
         return ["Title:",
-                "Episode:",
-                "Opening:",
+                "Number of the episode:",
+                "Opening credits:",
                 "Director:",
                 "Producer:",
                 "Release date:",

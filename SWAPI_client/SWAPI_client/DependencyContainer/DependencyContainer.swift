@@ -55,12 +55,6 @@ extension DependencyContainer {
 }
 
 extension DependencyContainer {
-    var listViewController: ListViewController {
-        let controller = ListViewController()
-        controller.viewModel = ListViewModel(apiClient: apiClient)
-        return controller
-    }
-    
     var filmsViewController: FilmsViewController {
         let controller = FilmsViewController()
         controller.viewModel = FilmsViewModel(apiClient: apiClient)

@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-internal class ListViewModel: ListViewModelType {
+internal class ListViewModel<T: Decodable>: ListViewModelType {
+    var itemsArray = [T]()
     let apiClient: APIClientType
     
     init(apiClient: APIClientType) {
@@ -24,11 +25,11 @@ internal class ListViewModel: ListViewModelType {
         return NSAttributedString(string: "I couldn't download data", attributes: attributes)
     }
     
-    func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ()) {
-        fatalError("This function should be overriden")
+    var itemsArrayCount: Int {
+        return itemsArray.count
     }
     
-    func itemsArrayCount() -> Int {
+    func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ()) {
         fatalError("This function should be overriden")
     }
     

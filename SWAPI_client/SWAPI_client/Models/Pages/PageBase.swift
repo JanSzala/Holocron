@@ -8,27 +8,24 @@
 
 import Foundation
 
-internal protocol PageBaseType {
-    var count: Int { get }
-    var next: String? { get }
-    var previous: String? { get }
-}
-
-internal class PageBase: PageBaseType, Decodable {
+internal class PageBase<T: Decodable>: Decodable {
     let count: Int
     let next: String?
     let previous: String?
+    let results: [T]?
     
     private enum CodingKeys: CodingKey {
         case count
         case next
         case previous
+        case results
     }
     
-    init(count: Int, next: String?, previous: String?) {
+    init(count: Int, next: String?, previous: String?, results: [T]?) {
         self.count = count
         self.next = next
         self.previous = previous
+        self.results = results
     }
     
     required init(from decoder: Decoder) throws {
@@ -37,5 +34,6 @@ internal class PageBase: PageBaseType, Decodable {
         count = try container.decode(.count)
         next = try container.decodeIfPresent(.next)
         previous = try container.decodeIfPresent(.previous)
+        results = try container.decodeIfPresent(.results)
     }
 }

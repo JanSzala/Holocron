@@ -35,27 +35,6 @@ internal class FilmsViewModel: ListViewModel<Film>, FilmsViewModelType {
             self?.itemsArray.append(contentsOf: arrayOfData)
             onSuccess()
         }, onFailure: onFailure, noMoreData: noMoreData)
-        
-//        guard shouldFetchData == true else {
-//            noMoreData()
-//            return
-//        }
-//
-//        apiClient.getFilms(page: currentPage, onSuccess: { data in
-//            self.currentPage += 1
-//
-//            guard let arrayOfData = data.results else {
-//                fatalError("could not fill the array with results")
-//            }
-//
-//            self.shouldFetchData = data.next != nil
-//
-//            self.itemsArray.append(contentsOf: arrayOfData)
-//            onSuccess()
-//        }, onFailure: {
-//            logMsg("Failed fetching data")
-//            onFailure()
-//        })
     }
 }
 

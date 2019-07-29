@@ -9,11 +9,6 @@
 import UIKit
 
 class FilmsViewController: ListViewController {
-//    @IBOutlet weak var tableView: UITableView!
-//    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-//    @IBOutlet weak var emptyListView: UIView!
-//    @IBOutlet weak var emptyListLabel: UILabel!
-    
     var filmsViewModel: FilmsViewModelType {
         guard let viewModel = viewModel as? FilmsViewModelType else {
             fatalError("ViewModel should be type of FilmsViewModelType")
@@ -28,12 +23,11 @@ class FilmsViewController: ListViewController {
     
     override func setupUI() {
         super.setupUI()
-        title = "Films" //filmsViewModel.controllerTitle
+        title = filmsViewModel.controllerTitle
     }
 }
 
 extension FilmsViewController {
     func viewModelWasSet(viewModel: FilmsViewModelType) {
-        
     }
 }

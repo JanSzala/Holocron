@@ -74,18 +74,14 @@ extension FlowController {
         controller.filmsViewModel.showDetails = { film in
             self.showFilmDetails(film: film)
         }
-        
-//        controller.filmsViewModel.showDetails = { film in
-//            self.showFilmDetails(film: film)
-//        }
-        
+                
         navigationController.pushViewController(controller, animated: true)
     }
     
     func showPeopleViewController() {
         let controller = dependencyContainer.peopleViewController
         
-        controller.viewModel.showDetails = { person in
+        controller.peopleViewModel.showDetails = { person in
             self.showPersonDetails(person: person)
         }
         

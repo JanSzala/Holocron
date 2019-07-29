@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class FilmsViewModel: ListViewModel<Film>, FilmsViewModelType {
+class FilmsViewModel: ListViewModel<Film>, FilmsViewModelType {
     var showDetails: ((Film) -> ())?
     
     var controllerTitle: String = "Films"

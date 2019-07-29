@@ -543,7 +543,6 @@
 			children = (
 				22E4134A22BAD12400D44776 /* FilmsViewModelType.swift */,
 				22E4134822BAD11A00D44776 /* FilmsViewModel.swift */,
-				67E4146122DE0C5700CFD1BF /* FetchData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -902,6 +901,7 @@
 			children = (
 				6799F39522D8CD9400D79A2E /* ListViewModelType.swift */,
 				6799F39322D8CD8600D79A2E /* ListViewModel.swift */,
+				67E4146122DE0C5700CFD1BF /* FetchData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

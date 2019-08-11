@@ -6,9 +6,20 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
+import LifetimeTracker
 import UIKit
 
 class SpeciesViewController: ListViewController {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        trackLifetime()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     var speciesViewModel: SpeciesViewModelType {
         guard let viewModel = viewModel as? SpeciesViewModelType else {
             fatalError("ViewModel should be type of SpeciesViewModelType")
@@ -21,6 +32,10 @@ class SpeciesViewController: ListViewController {
         super.setupUI()
         title = speciesViewModel.controllerTitle
     }
+}
+
+extension SpeciesViewController: LifetimeTrackable {
+    static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "Species")
 }
 
 extension SpeciesViewController {

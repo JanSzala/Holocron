@@ -6,10 +6,21 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
+import LifetimeTracker
 import UIKit
 
 class OptionsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        trackLifetime()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +58,7 @@ class OptionsViewController: UIViewController {
         cell.backgroundColor = self.darkModeColor()
         cell.selectionStyle = .none
         
-        cell.onSwitch = {
+        cell.onSwitch = { [unowned self] in
             self.viewModel.onDarkModeSwitchTapped()
             self.tableView.backgroundColor = self.darkModeColor()
             cell.backgroundColor = self.darkModeColor()
@@ -59,7 +70,7 @@ class OptionsViewController: UIViewController {
     }
 }
 
-extension OptionsViewController: UITableViewDataSource {
+extension OptionsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
     }
@@ -73,7 +84,8 @@ extension OptionsViewController: UITableViewDataSource {
     }
 }
 
-extension OptionsViewController: UITableViewDelegate {
+extension OptionsViewController: LifetimeTrackable {
+    static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "Options")
 }
 
 extension OptionsViewController: ViewModelOwner {

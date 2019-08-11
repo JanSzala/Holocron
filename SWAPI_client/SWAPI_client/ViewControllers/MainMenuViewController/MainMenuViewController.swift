@@ -6,11 +6,22 @@
 //  Copyright © 2018 JanSzala. All rights reserved.
 //
 
+import LifetimeTracker
 import UIKit
 
 class MainMenuViewController: UIViewController {
     @IBOutlet var sceneView: UIView!
     @IBOutlet weak var mainMenuAnimatedView: MainMenuAnimatedView!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        trackLifetime()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +72,10 @@ extension MainMenuViewController {
     private func presentAlert() {
         self.present(viewModel.alert, animated: true)
     }
+}
+
+extension MainMenuViewController: LifetimeTrackable {
+    static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "MainMenu")
 }
 
 extension MainMenuViewController: ViewModelOwner {

@@ -7,6 +7,7 @@
 //
 
 import CoreData
+import LifetimeTracker
 import UIKit
 
 @UIApplicationMain
@@ -17,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var flowController: FlowControllerType?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        #if DEBUG
+        LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .alwaysVisible, style: .circular).refreshUI)
+        #endif
+        
         if UserDefaults.isFirstLaunch() {
             UserDefaults.standard.set(true, forKey: "isDarkModeOn")
         }

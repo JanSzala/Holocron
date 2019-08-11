@@ -12,6 +12,8 @@
 		220B3A5A2300209B00814B24 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220B3A582300209B00814B24 /* DetailsViewController.xib */; };
 		220B3A5C230020B900814B24 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A5B230020B900814B24 /* DetailsViewModel.swift */; };
 		220B3A5F230020CA00814B24 /* DetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A5E230020CA00814B24 /* DetailsViewModelType.swift */; };
+		220B3A642300887100814B24 /* FlowController+DetailsControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A632300887100814B24 /* FlowController+DetailsControllers.swift */; };
+		220B3A67230088EB00814B24 /* FlowController+ListControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A66230088EB00814B24 /* FlowController+ListControllers.swift */; };
 		22554B79229F342800ED428C /* EarlGreyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22554B78229F342800ED428C /* EarlGreyTests.swift */; };
 		22554B80229F344600ED428C /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22554B6F229F2EC200ED428C /* EarlGrey.framework */; };
 		22554B83229F361A00ED428C /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22554B82229F361A00ED428C /* EarlGrey.swift */; };
@@ -187,6 +189,8 @@
 		220B3A582300209B00814B24 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		220B3A5B230020B900814B24 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		220B3A5E230020CA00814B24 /* DetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelType.swift; sourceTree = "<group>"; };
+		220B3A632300887100814B24 /* FlowController+DetailsControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowController+DetailsControllers.swift"; sourceTree = "<group>"; };
+		220B3A66230088EB00814B24 /* FlowController+ListControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowController+ListControllers.swift"; sourceTree = "<group>"; };
 		22554B6F229F2EC200ED428C /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Carthage/Build/iOS/EarlGrey.framework; sourceTree = "<group>"; };
 		22554B76229F342700ED428C /* EarlGreyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarlGreyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22554B78229F342800ED428C /* EarlGreyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyTests.swift; sourceTree = "<group>"; };
@@ -816,6 +820,8 @@
 			children = (
 				671416DC21B0551900B90FD9 /* FlowControllerType.swift */,
 				671416DE21B0552F00B90FD9 /* FlowController.swift */,
+				220B3A66230088EB00814B24 /* FlowController+ListControllers.swift */,
+				220B3A632300887100814B24 /* FlowController+DetailsControllers.swift */,
 			);
 			path = FlowController;
 			sourceTree = "<group>";
@@ -1363,6 +1369,7 @@
 				6771D7C72205EB5F00E1D031 /* Kind.swift in Sources */,
 				22AAC33822A02184007EE666 /* PageBase.swift in Sources */,
 				22E4137622BAEC1C00D44776 /* KindViewModelType.swift in Sources */,
+				220B3A67230088EB00814B24 /* FlowController+ListControllers.swift in Sources */,
 				22E4137C22BAEC6000D44776 /* ShipViewModel.swift in Sources */,
 				671416EF21B056C500B90FD9 /* DependencyContainer.swift in Sources */,
 				671416A021B053A800B90FD9 /* AppDelegate.swift in Sources */,
@@ -1381,6 +1388,7 @@
 				22E4137A22BAEC5200D44776 /* ShipViewModelType.swift in Sources */,
 				22E4131922BA4C0600D44776 /* PersonViewController.swift in Sources */,
 				671416D721B054B000B90FD9 /* associatedObject.swift in Sources */,
+				220B3A642300887100814B24 /* FlowController+DetailsControllers.swift in Sources */,
 				220B3A5F230020CA00814B24 /* DetailsViewModelType.swift in Sources */,
 				22E4134322BAD0F100D44776 /* SpeciesViewModelType.swift in Sources */,
 				671416DA21B054DA00B90FD9 /* NavigationController.swift in Sources */,

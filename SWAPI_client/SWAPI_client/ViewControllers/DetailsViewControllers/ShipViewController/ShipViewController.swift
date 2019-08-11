@@ -6,9 +6,23 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
+import LifetimeTracker
 import UIKit
 
 class ShipViewController: DetailsViewController {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        trackLifetime()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}
+
+extension ShipViewController: LifetimeTrackable {
+    static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "ShipDetails")
 }
 
 extension ShipViewController {

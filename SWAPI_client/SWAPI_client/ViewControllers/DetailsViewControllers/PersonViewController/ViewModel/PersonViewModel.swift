@@ -8,26 +8,16 @@
 
 import Foundation
 
-class PersonViewModel: PersonViewModelType {
-    var controllerTitle: String
-    var dataArray = [String]()
+class PersonViewModel: DetailsViewModel<Person>, PersonViewModelType {
     var person: Person
-    
-    var sectionsCount: Int {
-        return dataSectionTitles.count
-    }
-    
-    let numberOfRowsInSection: Int = 1
     
     init(person: Person) {
         self.person = person
-        self.controllerTitle = person.name
+        super.init(controllerTitle: person.name)
         updateSections(for: person)
     }
-}
-
-extension PersonViewModel {
-    var dataSectionTitles: [String] {
+    
+    override var dataSectionTitles: [String] {
         return ["Name:",
                 "Birth year:",
                 "Eye Color:",
@@ -44,18 +34,8 @@ extension PersonViewModel {
                 "Created:",
                 "Edited:"]
     }
-}
-
-extension PersonViewModel {
-    func dataForRow(at indexPath: IndexPath) -> String {
-        return dataArray[indexPath.section]
-    }
     
-    func sectionTitle(for index: Int) -> String {
-        return dataSectionTitles[index]
-    }
-    
-    func updateSections(for person: Person) {
+    override func updateSections(for item: Person) {
         dataArray = [person.name,
                      person.birth_year,
                      person.eye_color,

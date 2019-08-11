@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ShipViewModelType: class {
+protocol ShipViewModelType: DetailsViewModelType {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }

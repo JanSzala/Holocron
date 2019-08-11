@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlanetViewController" customModule="Holocron" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="bNj-Ex-AgB" id="Gib-4w-3RD"/>
+                <outlet property="tableView" destination="bNj-Ex-AgB" id="XJH-xa-zqa"/>
                 <outlet property="view" destination="Nop-ld-MbG" id="c8d-r3-nzj"/>
             </connections>
         </placeholder>

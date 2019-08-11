@@ -8,26 +8,16 @@
 
 import Foundation
 
-class ShipViewModel: ShipViewModelType {
-    var controllerTitle: String
-    var dataArray = [String]()
+class ShipViewModel: DetailsViewModel<Starship>, ShipViewModelType {
     var starship: Starship
-    
-    var sectionsCount: Int {
-        return dataSectionTitles.count
-    }
-    
-    let numberOfRowsInSection: Int = 1
     
     init(starship: Starship) {
         self.starship = starship
-        self.controllerTitle = starship.name
+        super.init(controllerTitle: starship.name)
         updateSections(for: starship)
     }
-}
 
-extension ShipViewModel {
-    var dataSectionTitles: [String] {
+    override var dataSectionTitles: [String] {
         return ["Name:",
                 "Model:",
                 "Starship class:",
@@ -46,18 +36,8 @@ extension ShipViewModel {
                 "Created:",
                 "Edited:"]
     }
-}
-
-extension ShipViewModel {
-    func dataForRow(at indexPath: IndexPath) -> String {
-        return dataArray[indexPath.section]
-    }
     
-    func sectionTitle(for index: Int) -> String {
-        return dataSectionTitles[index]
-    }
-    
-    func updateSections(for starship: Starship) {
+    override func updateSections(for item: Starship) {
         dataArray = [starship.name,
                      starship.model,
                      starship.starship_class,

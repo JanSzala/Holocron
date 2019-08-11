@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol KindViewModelType: class {
+protocol KindViewModelType: DetailsViewModelType {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }

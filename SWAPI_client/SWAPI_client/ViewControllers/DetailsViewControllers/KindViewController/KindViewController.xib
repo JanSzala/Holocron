@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KindViewController" customModule="Holocron" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="d8m-XN-HsB" id="7lb-at-Raa"/>
+                <outlet property="tableView" destination="d8m-XN-HsB" id="RNy-3i-X7L"/>
                 <outlet property="view" destination="9CU-gB-luf" id="q96-Po-bJz"/>
             </connections>
         </placeholder>

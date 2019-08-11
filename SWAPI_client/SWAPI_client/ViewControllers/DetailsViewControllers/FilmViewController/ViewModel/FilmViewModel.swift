@@ -33,7 +33,7 @@ class FilmViewModel: DetailsViewModel<Film>, FilmViewModelType {
                 "Edited:"]
     }
     
-    override func updateSections(for film: Film) {
+    override func updateSections(for item: Film) {
         dataArray = [film.title,
                      String(film.episode_id),
                      film.opening_crawl,

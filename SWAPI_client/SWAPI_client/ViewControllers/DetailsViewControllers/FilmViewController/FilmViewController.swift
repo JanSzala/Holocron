@@ -9,17 +9,6 @@
 import UIKit
 
 class FilmViewController: DetailsViewController {
-    var filmViewModel: FilmViewModelType {
-        guard let viewModel = viewModel as? FilmViewModelType else {
-            fatalError("ViewModel should be type of FilmViewModelType")
-        }
-        
-        return viewModel
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 
 extension FilmViewController {

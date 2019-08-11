@@ -17,10 +17,6 @@ class SpeciesViewController: ListViewController {
         return viewModel
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func setupUI() {
         super.setupUI()
         title = speciesViewModel.controllerTitle

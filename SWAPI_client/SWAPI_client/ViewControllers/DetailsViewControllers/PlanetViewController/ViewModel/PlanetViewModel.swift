@@ -8,26 +8,16 @@
 
 import Foundation
 
-class PlanetViewModel: PlanetViewModelType {
-    var controllerTitle: String
-    var dataArray = [String]()
+class PlanetViewModel: DetailsViewModel<Planet>, PlanetViewModelType {
     var planet: Planet
-    
-    var sectionsCount: Int {
-        return dataSectionTitles.count
-    }
-    
-    let numberOfRowsInSection: Int = 1
     
     init(planet: Planet) {
         self.planet = planet
-        self.controllerTitle = planet.name
+        super.init(controllerTitle: planet.name)
         updateSections(for: planet)
     }
-}
-
-extension PlanetViewModel {
-    var dataSectionTitles: [String] {
+    
+    override var dataSectionTitles: [String] {
         return ["Name:",
                 "Diameter in kilometers:",
                 "Rotation period in hours:",
@@ -42,18 +32,8 @@ extension PlanetViewModel {
                 "Created:",
                 "Edited:"]
     }
-}
-
-extension PlanetViewModel {
-    func dataForRow(at indexPath: IndexPath) -> String {
-        return dataArray[indexPath.section]
-    }
     
-    func sectionTitle(for index: Int) -> String {
-        return dataSectionTitles[index]
-    }
-    
-    func updateSections(for planet: Planet) {
+    override func updateSections(for item: Planet) {
         dataArray = [planet.name,
                      planet.diameter,
                      planet.rotation_period,

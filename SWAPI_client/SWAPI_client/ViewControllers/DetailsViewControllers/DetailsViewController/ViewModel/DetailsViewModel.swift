@@ -27,7 +27,7 @@ class DetailsViewModel<T: Decodable>: DetailsViewModelType {
         fatalError("This should be overriden")
     }
     
-    func updateSections(for film: Film) {
+    func updateSections(for item: T) {
         fatalError("This should be overriden")
     }
 }

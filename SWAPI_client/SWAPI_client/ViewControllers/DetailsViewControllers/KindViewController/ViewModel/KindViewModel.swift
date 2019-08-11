@@ -8,26 +8,16 @@
 
 import Foundation
 
-class KindViewModel: KindViewModelType {
-    var controllerTitle: String
-    var dataArray = [String]()
+class KindViewModel: DetailsViewModel<Kind>, KindViewModelType {
     var kind: Kind
-    
-    var sectionsCount: Int {
-        return dataSectionTitles.count
-    }
-    
-    let numberOfRowsInSection: Int = 1
     
     init(kind: Kind) {
         self.kind = kind
-        self.controllerTitle = kind.name
+        super.init(controllerTitle: kind.name)
         updateSections(for: kind)
     }
-}
-
-extension KindViewModel {
-    var dataSectionTitles: [String] {
+    
+    override var dataSectionTitles: [String] {
         return ["Name:",
                 "Classification:",
                 "Designation:",
@@ -42,18 +32,8 @@ extension KindViewModel {
                 "Created:",
                 "Edited:"]
     }
-}
-
-extension KindViewModel {
-    func dataForRow(at indexPath: IndexPath) -> String {
-        return dataArray[indexPath.section]
-    }
     
-    func sectionTitle(for index: Int) -> String {
-        return dataSectionTitles[index]
-    }
-    
-    func updateSections(for kind: Kind) {
+    override func updateSections(for kind: Kind) {
         dataArray = [kind.name,
                      kind.classification,
                      kind.designation,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol VehicleViewModelType: class {
+protocol VehicleViewModelType: DetailsViewModelType {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }
@@ -16,3 +16,4 @@ protocol VehicleViewModelType: class {
     func sectionTitle(for index: Int) -> String
     func dataForRow(at indexPath: IndexPath) -> String
 }
+

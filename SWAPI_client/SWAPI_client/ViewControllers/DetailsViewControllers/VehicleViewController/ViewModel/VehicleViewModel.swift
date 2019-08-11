@@ -8,26 +8,16 @@
 
 import Foundation
 
-class VehicleViewModel: VehicleViewModelType {
-    var controllerTitle: String
-    var dataArray = [String]()
+class VehicleViewModel: DetailsViewModel<Vehicle>, VehicleViewModelType {
     var vehicle: Vehicle
-    
-    var sectionsCount: Int {
-        return dataSectionTitles.count
-    }
-    
-    let numberOfRowsInSection: Int = 1
     
     init(vehicle: Vehicle) {
         self.vehicle = vehicle
-        self.controllerTitle = vehicle.name
+        super.init(controllerTitle: vehicle.name)
         updateSections(for: vehicle)
     }
-}
-
-extension VehicleViewModel {
-    var dataSectionTitles: [String] {
+    
+    override var dataSectionTitles: [String] {
         return ["Name:",
                 "Model:",
                 "Vehicle class:",
@@ -44,18 +34,8 @@ extension VehicleViewModel {
                 "Created:",
                 "Edited:"]
     }
-}
-
-extension VehicleViewModel {
-    func dataForRow(at indexPath: IndexPath) -> String {
-        return dataArray[indexPath.section]
-    }
     
-    func sectionTitle(for index: Int) -> String {
-        return dataSectionTitles[index]
-    }
-    
-    func updateSections(for vehicle: Vehicle) {
+    override func updateSections(for item: Vehicle) {
         dataArray = [vehicle.name,
                      vehicle.model,
                      vehicle.vehicle_class,

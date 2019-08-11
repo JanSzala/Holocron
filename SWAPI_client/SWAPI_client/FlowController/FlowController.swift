@@ -91,7 +91,7 @@ extension FlowController {
     func showPlanetsViewController() {
         let controller = dependencyContainer.planetsViewController
         
-        controller.viewModel.showDetails = { planet in
+        controller.planetsViewModel.showDetails = { planet in
             self.showPlanetDetails(planet: planet)
         }
         

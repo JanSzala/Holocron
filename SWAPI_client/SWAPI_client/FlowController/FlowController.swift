@@ -17,7 +17,7 @@ class FlowController: NSObject, FlowControllerType {
         
         super.init()
         
-        navigationController.viewControllers = [mainMenuViewController]
+        showMainMenu()
     }
     
     var rootViewController: UIViewController
@@ -25,42 +25,45 @@ class FlowController: NSObject, FlowControllerType {
     private(set) var navigationController: UINavigationController
     private(set) var dependencyContainer: DependencyContainerType
     
-    private lazy var mainMenuViewController: MainMenuViewController = {
-        let controller = dependencyContainer.mainMenuViewController
+    private func showMainMenu() {
+        let viewModel = dependencyContainer.mainMenuViewModel()
         
-        controller.viewModel.onOptions = {
+        viewModel.onOptions = {
             self.showOptions()
         }
         
-        controller.viewModel.onFilms = {
+        viewModel.onFilms = {
             self.showFilmsViewController()
         }
         
-        controller.viewModel.onPeople = {
+        viewModel.onPeople = {
             self.showPeopleViewController()
         }
         
-        controller.viewModel.onPlanets = {
+        viewModel.onPlanets = {
             self.showPlanetsViewController()
         }
         
-        controller.viewModel.onSpecies = {
+        viewModel.onSpecies = {
             self.showSpeciesViewController()
         }
         
-        controller.viewModel.onShips = {
+        viewModel.onShips = {
             self.showShipsViewController()
         }
         
-        controller.viewModel.onVehicles = {
+        viewModel.onVehicles = {
             self.showVehiclesViewController()
         }
-                
-        return controller
-    }()
+        
+        let controller = dependencyContainer.mainMenuViewController(with: viewModel)
+        
+        navigationController.viewControllers = [controller]
+    }
     
-    func showOptions() {
-        let controller = dependencyContainer.optionsViewController
+    private func showOptions() {
+        let viewModel = dependencyContainer.optionsViewModel()
+        let controller = dependencyContainer.optionsViewController(with: viewModel)
         
         navigationController.pushViewController(controller, animated: true)
     }

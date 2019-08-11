@@ -14,6 +14,8 @@
 		220B3A5F230020CA00814B24 /* DetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A5E230020CA00814B24 /* DetailsViewModelType.swift */; };
 		220B3A642300887100814B24 /* FlowController+DetailsControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A632300887100814B24 /* FlowController+DetailsControllers.swift */; };
 		220B3A67230088EB00814B24 /* FlowController+ListControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A66230088EB00814B24 /* FlowController+ListControllers.swift */; };
+		220B3A692300A89600814B24 /* DependencyContainer+ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A682300A89600814B24 /* DependencyContainer+ViewControllers.swift */; };
+		220B3A6B2300A8A500814B24 /* DependencyContainer+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A6A2300A8A500814B24 /* DependencyContainer+ViewModels.swift */; };
 		22554B79229F342800ED428C /* EarlGreyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22554B78229F342800ED428C /* EarlGreyTests.swift */; };
 		22554B80229F344600ED428C /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22554B6F229F2EC200ED428C /* EarlGrey.framework */; };
 		22554B83229F361A00ED428C /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22554B82229F361A00ED428C /* EarlGrey.swift */; };
@@ -191,6 +193,8 @@
 		220B3A5E230020CA00814B24 /* DetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelType.swift; sourceTree = "<group>"; };
 		220B3A632300887100814B24 /* FlowController+DetailsControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowController+DetailsControllers.swift"; sourceTree = "<group>"; };
 		220B3A66230088EB00814B24 /* FlowController+ListControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowController+ListControllers.swift"; sourceTree = "<group>"; };
+		220B3A682300A89600814B24 /* DependencyContainer+ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyContainer+ViewControllers.swift"; sourceTree = "<group>"; };
+		220B3A6A2300A8A500814B24 /* DependencyContainer+ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyContainer+ViewModels.swift"; sourceTree = "<group>"; };
 		22554B6F229F2EC200ED428C /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Carthage/Build/iOS/EarlGrey.framework; sourceTree = "<group>"; };
 		22554B76229F342700ED428C /* EarlGreyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarlGreyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22554B78229F342800ED428C /* EarlGreyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyTests.swift; sourceTree = "<group>"; };
@@ -861,6 +865,8 @@
 			children = (
 				671416F021B056F300B90FD9 /* DependencyContainerType.swift */,
 				671416EE21B056C500B90FD9 /* DependencyContainer.swift */,
+				220B3A682300A89600814B24 /* DependencyContainer+ViewControllers.swift */,
+				220B3A6A2300A8A500814B24 /* DependencyContainer+ViewModels.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -1335,6 +1341,7 @@
 				675438E321FE24A300900D30 /* URLSessionCreator.swift in Sources */,
 				67969D9621F35AEB00B0A6EE /* InternetReachability.swift in Sources */,
 				671416DF21B0552F00B90FD9 /* FlowController.swift in Sources */,
+				220B3A6B2300A8A500814B24 /* DependencyContainer+ViewModels.swift in Sources */,
 				6799F39622D8CD9400D79A2E /* ListViewModelType.swift in Sources */,
 				6709F46621E0E44100056F80 /* MainMenuSquareView.swift in Sources */,
 				22AAC33622A01F51007EE666 /* ItemBase.swift in Sources */,
@@ -1380,6 +1387,7 @@
 				22E4137022BAEBEE00D44776 /* FilmViewModelType.swift in Sources */,
 				6771D7CB2205ED8600E1D031 /* Starship.swift in Sources */,
 				22E4134122BAD0E300D44776 /* SpeciesViewModel.swift in Sources */,
+				220B3A692300A89600814B24 /* DependencyContainer+ViewControllers.swift in Sources */,
 				22E4138022BAEC7F00D44776 /* VehicleViewModel.swift in Sources */,
 				22E4138B22BAEF6E00D44776 /* PlanetViewController.swift in Sources */,
 				22E4134922BAD11A00D44776 /* FilmsViewModel.swift in Sources */,

@@ -15,7 +15,7 @@ internal protocol KindType: ItemBaseType {
     var hair_colors: String { get }
     var skin_colors: String { get }
     var language: String { get }
-    var homeworld: String { get }
+    var homeworld: String? { get }
     var people: [String] { get }
     var films: [String] { get }
 }
@@ -29,7 +29,7 @@ internal class Kind: ItemBase, KindType {
     let hair_colors: String
     let skin_colors: String
     let language: String
-    let homeworld: String
+    let homeworld: String?
     let people: [String]
     let films: [String]
     

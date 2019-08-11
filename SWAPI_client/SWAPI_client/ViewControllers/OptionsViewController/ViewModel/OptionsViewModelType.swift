@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal protocol OptionsViewModelType: class {
+protocol OptionsViewModelType: class {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     

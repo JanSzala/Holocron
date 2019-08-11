@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol PeopleViewModelType: ListViewModelType {
+protocol PeopleViewModelType: ListViewModelType {
     var showDetails: ((Person) -> ())? { get set }
     
     var controllerTitle: String { get set }

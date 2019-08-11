@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal class ListViewModel<T: Decodable>: ListViewModelType {
+class ListViewModel<T: Decodable>: ListViewModelType {
     var itemsArray = [T]()
     let apiClient: APIClientType
     

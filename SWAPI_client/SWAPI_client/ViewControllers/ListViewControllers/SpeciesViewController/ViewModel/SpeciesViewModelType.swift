@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol SpeciesViewModelType: ListViewModelType {
+protocol SpeciesViewModelType: ListViewModelType {
     var showDetails: ((Kind) -> ())? { get set }
     
     var controllerTitle: String { get set }

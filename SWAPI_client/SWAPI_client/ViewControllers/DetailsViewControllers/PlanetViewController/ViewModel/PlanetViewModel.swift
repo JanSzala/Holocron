@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class PlanetViewModel: PlanetViewModelType {
+class PlanetViewModel: PlanetViewModelType {
     var controllerTitle: String
     var dataArray = [String]()
     var planet: Planet

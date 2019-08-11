@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol PlanetViewModelType: class {
+protocol PlanetViewModelType: class {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }

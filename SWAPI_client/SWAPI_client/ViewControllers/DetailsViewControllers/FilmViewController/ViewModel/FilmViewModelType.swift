@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol FilmViewModelType: class {
+protocol FilmViewModelType: DetailsViewModelType {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }

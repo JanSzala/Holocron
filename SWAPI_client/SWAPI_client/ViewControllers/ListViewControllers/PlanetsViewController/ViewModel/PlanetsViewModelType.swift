@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol PlanetsViewModelType: ListViewModelType {
+protocol PlanetsViewModelType: ListViewModelType {
     var showDetails: ((Planet) -> ())? { get set }
     
     var controllerTitle: String { get set }

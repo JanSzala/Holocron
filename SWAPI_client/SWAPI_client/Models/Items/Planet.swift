@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal protocol PlanetType: ItemBaseType {
+protocol PlanetType: ItemBaseType {
     var diameter: String { get }
     var rotation_period: String { get }
     var orbital_period: String { get }
@@ -19,7 +19,7 @@ internal protocol PlanetType: ItemBaseType {
     var films: [String] { get }
 }
 
-internal class Planet: ItemBase, PlanetType {
+class Planet: ItemBase, PlanetType {
     let diameter: String
     let rotation_period: String
     let orbital_period: String

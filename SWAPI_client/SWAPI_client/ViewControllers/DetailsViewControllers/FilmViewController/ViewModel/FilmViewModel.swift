@@ -8,28 +8,16 @@
 
 import Foundation
 
-internal class FilmViewModel: FilmViewModelType {
-    var controllerTitle: String
-    
-    var dataArray = [String]()
-    
-    let numberOfRowsInSection: Int = 1
-    
-    var sectionsCount: Int {
-        return dataSectionTitles.count
-    }
-    
+class FilmViewModel: DetailsViewModel<Film>, FilmViewModelType {
     var film: Film
     
     init(film: Film) {
         self.film = film
-        self.controllerTitle = film.title
+        super.init(controllerTitle: film.title)
         updateSections(for: film)
     }
-}
-
-extension FilmViewModel {
-    var dataSectionTitles: [String] {
+    
+    override var dataSectionTitles: [String] {
         return ["Title:",
                 "Number of the episode:",
                 "Opening credits:",
@@ -44,18 +32,8 @@ extension FilmViewModel {
                 "Created:",
                 "Edited:"]
     }
-}
-
-extension FilmViewModel {
-    func dataForRow(at indexPath: IndexPath) -> String {
-        return dataArray[indexPath.section]
-    }
     
-    func sectionTitle(for index: Int) -> String {
-        return dataSectionTitles[index]
-    }
-    
-    func updateSections(for film: Film) {
+    override func updateSections(for film: Film) {
         dataArray = [film.title,
                      String(film.episode_id),
                      film.opening_crawl,

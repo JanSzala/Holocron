@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-internal protocol FlowControllerType {
+protocol FlowControllerType {
     var rootViewController: UIViewController { get set }
 }

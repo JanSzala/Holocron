@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-internal protocol AppearanceConfigType {
+protocol AppearanceConfigType {
     func applyDefault()
 }
 
-internal class AppearanceConfig: AppearanceConfigType {
+class AppearanceConfig: AppearanceConfigType {
     func applyDefault() {
         NavigationBar.appearance().tintColor = UIColor.black
         NavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 50),

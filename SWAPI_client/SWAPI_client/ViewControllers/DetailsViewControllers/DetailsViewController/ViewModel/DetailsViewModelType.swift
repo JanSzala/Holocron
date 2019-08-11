@@ -1,14 +1,14 @@
 //
-//  PersonViewModelType.swift
+//  DetailsViewModelType.swift
 //  SWAPI_client
 //
-//  Created by GLaDOS on 19/06/2019.
+//  Created by GLaDOS on 11/08/2019.
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
 import Foundation
 
-protocol PersonViewModelType: class {
+protocol DetailsViewModelType: class {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal class OptionsViewModel: OptionsViewModelType {
+class OptionsViewModel: OptionsViewModelType {
     var controllerTitle: String = NSLocalizedString("Options", comment: "")
     var optionsTitlesArray = ["Dark mode"]
     

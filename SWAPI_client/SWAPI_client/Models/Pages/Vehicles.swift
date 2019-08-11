@@ -6,6 +6,6 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Vehicles: PageBase<Vehicle> {
+class Vehicles: PageBase<Vehicle> {
 
 }

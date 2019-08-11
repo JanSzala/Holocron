@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol FilmsViewModelType: ListViewModelType {
+protocol FilmsViewModelType: ListViewModelType {
     var showDetails: ((Film) -> ())? { get set }
     
     var controllerTitle: String { get set }

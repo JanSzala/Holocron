@@ -15,4 +15,4 @@ import Foundation
  It shouldn't know how next/previous view controllers will be shown or have any connection to them.
  */
 
-internal protocol ViewModel: class { }
+protocol ViewModel: class { }

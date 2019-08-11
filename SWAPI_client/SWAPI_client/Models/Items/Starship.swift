@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal protocol StarshipType: ItemBaseType {
+ protocol StarshipType: ItemBaseType {
     var model: String { get }
     var starship_class: String { get }
     var manufacturer: String { get }
@@ -23,7 +23,7 @@ internal protocol StarshipType: ItemBaseType {
     var pilots: [String] { get }
 }
 
-internal class Starship: ItemBase, StarshipType {
+class Starship: ItemBase, StarshipType {
     let model: String
     let starship_class: String
     let manufacturer: String

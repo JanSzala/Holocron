@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol DependencyContainerType {
+protocol DependencyContainerType {
     var apiClient: APIClientType { get }
     var appearanceConfig: AppearanceConfigType { get }
     var mainMenuViewController: MainMenuViewController { get }

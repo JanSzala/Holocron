@@ -6,6 +6,6 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Starships: PageBase<Starship> {
+class Starships: PageBase<Starship> {
 
 }

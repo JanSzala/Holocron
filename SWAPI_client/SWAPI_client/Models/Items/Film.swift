@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal protocol FilmType {
+protocol FilmType {
     var title: String { get }
     var episode_id: Int { get }
     var opening_crawl: String { get }
@@ -23,7 +23,7 @@ internal protocol FilmType {
     var edited: String { get }
 }
 
-internal class Film: FilmType, Decodable {
+class Film: FilmType, Decodable {
     let title: String
     let episode_id: Int
     let opening_crawl: String

@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol PersonType: ItemBaseType {
+protocol PersonType: ItemBaseType {
     var birth_year: String { get }
     var eye_color: String { get }
     var gender: String { get }
@@ -23,7 +23,7 @@ internal protocol PersonType: ItemBaseType {
     var vehicles: [String]? { get }
 }
 
-internal class Person: ItemBase, PersonType {
+class Person: ItemBase, PersonType {
     let birth_year: String
     let eye_color: String
     let gender: String

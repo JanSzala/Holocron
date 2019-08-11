@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal protocol MainMenuViewModelType: class {
+protocol MainMenuViewModelType: class {
     var onTapped: ((DataType, String) -> ())? { get set }
     var onOptions: (() -> ())? { get set }
     var onFilms: (() -> ())? { get set }

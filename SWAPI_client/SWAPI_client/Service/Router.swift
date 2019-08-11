@@ -8,11 +8,11 @@
 
 import Foundation
 
-internal protocol RouterType: class {
+protocol RouterType: class {
     func route(_ endpoint: DataType, _ page: Int) -> String
 }
 
-internal class Router: RouterType {
+class Router: RouterType {
     func route(_ endpoint: DataType, _ page: Int) -> String {
         var baseRoute = "https://swapi.co/api/"
         

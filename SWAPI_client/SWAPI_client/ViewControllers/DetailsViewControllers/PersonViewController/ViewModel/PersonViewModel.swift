@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class PersonViewModel: PersonViewModelType {
+class PersonViewModel: PersonViewModelType {
     var controllerTitle: String
     var dataArray = [String]()
     var person: Person

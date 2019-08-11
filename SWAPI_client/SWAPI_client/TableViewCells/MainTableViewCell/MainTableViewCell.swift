@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class MainTableViewCell: UITableViewCell {
+class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
 }

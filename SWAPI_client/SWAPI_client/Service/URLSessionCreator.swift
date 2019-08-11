@@ -8,11 +8,11 @@
 
 import Foundation
 
-internal protocol URLSessionCreatorType: class {
+protocol URLSessionCreatorType: class {
     func createURLSession(pageAddress: String, onSuccess: @escaping (Data) -> (), onFailure: @escaping () -> ())
 }
 
-internal class URLSessionCreator: URLSessionCreatorType {
+class URLSessionCreator: URLSessionCreatorType {
     func createURLSession(pageAddress: String, onSuccess: @escaping (Data) -> (), onFailure: @escaping () -> ()) {
         guard let url = URL(string: pageAddress) else {
             return

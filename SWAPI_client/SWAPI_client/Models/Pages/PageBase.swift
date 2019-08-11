@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class PageBase<T: Decodable>: Decodable {
+class PageBase<T: Decodable>: Decodable {
     let count: Int
     let next: String?
     let previous: String?

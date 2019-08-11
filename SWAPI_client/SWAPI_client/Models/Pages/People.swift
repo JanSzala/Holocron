@@ -6,6 +6,6 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class People: PageBase<Person> {
+class People: PageBase<Person> {
 
 }

@@ -6,6 +6,6 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Planets: PageBase<Planet> {
+class Planets: PageBase<Planet> {
 
 }

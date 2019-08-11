@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol ShipViewModelType: class {
+protocol ShipViewModelType: class {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class VehicleViewModel: VehicleViewModelType {
+class VehicleViewModel: VehicleViewModelType {
     var controllerTitle: String
     var dataArray = [String]()
     var vehicle: Vehicle

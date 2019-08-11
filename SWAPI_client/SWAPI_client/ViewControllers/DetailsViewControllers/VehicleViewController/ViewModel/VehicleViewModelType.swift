@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol VehicleViewModelType: class {
+protocol VehicleViewModelType: class {
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }

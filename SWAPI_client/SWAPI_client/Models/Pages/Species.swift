@@ -6,6 +6,6 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Species: PageBase<Kind> {
+class Species: PageBase<Kind> {
 
 }

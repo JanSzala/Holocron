@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class KindViewModel: KindViewModelType {
+class KindViewModel: KindViewModelType {
     var controllerTitle: String
     var dataArray = [String]()
     var kind: Kind

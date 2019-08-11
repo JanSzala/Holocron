@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal class FlowController: NSObject, FlowControllerType {
+class FlowController: NSObject, FlowControllerType {
     
     var rootViewController: UIViewController
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class OptionsCellWithSwitch: UITableViewCell {
+class OptionsCellWithSwitch: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var switchButton: UISwitch!
     

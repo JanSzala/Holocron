@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal class MainMenuViewModel: MainMenuViewModelType {
+class MainMenuViewModel: MainMenuViewModelType {
     var onTapped: ((DataType, String) -> ())?
     var onOptions: (() -> ())?
     var onFilms: (() -> ())?

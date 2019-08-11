@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal class DependencyContainer: DependencyContainerType {
+class DependencyContainer: DependencyContainerType {
     
     private lazy var navigationController = NavigationController(navigationBarClass: NavigationBar.self, toolbarClass: nil)
     
@@ -19,7 +19,7 @@ internal class DependencyContainer: DependencyContainerType {
     
     lazy var flowController = FlowController(dependencyContainer: self, rootViewController: rootViewController, navigationController: navigationController)
     
-    internal lazy var appearanceConfig: AppearanceConfigType = AppearanceConfig()
+    lazy var appearanceConfig: AppearanceConfigType = AppearanceConfig()
 }
 
 extension DependencyContainer {

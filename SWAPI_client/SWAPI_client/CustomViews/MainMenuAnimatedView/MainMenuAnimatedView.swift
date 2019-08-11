@@ -26,7 +26,7 @@ private enum ViewPlacing {
     case leftDown
 }
 
-internal class MainMenuAnimatedView: UIView {
+class MainMenuAnimatedView: UIView {
     @IBOutlet var sceneView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mainMenuButton: MainMenuSquareView!

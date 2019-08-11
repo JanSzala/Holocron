@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class MainMenuViewController: UIViewController {
+class MainMenuViewController: UIViewController {
     @IBOutlet var sceneView: UIView!
     @IBOutlet weak var mainMenuAnimatedView: MainMenuAnimatedView!
     

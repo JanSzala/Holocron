@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal protocol KindType: ItemBaseType {
+protocol KindType: ItemBaseType {
     var classification: String { get }
     var designation: String { get }
     var average_height: String { get }
@@ -20,7 +20,7 @@ internal protocol KindType: ItemBaseType {
     var films: [String] { get }
 }
 
-internal class Kind: ItemBase, KindType {
+class Kind: ItemBase, KindType {
     let classification: String
     let designation: String
     let average_height: String

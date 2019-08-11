@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol ShipsViewModelType: ListViewModelType {
+protocol ShipsViewModelType: ListViewModelType {
     var showDetails: ((Starship) -> ())? { get set }
     
     var controllerTitle: String { get set }

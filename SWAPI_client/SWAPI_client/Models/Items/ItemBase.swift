@@ -8,14 +8,14 @@
 
 import Foundation
 
-internal protocol ItemBaseType {
+protocol ItemBaseType {
     var name: String { get }
     var url: String { get }
     var created: String { get }
     var edited: String { get }
 }
 
-internal class ItemBase: ItemBaseType, Decodable {
+class ItemBase: ItemBaseType, Decodable {
     let name: String
     let url: String
     let created: String

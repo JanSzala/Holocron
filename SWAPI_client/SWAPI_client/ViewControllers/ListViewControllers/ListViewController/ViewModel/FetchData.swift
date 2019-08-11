@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class FetchData {
+class FetchData {
     var currentPage: Int = 1
     var shouldFetchData: Bool = true
     var apiClient: APIClientType

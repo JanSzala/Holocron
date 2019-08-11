@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class OptionsViewController: UIViewController {
+class OptionsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

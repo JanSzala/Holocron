@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class ShipViewModel: ShipViewModelType {
+class ShipViewModel: ShipViewModelType {
     var controllerTitle: String
     var dataArray = [String]()
     var starship: Starship

@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal protocol VehicleType: ItemBaseType {
+protocol VehicleType: ItemBaseType {
     var model: String { get }
     var vehicle_class: String { get }
     var manufacturer: String { get }
@@ -21,7 +21,7 @@ internal protocol VehicleType: ItemBaseType {
     var pilots: [String] { get }
 }
 
-internal class Vehicle: ItemBase, VehicleType {
+class Vehicle: ItemBase, VehicleType {
     let model: String
     let vehicle_class: String
     let manufacturer: String

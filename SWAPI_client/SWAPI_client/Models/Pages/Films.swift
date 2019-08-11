@@ -6,6 +6,6 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-internal class Films: PageBase<Film> {
+class Films: PageBase<Film> {
 
 }

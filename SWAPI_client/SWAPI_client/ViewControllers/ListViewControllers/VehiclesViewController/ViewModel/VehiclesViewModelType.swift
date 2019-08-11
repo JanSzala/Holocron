@@ -1,5 +1,5 @@
 //
-//  VehicleViewModelType.swift
+//  VehiclesViewModelType.swift
 //  SWAPI_client
 //
 //  Created by GLaDOS on 19/06/2019.
@@ -8,15 +8,12 @@
 
 import Foundation
 
-internal protocol VehiclesViewModelType: class {
+internal protocol VehiclesViewModelType: ListViewModelType {
     var showDetails: ((Vehicle) -> ())? { get set }
     
     var controllerTitle: String { get set }
     var currentPage: Int { get }
     var shouldFetchData: Bool { get }
-    var itemsArrayCount: Int { get }
-    var numberOfSections: Int { get }
-    var emptyListLabel: NSAttributedString { get }
     
     func title(for indexPath: IndexPath) -> String?
     func presentDetails(for indexPath: IndexPath)

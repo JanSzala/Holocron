@@ -9,61 +9,32 @@
 
 import UIKit
 
-internal class VehiclesViewModel: VehiclesViewModelType {
+class VehiclesViewModel: ListViewModel<Vehicle>, VehiclesViewModelType {
     var showDetails: ((Vehicle) -> ())?
     
     var controllerTitle: String = "Vehicles"
     var currentPage: Int = 1
     var shouldFetchData: Bool = true
-    var itemsArray = [Vehicle]()
     
-    var itemsArrayCount: Int {
-        return itemsArray.count
+    var fetch: FetchData
+    
+    override init(apiClient: APIClientType) {
+        fetch = FetchData(apiClient: apiClient)
+        super.init(apiClient: apiClient)
     }
     
-    var emptyListLabel: NSAttributedString {
-        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 35),
-                                                         NSAttributedString.Key.foregroundColor: UIColor.red]
-        return NSAttributedString(string: "I couldn't download data", attributes: attributes)
-    }
-    
-    let numberOfSections: Int = 1
-    
-    let apiClient: APIClientType
-    
-    init(apiClient: APIClientType) {
-        self.apiClient = apiClient
-    }
-    
-    func presentDetails(for indexPath: IndexPath) {
+    override func presentDetails(for indexPath: IndexPath) {
         showDetails?(itemsArray[indexPath.row])
     }
     
-    func title(for indexPath: IndexPath) -> String? {
+    override func title(for indexPath: IndexPath) -> String? {
         return itemsArray[indexPath.row].name
     }
     
-    func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ()) {
-        guard shouldFetchData == true else {
-            noMoreData()
-            return
-        }
-        
-        apiClient.getVehicles(page: currentPage, onSuccess: { data in
-            self.currentPage += 1
-            
-            guard let arrayOfData = data.results else {
-                fatalError("could not fill the array with results")
-            }
-            
-            self.shouldFetchData = data.next != nil
-            
-            self.itemsArray.append(contentsOf: arrayOfData)
+    override func fetchData(onSuccess: @escaping () -> (), onFailure: @escaping () -> (), noMoreData: @escaping () -> ()) {
+        fetch.fetchData(type: DataType.Vehicles, onSuccess: { [weak self] (arrayOfData: [Vehicle]) in
+            self?.itemsArray.append(contentsOf: arrayOfData)
             onSuccess()
-        }, onFailure: {
-            logMsg("Failed fetching data")
-            onFailure()
-        })
+            }, onFailure: onFailure, noMoreData: noMoreData)
     }
 }
-

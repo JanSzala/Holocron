@@ -101,7 +101,7 @@ extension FlowController {
     func showSpeciesViewController() {
         let controller = dependencyContainer.speciesViewController
         
-        controller.viewModel.showDetails = { kind in
+        controller.speciesViewModel.showDetails = { kind in
             self.showKindDetails(kind: kind)
         }
         
@@ -111,7 +111,7 @@ extension FlowController {
     func showShipsViewController() {
         let controller = dependencyContainer.shipsViewController
         
-        controller.viewModel.showDetails = { ship in
+        controller.shipsViewModel.showDetails = { ship in
             self.showShipDetails(ship: ship)
         }
         
@@ -121,7 +121,7 @@ extension FlowController {
     func showVehiclesViewController() {
         let controller = dependencyContainer.vehiclesViewController
         
-        controller.viewModel.showDetails = { vehicle in
+        controller.vehiclesViewModel.showDetails = { vehicle in
             self.showVehicleDetails(vehicle: vehicle)
         }
         

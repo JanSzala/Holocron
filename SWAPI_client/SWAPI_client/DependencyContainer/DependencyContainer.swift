@@ -23,7 +23,7 @@ class DependencyContainer: DependencyContainerType {
 
 extension DependencyContainer {
     var apiClient: APIClientType {
-        return APIClient(apiParser: apiParser, router: router, urlSessionCreator: urlSessionCreator)
+        return APIClient(apiParser: apiParser, router: router, apiService: apiService)
     }
     
     var apiParser: APIParserType {
@@ -34,7 +34,7 @@ extension DependencyContainer {
         return Router()
     }
     
-    var urlSessionCreator: URLSessionCreatorType {
-        return URLSessionCreator()
+    var apiService: APIServiceType {
+        return APIService()
     }
 }

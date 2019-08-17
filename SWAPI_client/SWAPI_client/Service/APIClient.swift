@@ -16,16 +16,16 @@ protocol APIClientType: class {
 class APIClient: APIClientType {
     let apiParser: APIParserType
     let router: RouterType
-    let urlSessionCreator: URLSessionCreatorType
+    let apiService: APIServiceType
     
-    init(apiParser: APIParserType, router: RouterType, urlSessionCreator: URLSessionCreatorType) {
+    init(apiParser: APIParserType, router: RouterType, apiService: APIServiceType) {
         self.apiParser = apiParser
         self.router = router
-        self.urlSessionCreator = urlSessionCreator
+        self.apiService = apiService
     }
     
     func getData<T: Decodable>(page: Int, type: DataType, onSuccess: @escaping (T) -> (), onFailure: @escaping  () -> ()) {
-        self.urlSessionCreator.createURLSession(pageAddress: router.route(type, page), onSuccess: { data in
+        _ = self.apiService.makeRequest(using: router.route(type, page), onSuccess: { data in
             self.apiParser.parseData(data: data, onSuccess: { fetchedData in
                 onSuccess(fetchedData)
             }, onFailure: {

@@ -15,7 +15,9 @@ class ListViewController: UIViewController {
     @IBOutlet weak var emptyListLabel: UILabel!
     
     private lazy var dataSource: ListDataSource = {
-        ListDataSource(viewModel: viewModel, populateTable: { self.populateTable() })
+        ListDataSource(viewModel: viewModel, populateTable: { [unowned self] in
+            self.populateTable()
+        })
     }()
 
     override func viewDidLoad() {

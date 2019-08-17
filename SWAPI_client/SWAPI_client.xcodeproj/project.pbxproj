@@ -90,7 +90,7 @@
 		6742C5092233ED860076A3BA /* BasicHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6742C5072233ED860076A3BA /* BasicHeaderView.xib */; };
 		675438E021FE167900900D30 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675438DE21FE167900900D30 /* MainTableViewCell.swift */; };
 		675438E121FE167900900D30 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675438DF21FE167900900D30 /* MainTableViewCell.xib */; };
-		675438E321FE24A300900D30 /* URLSessionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675438E221FE24A300900D30 /* URLSessionCreator.swift */; };
+		675438E321FE24A300900D30 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675438E221FE24A300900D30 /* APIService.swift */; };
 		6771D7C12205E2F500E1D031 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7C02205E2F500E1D031 /* Film.swift */; };
 		6771D7C52205EA8700E1D031 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7C42205EA8700E1D031 /* Films.swift */; };
 		6771D7C72205EB5F00E1D031 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771D7C62205EB5F00E1D031 /* Kind.swift */; };
@@ -269,7 +269,7 @@
 		6742C5072233ED860076A3BA /* BasicHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicHeaderView.xib; sourceTree = "<group>"; };
 		675438DE21FE167900900D30 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		675438DF21FE167900900D30 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
-		675438E221FE24A300900D30 /* URLSessionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCreator.swift; sourceTree = "<group>"; };
+		675438E221FE24A300900D30 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		6771D7C02205E2F500E1D031 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		6771D7C42205EA8700E1D031 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		6771D7C62205EB5F00E1D031 /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
@@ -947,7 +947,7 @@
 			isa = PBXGroup;
 			children = (
 				67969D9A21F3701D00B0A6EE /* APIClient.swift */,
-				675438E221FE24A300900D30 /* URLSessionCreator.swift */,
+				675438E221FE24A300900D30 /* APIService.swift */,
 				67BE63C6220CA5BA002347E4 /* Router.swift */,
 				67BE63C4220CA414002347E4 /* APIParser.swift */,
 				67B714E12249403D0033C249 /* Apperance */,
@@ -1297,7 +1297,7 @@
 				221C46EA23087CCA0086DEFE /* DetailsDataSource.swift in Sources */,
 				6771D7C12205E2F500E1D031 /* Film.swift in Sources */,
 				671416DD21B0551900B90FD9 /* FlowControllerType.swift in Sources */,
-				675438E321FE24A300900D30 /* URLSessionCreator.swift in Sources */,
+				675438E321FE24A300900D30 /* APIService.swift in Sources */,
 				67969D9621F35AEB00B0A6EE /* InternetReachability.swift in Sources */,
 				221C46EC23087E350086DEFE /* ListDataSource.swift in Sources */,
 				671416DF21B0552F00B90FD9 /* FlowController.swift in Sources */,

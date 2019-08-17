@@ -11,7 +11,7 @@ import UIKit
 
 class KindViewController: DetailsViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        super.init(nibName: "DetailsViewController", bundle: nibBundleOrNil)
         
         trackLifetime()
     }

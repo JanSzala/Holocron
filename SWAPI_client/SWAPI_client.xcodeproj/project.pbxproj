@@ -25,7 +25,6 @@
 		22AAC33622A01F51007EE666 /* ItemBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AAC33522A01F51007EE666 /* ItemBase.swift */; };
 		22AAC33822A02184007EE666 /* PageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AAC33722A02184007EE666 /* PageBase.swift */; };
 		22E4131922BA4C0600D44776 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4131722BA4C0600D44776 /* PersonViewController.swift */; };
-		22E4131A22BA4C0600D44776 /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4131822BA4C0600D44776 /* PersonViewController.xib */; };
 		22E4131D22BA4C3100D44776 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4131C22BA4C3100D44776 /* PersonViewModel.swift */; };
 		22E4131F22BA4C3B00D44776 /* PersonViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4131E22BA4C3B00D44776 /* PersonViewModelType.swift */; };
 		22E4132422BA99B400D44776 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4132222BA99B400D44776 /* PeopleViewController.swift */; };
@@ -65,15 +64,10 @@
 		22E4138222BAEE1500D44776 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4138122BAEE1500D44776 /* MainMenuViewController.swift */; };
 		22E4138422BAEE3500D44776 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4138322BAEE3500D44776 /* MainMenuViewController.xib */; };
 		22E4138722BAEF5F00D44776 /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4138522BAEF5F00D44776 /* FilmViewController.swift */; };
-		22E4138822BAEF5F00D44776 /* FilmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4138622BAEF5F00D44776 /* FilmViewController.xib */; };
 		22E4138B22BAEF6E00D44776 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4138922BAEF6E00D44776 /* PlanetViewController.swift */; };
-		22E4138C22BAEF6E00D44776 /* PlanetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4138A22BAEF6E00D44776 /* PlanetViewController.xib */; };
 		22E4138F22BAEF7E00D44776 /* KindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4138D22BAEF7E00D44776 /* KindViewController.swift */; };
-		22E4139022BAEF7E00D44776 /* KindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4138E22BAEF7E00D44776 /* KindViewController.xib */; };
 		22E4139322BAEF8900D44776 /* ShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4139122BAEF8900D44776 /* ShipViewController.swift */; };
-		22E4139422BAEF8900D44776 /* ShipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4139222BAEF8900D44776 /* ShipViewController.xib */; };
 		22E4139722BAEF9B00D44776 /* VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4139522BAEF9B00D44776 /* VehicleViewController.swift */; };
-		22E4139822BAEF9B00D44776 /* VehicleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4139622BAEF9B00D44776 /* VehicleViewController.xib */; };
 		6709F46621E0E44100056F80 /* MainMenuSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709F46421E0E44100056F80 /* MainMenuSquareView.swift */; };
 		6709F46721E0E44100056F80 /* MainMenuSquareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6709F46521E0E44100056F80 /* MainMenuSquareView.xib */; };
 		6709F46B21E0EEDE00056F80 /* UIView+fixInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709F46A21E0EEDE00056F80 /* UIView+fixInView.swift */; };
@@ -206,7 +200,6 @@
 		22AAC33522A01F51007EE666 /* ItemBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBase.swift; sourceTree = "<group>"; };
 		22AAC33722A02184007EE666 /* PageBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBase.swift; sourceTree = "<group>"; };
 		22E4131722BA4C0600D44776 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
-		22E4131822BA4C0600D44776 /* PersonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
 		22E4131C22BA4C3100D44776 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		22E4131E22BA4C3B00D44776 /* PersonViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModelType.swift; sourceTree = "<group>"; };
 		22E4132222BA99B400D44776 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -246,15 +239,10 @@
 		22E4138122BAEE1500D44776 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		22E4138322BAEE3500D44776 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
 		22E4138522BAEF5F00D44776 /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
-		22E4138622BAEF5F00D44776 /* FilmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmViewController.xib; sourceTree = "<group>"; };
 		22E4138922BAEF6E00D44776 /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
-		22E4138A22BAEF6E00D44776 /* PlanetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetViewController.xib; sourceTree = "<group>"; };
 		22E4138D22BAEF7E00D44776 /* KindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindViewController.swift; sourceTree = "<group>"; };
-		22E4138E22BAEF7E00D44776 /* KindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KindViewController.xib; sourceTree = "<group>"; };
 		22E4139122BAEF8900D44776 /* ShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipViewController.swift; sourceTree = "<group>"; };
-		22E4139222BAEF8900D44776 /* ShipViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShipViewController.xib; sourceTree = "<group>"; };
 		22E4139522BAEF9B00D44776 /* VehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewController.swift; sourceTree = "<group>"; };
-		22E4139622BAEF9B00D44776 /* VehicleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleViewController.xib; sourceTree = "<group>"; };
 		6709F46421E0E44100056F80 /* MainMenuSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuSquareView.swift; sourceTree = "<group>"; };
 		6709F46521E0E44100056F80 /* MainMenuSquareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuSquareView.xib; sourceTree = "<group>"; };
 		6709F46A21E0EEDE00056F80 /* UIView+fixInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fixInView.swift"; sourceTree = "<group>"; };
@@ -477,7 +465,6 @@
 			children = (
 				22E4131B22BA4C1E00D44776 /* ViewModel */,
 				22E4131722BA4C0600D44776 /* PersonViewController.swift */,
-				22E4131822BA4C0600D44776 /* PersonViewController.xib */,
 			);
 			path = PersonViewController;
 			sourceTree = "<group>";
@@ -624,7 +611,6 @@
 			children = (
 				22E4136822BAEA2200D44776 /* ViewModel */,
 				22E4138522BAEF5F00D44776 /* FilmViewController.swift */,
-				22E4138622BAEF5F00D44776 /* FilmViewController.xib */,
 			);
 			path = FilmViewController;
 			sourceTree = "<group>";
@@ -634,7 +620,6 @@
 			children = (
 				22E4136922BAEA2900D44776 /* ViewModel */,
 				22E4138922BAEF6E00D44776 /* PlanetViewController.swift */,
-				22E4138A22BAEF6E00D44776 /* PlanetViewController.xib */,
 			);
 			path = PlanetViewController;
 			sourceTree = "<group>";
@@ -644,7 +629,6 @@
 			children = (
 				22E4136A22BAEA2F00D44776 /* ViewModel */,
 				22E4138D22BAEF7E00D44776 /* KindViewController.swift */,
-				22E4138E22BAEF7E00D44776 /* KindViewController.xib */,
 			);
 			path = KindViewController;
 			sourceTree = "<group>";
@@ -654,7 +638,6 @@
 			children = (
 				22E4136B22BAEA3400D44776 /* ViewModel */,
 				22E4139122BAEF8900D44776 /* ShipViewController.swift */,
-				22E4139222BAEF8900D44776 /* ShipViewController.xib */,
 			);
 			path = ShipViewController;
 			sourceTree = "<group>";
@@ -664,7 +647,6 @@
 			children = (
 				22E4136C22BAEA3800D44776 /* ViewModel */,
 				22E4139522BAEF9B00D44776 /* VehicleViewController.swift */,
-				22E4139622BAEF9B00D44776 /* VehicleViewController.xib */,
 			);
 			path = VehicleViewController;
 			sourceTree = "<group>";
@@ -1187,27 +1169,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E4139422BAEF8900D44776 /* ShipViewController.xib in Resources */,
-				22E4138822BAEF5F00D44776 /* FilmViewController.xib in Resources */,
 				22E4135322BAD33100D44776 /* PlanetsViewController.xib in Resources */,
 				22E4134F22BAD31600D44776 /* FilmsViewController.xib in Resources */,
 				671416AD21B053AA00B90FD9 /* LaunchScreen.storyboard in Resources */,
 				6742C5012233D8A50076A3BA /* Localizable.strings in Resources */,
 				22E4135F22BAD39C00D44776 /* VehiclesViewController.xib in Resources */,
 				6799F39022D8C7CC00D79A2E /* ListViewController.xib in Resources */,
-				22E4139822BAEF9B00D44776 /* VehicleViewController.xib in Resources */,
 				22E4135722BAD35B00D44776 /* SpeciesViewController.xib in Resources */,
 				6742C5092233ED860076A3BA /* BasicHeaderView.xib in Resources */,
-				22E4139022BAEF7E00D44776 /* KindViewController.xib in Resources */,
 				22E4132522BA99B400D44776 /* PeopleViewController.xib in Resources */,
 				675438E121FE167900900D30 /* MainTableViewCell.xib in Resources */,
 				22E4138422BAEE3500D44776 /* MainMenuViewController.xib in Resources */,
 				671416AA21B053AA00B90FD9 /* Assets.xcassets in Resources */,
 				67E8FC85220EF40500CB9B40 /* OptionsViewController.xib in Resources */,
-				22E4138C22BAEF6E00D44776 /* PlanetViewController.xib in Resources */,
 				67E8FC91220EFE2E00CB9B40 /* OptionsCellWithSwitch.xib in Resources */,
 				226ACA4322B908B000CED67B /* MainMenuAnimatedView.xib in Resources */,
-				22E4131A22BA4C0600D44776 /* PersonViewController.xib in Resources */,
 				22E4135B22BAD37C00D44776 /* ShipsViewController.xib in Resources */,
 				6709F46721E0E44100056F80 /* MainMenuSquareView.xib in Resources */,
 				220B3A5A2300209B00814B24 /* DetailsViewController.xib in Resources */,

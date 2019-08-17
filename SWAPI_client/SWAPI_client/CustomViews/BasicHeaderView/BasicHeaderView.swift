@@ -10,4 +10,6 @@ import UIKit
 
 class BasicHeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var customSeparatorView: UIView!
+    @IBOutlet weak var separatorHeightConstraint: NSLayoutConstraint!
 }

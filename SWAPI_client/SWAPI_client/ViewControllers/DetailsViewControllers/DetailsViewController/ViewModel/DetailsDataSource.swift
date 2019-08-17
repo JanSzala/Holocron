@@ -28,14 +28,11 @@ extension DetailsDataSource: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header: BasicHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "basicHeaderView") as? BasicHeaderView else {
+        guard let headerView: BasicHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "basicHeaderView") as? BasicHeaderView else {
             fatalError("Could not dequeue BasicHeaderView")
         }
         
-        header.titleLabel.text = viewModel.sectionTitle(for: section)
-        header.titleLabel.textColor = darkModeColor(reversedColors: true)
-        
-        return header
+        return configure(headerView, for: section)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -65,5 +62,25 @@ extension DetailsDataSource: UITableViewDataSource, UITableViewDelegate {
         cell.isUserInteractionEnabled = false
         
         return cell
+    }
+    
+    private func configure(_ headerView: BasicHeaderView, for section: Int) -> BasicHeaderView {
+        headerView.titleLabel.text = viewModel.sectionTitle(for: section)
+        headerView.titleLabel.textColor = darkModeColor(reversedColors: true)
+        
+        guard section != 0 else {
+            
+            return headerView
+        }
+        
+        if section == 0 {
+            headerView.customSeparatorView.isHidden = true
+        } else {
+//            headerView.customSeparatorView.isHidden = false
+            headerView.customSeparatorView.backgroundColor = darkModeColor(reversedColors: true)
+            headerView.separatorHeightConstraint.constant = 0.5
+        }
+        
+        return headerView
     }
 }

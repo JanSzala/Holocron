@@ -20,17 +20,27 @@
                     <rect key="frame" x="0.0" y="5" width="375" height="252"/>
                     <subviews>
                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-PF-3Xc">
-                            <rect key="frame" x="16" y="0.0" width="359" height="252"/>
+                            <rect key="frame" x="16" y="21" width="359" height="231"/>
                             <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-XR-nx8">
+                            <rect key="frame" x="16" y="0.0" width="359" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="uoT-Bt-17R"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="b6q-PF-3Xc" secondAttribute="bottom" id="2Zh-5x-Wbf"/>
                         <constraint firstItem="b6q-PF-3Xc" firstAttribute="leading" secondItem="WAb-Yu-Rix" secondAttribute="leading" constant="16" id="FLO-Zs-y3R"/>
+                        <constraint firstItem="b6q-PF-3Xc" firstAttribute="top" secondItem="FBq-XR-nx8" secondAttribute="bottom" constant="20" id="RHn-i1-Ugj"/>
+                        <constraint firstItem="FBq-XR-nx8" firstAttribute="leading" secondItem="WAb-Yu-Rix" secondAttribute="leading" constant="16" id="Stl-K6-oGF"/>
+                        <constraint firstAttribute="trailing" secondItem="FBq-XR-nx8" secondAttribute="trailing" id="TNV-5U-BLJ"/>
                         <constraint firstAttribute="trailing" secondItem="b6q-PF-3Xc" secondAttribute="trailing" id="WRk-Zc-7vg"/>
-                        <constraint firstItem="b6q-PF-3Xc" firstAttribute="top" secondItem="WAb-Yu-Rix" secondAttribute="top" id="m45-iz-vsn"/>
+                        <constraint firstItem="FBq-XR-nx8" firstAttribute="top" secondItem="WAb-Yu-Rix" secondAttribute="top" id="eaJ-fH-H63"/>
                     </constraints>
                 </view>
             </subviews>
@@ -44,6 +54,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="K2r-gr-dqB"/>
             <connections>
+                <outlet property="customSeparatorView" destination="FBq-XR-nx8" id="oXT-qB-0Gq"/>
+                <outlet property="separatorHeightConstraint" destination="uoT-Bt-17R" id="DYk-FH-5gw"/>
                 <outlet property="titleLabel" destination="b6q-PF-3Xc" id="fYm-aX-cK5"/>
             </connections>
             <point key="canvasLocation" x="-77.599999999999994" y="-28.785607196401802"/>

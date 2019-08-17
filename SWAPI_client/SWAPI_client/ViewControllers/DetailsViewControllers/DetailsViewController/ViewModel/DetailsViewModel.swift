@@ -20,7 +20,7 @@ class DetailsViewModel<T: Decodable>: DetailsViewModelType {
     }
     
     var heightForHeaderInSection: CGFloat {
-        return 30
+        return 50
     }
     
     init(controllerTitle: String) {

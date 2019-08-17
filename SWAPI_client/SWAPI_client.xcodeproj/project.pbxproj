@@ -16,6 +16,8 @@
 		220B3A67230088EB00814B24 /* FlowController+ListControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A66230088EB00814B24 /* FlowController+ListControllers.swift */; };
 		220B3A692300A89600814B24 /* DependencyContainer+ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A682300A89600814B24 /* DependencyContainer+ViewControllers.swift */; };
 		220B3A6B2300A8A500814B24 /* DependencyContainer+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B3A6A2300A8A500814B24 /* DependencyContainer+ViewModels.swift */; };
+		221C46EA23087CCA0086DEFE /* DetailsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C46E923087CCA0086DEFE /* DetailsDataSource.swift */; };
+		221C46EC23087E350086DEFE /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C46EB23087E350086DEFE /* ListDataSource.swift */; };
 		22554B79229F342800ED428C /* EarlGreyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22554B78229F342800ED428C /* EarlGreyTests.swift */; };
 		22554B80229F344600ED428C /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22554B6F229F2EC200ED428C /* EarlGrey.framework */; };
 		22554B83229F361A00ED428C /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22554B82229F361A00ED428C /* EarlGrey.swift */; };
@@ -183,6 +185,8 @@
 		220B3A66230088EB00814B24 /* FlowController+ListControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowController+ListControllers.swift"; sourceTree = "<group>"; };
 		220B3A682300A89600814B24 /* DependencyContainer+ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyContainer+ViewControllers.swift"; sourceTree = "<group>"; };
 		220B3A6A2300A8A500814B24 /* DependencyContainer+ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyContainer+ViewModels.swift"; sourceTree = "<group>"; };
+		221C46E923087CCA0086DEFE /* DetailsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDataSource.swift; sourceTree = "<group>"; };
+		221C46EB23087E350086DEFE /* ListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
 		22554B6F229F2EC200ED428C /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Carthage/Build/iOS/EarlGrey.framework; sourceTree = "<group>"; };
 		22554B76229F342700ED428C /* EarlGreyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarlGreyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22554B78229F342800ED428C /* EarlGreyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyTests.swift; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 			children = (
 				220B3A5E230020CA00814B24 /* DetailsViewModelType.swift */,
 				220B3A5B230020B900814B24 /* DetailsViewModel.swift */,
+				221C46E923087CCA0086DEFE /* DetailsDataSource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -906,6 +911,7 @@
 				6799F39522D8CD9400D79A2E /* ListViewModelType.swift */,
 				6799F39322D8CD8600D79A2E /* ListViewModel.swift */,
 				67E4146122DE0C5700CFD1BF /* FetchData.swift */,
+				221C46EB23087E350086DEFE /* ListDataSource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1288,10 +1294,12 @@
 				671416F121B056F300B90FD9 /* DependencyContainerType.swift in Sources */,
 				22E4139722BAEF9B00D44776 /* VehicleViewController.swift in Sources */,
 				6771D7D5220654D400E1D031 /* Planets.swift in Sources */,
+				221C46EA23087CCA0086DEFE /* DetailsDataSource.swift in Sources */,
 				6771D7C12205E2F500E1D031 /* Film.swift in Sources */,
 				671416DD21B0551900B90FD9 /* FlowControllerType.swift in Sources */,
 				675438E321FE24A300900D30 /* URLSessionCreator.swift in Sources */,
 				67969D9621F35AEB00B0A6EE /* InternetReachability.swift in Sources */,
+				221C46EC23087E350086DEFE /* ListDataSource.swift in Sources */,
 				671416DF21B0552F00B90FD9 /* FlowController.swift in Sources */,
 				220B3A6B2300A8A500814B24 /* DependencyContainer+ViewModels.swift in Sources */,
 				6799F39622D8CD9400D79A2E /* ListViewModelType.swift in Sources */,

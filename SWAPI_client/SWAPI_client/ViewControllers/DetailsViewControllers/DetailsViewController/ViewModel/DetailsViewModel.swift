@@ -6,7 +6,7 @@
 //  Copyright © 2019 JanSzala. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class DetailsViewModel<T: Decodable>: DetailsViewModelType {
     var controllerTitle: String
@@ -17,6 +17,10 @@ class DetailsViewModel<T: Decodable>: DetailsViewModelType {
     
     var sectionsCount: Int {
         return dataSectionTitles.count
+    }
+    
+    var heightForHeaderInSection: CGFloat {
+        return 30
     }
     
     init(controllerTitle: String) {

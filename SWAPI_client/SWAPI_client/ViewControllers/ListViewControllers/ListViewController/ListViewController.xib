@@ -16,6 +16,7 @@
                 <outlet property="emptyListLabel" destination="HQl-Ee-oZT" id="bcp-J5-Dnz"/>
                 <outlet property="emptyListView" destination="BLj-Z5-gbK" id="TxW-AP-2yp"/>
                 <outlet property="tableView" destination="IOS-eR-eZk" id="t8g-GR-uKF"/>
+                <outlet property="view" destination="FP1-3g-l9D" id="HUf-bm-xoU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

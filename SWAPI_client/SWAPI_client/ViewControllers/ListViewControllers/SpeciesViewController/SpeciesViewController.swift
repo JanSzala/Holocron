@@ -11,7 +11,7 @@ import UIKit
 
 class SpeciesViewController: ListViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        super.init(nibName: "ListViewController", bundle: nibBundleOrNil)
         
         trackLifetime()
     }

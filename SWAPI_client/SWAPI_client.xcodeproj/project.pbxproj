@@ -28,7 +28,6 @@
 		22E4131D22BA4C3100D44776 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4131C22BA4C3100D44776 /* PersonViewModel.swift */; };
 		22E4131F22BA4C3B00D44776 /* PersonViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4131E22BA4C3B00D44776 /* PersonViewModelType.swift */; };
 		22E4132422BA99B400D44776 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4132222BA99B400D44776 /* PeopleViewController.swift */; };
-		22E4132522BA99B400D44776 /* PeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4132322BA99B400D44776 /* PeopleViewController.xib */; };
 		22E4132822BA99F700D44776 /* PeopleViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4132722BA99F700D44776 /* PeopleViewModelType.swift */; };
 		22E4132A22BA99FF00D44776 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4132922BA99FF00D44776 /* PeopleViewModel.swift */; };
 		22E4133922BAD0B400D44776 /* VehiclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4133822BAD0B400D44776 /* VehiclesViewModel.swift */; };
@@ -42,15 +41,10 @@
 		22E4134922BAD11A00D44776 /* FilmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4134822BAD11A00D44776 /* FilmsViewModel.swift */; };
 		22E4134B22BAD12400D44776 /* FilmsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4134A22BAD12400D44776 /* FilmsViewModelType.swift */; };
 		22E4134E22BAD31600D44776 /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4134C22BAD31600D44776 /* FilmsViewController.swift */; };
-		22E4134F22BAD31600D44776 /* FilmsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4134D22BAD31600D44776 /* FilmsViewController.xib */; };
 		22E4135222BAD33100D44776 /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4135022BAD33100D44776 /* PlanetsViewController.swift */; };
-		22E4135322BAD33100D44776 /* PlanetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4135122BAD33100D44776 /* PlanetsViewController.xib */; };
 		22E4135622BAD35B00D44776 /* SpeciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4135422BAD35B00D44776 /* SpeciesViewController.swift */; };
-		22E4135722BAD35B00D44776 /* SpeciesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4135522BAD35B00D44776 /* SpeciesViewController.xib */; };
 		22E4135A22BAD37C00D44776 /* ShipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4135822BAD37C00D44776 /* ShipsViewController.swift */; };
-		22E4135B22BAD37C00D44776 /* ShipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4135922BAD37C00D44776 /* ShipsViewController.xib */; };
 		22E4135E22BAD39C00D44776 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4135C22BAD39C00D44776 /* VehiclesViewController.swift */; };
-		22E4135F22BAD39C00D44776 /* VehiclesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4135D22BAD39C00D44776 /* VehiclesViewController.xib */; };
 		22E4136E22BAEBE400D44776 /* FilmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4136D22BAEBE400D44776 /* FilmViewModel.swift */; };
 		22E4137022BAEBEE00D44776 /* FilmViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4136F22BAEBEE00D44776 /* FilmViewModelType.swift */; };
 		22E4137222BAEC0700D44776 /* PlanetViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4137122BAEC0700D44776 /* PlanetViewModelType.swift */; };
@@ -203,7 +197,6 @@
 		22E4131C22BA4C3100D44776 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		22E4131E22BA4C3B00D44776 /* PersonViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModelType.swift; sourceTree = "<group>"; };
 		22E4132222BA99B400D44776 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
-		22E4132322BA99B400D44776 /* PeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewController.xib; sourceTree = "<group>"; };
 		22E4132722BA99F700D44776 /* PeopleViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelType.swift; sourceTree = "<group>"; };
 		22E4132922BA99FF00D44776 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		22E4133822BAD0B400D44776 /* VehiclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewModel.swift; sourceTree = "<group>"; };
@@ -217,15 +210,10 @@
 		22E4134822BAD11A00D44776 /* FilmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewModel.swift; sourceTree = "<group>"; };
 		22E4134A22BAD12400D44776 /* FilmsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewModelType.swift; sourceTree = "<group>"; };
 		22E4134C22BAD31600D44776 /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
-		22E4134D22BAD31600D44776 /* FilmsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmsViewController.xib; sourceTree = "<group>"; };
 		22E4135022BAD33100D44776 /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
-		22E4135122BAD33100D44776 /* PlanetsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetsViewController.xib; sourceTree = "<group>"; };
 		22E4135422BAD35B00D44776 /* SpeciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewController.swift; sourceTree = "<group>"; };
-		22E4135522BAD35B00D44776 /* SpeciesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeciesViewController.xib; sourceTree = "<group>"; };
 		22E4135822BAD37C00D44776 /* ShipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipsViewController.swift; sourceTree = "<group>"; };
-		22E4135922BAD37C00D44776 /* ShipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShipsViewController.xib; sourceTree = "<group>"; };
 		22E4135C22BAD39C00D44776 /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
-		22E4135D22BAD39C00D44776 /* VehiclesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehiclesViewController.xib; sourceTree = "<group>"; };
 		22E4136D22BAEBE400D44776 /* FilmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewModel.swift; sourceTree = "<group>"; };
 		22E4136F22BAEBEE00D44776 /* FilmViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewModelType.swift; sourceTree = "<group>"; };
 		22E4137122BAEC0700D44776 /* PlanetViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewModelType.swift; sourceTree = "<group>"; };
@@ -497,7 +485,6 @@
 			children = (
 				22E4132622BA99EA00D44776 /* ViewModel */,
 				22E4132222BA99B400D44776 /* PeopleViewController.swift */,
-				22E4132322BA99B400D44776 /* PeopleViewController.xib */,
 			);
 			path = PeopleViewController;
 			sourceTree = "<group>";
@@ -516,7 +503,6 @@
 			children = (
 				22E4133322BAD07C00D44776 /* ViewModel */,
 				22E4134C22BAD31600D44776 /* FilmsViewController.swift */,
-				22E4134D22BAD31600D44776 /* FilmsViewController.xib */,
 			);
 			path = FilmsViewController;
 			sourceTree = "<group>";
@@ -526,7 +512,6 @@
 			children = (
 				22E4133422BAD08400D44776 /* ViewModel */,
 				22E4135022BAD33100D44776 /* PlanetsViewController.swift */,
-				22E4135122BAD33100D44776 /* PlanetsViewController.xib */,
 			);
 			path = PlanetsViewController;
 			sourceTree = "<group>";
@@ -536,7 +521,6 @@
 			children = (
 				22E4133522BAD08B00D44776 /* ViewModel */,
 				22E4135422BAD35B00D44776 /* SpeciesViewController.swift */,
-				22E4135522BAD35B00D44776 /* SpeciesViewController.xib */,
 			);
 			path = SpeciesViewController;
 			sourceTree = "<group>";
@@ -546,7 +530,6 @@
 			children = (
 				22E4133622BAD09100D44776 /* ViewModel */,
 				22E4135822BAD37C00D44776 /* ShipsViewController.swift */,
-				22E4135922BAD37C00D44776 /* ShipsViewController.xib */,
 			);
 			path = ShipsViewController;
 			sourceTree = "<group>";
@@ -556,7 +539,6 @@
 			children = (
 				22E4133722BAD09700D44776 /* ViewModel */,
 				22E4135C22BAD39C00D44776 /* VehiclesViewController.swift */,
-				22E4135D22BAD39C00D44776 /* VehiclesViewController.xib */,
 			);
 			path = VehiclesViewController;
 			sourceTree = "<group>";
@@ -1169,22 +1151,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E4135322BAD33100D44776 /* PlanetsViewController.xib in Resources */,
-				22E4134F22BAD31600D44776 /* FilmsViewController.xib in Resources */,
 				671416AD21B053AA00B90FD9 /* LaunchScreen.storyboard in Resources */,
 				6742C5012233D8A50076A3BA /* Localizable.strings in Resources */,
-				22E4135F22BAD39C00D44776 /* VehiclesViewController.xib in Resources */,
 				6799F39022D8C7CC00D79A2E /* ListViewController.xib in Resources */,
-				22E4135722BAD35B00D44776 /* SpeciesViewController.xib in Resources */,
 				6742C5092233ED860076A3BA /* BasicHeaderView.xib in Resources */,
-				22E4132522BA99B400D44776 /* PeopleViewController.xib in Resources */,
 				675438E121FE167900900D30 /* MainTableViewCell.xib in Resources */,
 				22E4138422BAEE3500D44776 /* MainMenuViewController.xib in Resources */,
 				671416AA21B053AA00B90FD9 /* Assets.xcassets in Resources */,
 				67E8FC85220EF40500CB9B40 /* OptionsViewController.xib in Resources */,
 				67E8FC91220EFE2E00CB9B40 /* OptionsCellWithSwitch.xib in Resources */,
 				226ACA4322B908B000CED67B /* MainMenuAnimatedView.xib in Resources */,
-				22E4135B22BAD37C00D44776 /* ShipsViewController.xib in Resources */,
 				6709F46721E0E44100056F80 /* MainMenuSquareView.xib in Resources */,
 				220B3A5A2300209B00814B24 /* DetailsViewController.xib in Resources */,
 			);

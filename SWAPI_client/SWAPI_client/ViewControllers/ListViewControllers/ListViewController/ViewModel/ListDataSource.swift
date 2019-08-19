@@ -51,6 +51,7 @@ extension ListDataSource {
         cell.titleLabel.text = viewModel.title(for: indexPath)
         cell.backgroundColor = darkModeColor()
         cell.titleLabel.textColor = darkModeColor(reversedColors: true)
+        cell.titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         return cell
     }
 }

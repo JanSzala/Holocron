@@ -33,24 +33,12 @@ class MainMenuAnimatedView: UIView {
     
     var onOptions: () -> () = {}
     
-    var onFilms: () -> () = {
-        print("dupa")
-    }
-    var onPeople: () -> () = {
-        print("dupa")
-    }
-    var onPlanets: () -> () = {
-        print("dupa")
-    }
-    var onSpecies: () -> () = {
-        print("dupa")
-    }
-    var onShips: () -> () = {
-        print("dupa")
-    }
-    var onVehicles: () -> () = {
-        print("dupa")
-    }
+    var onFilms: () -> () = {}
+    var onPeople: () -> () = {}
+    var onPlanets: () -> () = {}
+    var onSpecies: () -> () = {}
+    var onShips: () -> () = {}
+    var onVehicles: () -> () = {}
     
     var onTapped: ((DataType, String) -> ())?
     var views = [MainMenuSquareView]()

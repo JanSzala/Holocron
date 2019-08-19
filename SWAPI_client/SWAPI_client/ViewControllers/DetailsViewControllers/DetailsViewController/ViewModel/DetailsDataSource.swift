@@ -60,6 +60,7 @@ extension DetailsDataSource: UITableViewDataSource, UITableViewDelegate {
         cell.backgroundColor = darkModeColor()
         cell.titleLabel.textColor = darkModeColor(reversedColors: true)
         cell.isUserInteractionEnabled = false
+        cell.titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         
         return cell
     }
@@ -67,16 +68,12 @@ extension DetailsDataSource: UITableViewDataSource, UITableViewDelegate {
     private func configure(_ headerView: BasicHeaderView, for section: Int) -> BasicHeaderView {
         headerView.titleLabel.text = viewModel.sectionTitle(for: section)
         headerView.titleLabel.textColor = darkModeColor(reversedColors: true)
-        
-        guard section != 0 else {
-            
-            return headerView
-        }
+        headerView.titleLabel.font = UIFont.preferredFont(forTextStyle: .title2)
         
         if section == 0 {
             headerView.customSeparatorView.isHidden = true
         } else {
-//            headerView.customSeparatorView.isHidden = false
+            headerView.customSeparatorView.isHidden = false
             headerView.customSeparatorView.backgroundColor = darkModeColor(reversedColors: true)
             headerView.separatorHeightConstraint.constant = 0.5
         }

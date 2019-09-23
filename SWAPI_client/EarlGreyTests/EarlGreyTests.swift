@@ -20,15 +20,27 @@ class EarlGreyTests: XCTestCase {
         
     }
 
-    func testExample() {
+    func test_mainMenuPeopleButton() {
         EarlGrey.selectElement(with: grey_text("People")).perform(grey_tap())
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_mainMenuPlanetsButton() {
+        EarlGrey.selectElement(with: grey_text("Planets")).perform(grey_tap())
     }
-
+    
+    func test_mainMenuSpeciesButton() {
+        EarlGrey.selectElement(with: grey_text("Species")).perform(grey_tap())
+    }
+    
+    func test_mainMenuShipsButton() {
+        EarlGrey.selectElement(with: grey_text("Ships")).perform(grey_tap())
+    }
+    
+    func test_mainMenuVehiclesButton() {
+        EarlGrey.selectElement(with: grey_text("Vehicles")).perform(grey_tap())
+    }
+    
+    func test_mainMenuFilmsButton() {
+        EarlGrey.selectElement(with: grey_text("Films")).perform(grey_tap())
+    }
 }

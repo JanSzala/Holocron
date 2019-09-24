@@ -9,6 +9,7 @@
 import Foundation
 
 protocol ListViewModelType: class {
+    var navBarAccessibilityId: String { get }
     var emptyListLabel: NSAttributedString { get }
     var numberOfSections: Int { get }
     var itemsArrayCount: Int { get }

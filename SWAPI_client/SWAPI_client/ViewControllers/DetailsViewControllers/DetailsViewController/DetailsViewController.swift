@@ -34,6 +34,8 @@ class DetailsViewController: UIViewController {
     }
     
     private func setupUI() {
+        self.navigationController?.navigationBar.accessibilityIdentifier = viewModel.navBarAccessibilityId
+        self.navigationItem.leftBarButtonItem?.accessibilityIdentifier = viewModel.leftItemAccessibilityId
         title = viewModel.controllerTitle
     }
     

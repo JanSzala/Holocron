@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 protocol OptionsViewModelType: class {
+    var navBarAccessibilityId: String { get }
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     

@@ -9,6 +9,8 @@
 import UIKit
 
 protocol DetailsViewModelType: class {
+    var navBarAccessibilityId: String { get }
+    var leftItemAccessibilityId: String { get }
     var controllerTitle: String { get }
     var numberOfRowsInSection: Int { get }
     var sectionsCount: Int { get }

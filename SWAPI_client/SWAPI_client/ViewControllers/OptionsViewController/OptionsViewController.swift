@@ -38,6 +38,7 @@ class OptionsViewController: UIViewController {
     private func setupUI() {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.accessibilityIdentifier = viewModel.navBarAccessibilityId
         title = viewModel.controllerTitle
     }
     

@@ -13,6 +13,8 @@ class ListViewModel<T: Decodable>: ListViewModelType {
     var itemsArray = [T]()
     let apiClient: APIClientType
     
+    let navBarAccessibilityId = "listVCNavigationBar"
+    
     init(apiClient: APIClientType) {
         self.apiClient = apiClient
     }

@@ -13,6 +13,8 @@ class OptionsViewModel: OptionsViewModelType {
     var controllerTitle: String = NSLocalizedString("Options", comment: "")
     var optionsTitlesArray = ["Dark mode"]
     
+    let navBarAccessibilityId = "optionsVCNavigationBar"
+    
     var numberOfRowsInSection: Int {
         return optionsTitlesArray.count
     }

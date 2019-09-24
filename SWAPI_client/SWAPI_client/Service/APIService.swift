@@ -22,6 +22,7 @@ class APIService: APIServiceType {
                     onFailure()
                     return
                 }
+                
                 guard let httpStatusCode = response.response?.statusCode else {
                     onFailure()
                     return

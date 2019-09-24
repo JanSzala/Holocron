@@ -10,10 +10,11 @@ import UIKit
 
 class DetailsViewModel<T: Decodable>: DetailsViewModelType {
     var controllerTitle: String
-    
     var dataArray = [String]()
     
     let numberOfRowsInSection: Int = 1
+    let navBarAccessibilityId = "detailsVCNavigationBar"
+    let leftItemAccessibilityId = "navBarLeftBarButtonItem"
     
     var sectionsCount: Int {
         return dataSectionTitles.count

@@ -52,6 +52,7 @@ extension ListDataSource {
         cell.backgroundColor = darkModeColor()
         cell.titleLabel.textColor = darkModeColor(reversedColors: true)
         cell.titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        cell.accessibilityIdentifier = "mainTableViewCell\(indexPath.row)"
         return cell
     }
 }

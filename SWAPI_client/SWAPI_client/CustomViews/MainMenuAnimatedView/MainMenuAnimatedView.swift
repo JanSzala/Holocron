@@ -87,6 +87,7 @@ class MainMenuAnimatedView: UIView {
 extension MainMenuAnimatedView {
     private func setupMainMenuButton() {
         mainMenuButton.frame.origin.y = containerView.frame.maxY + mainMenuButton.frame.height + additionalSpace
+        mainMenuButton.accessibilityIdentifier = "Options"
         
         mainMenuButton.onButton = {
             self.onOptions()
@@ -111,6 +112,7 @@ extension MainMenuAnimatedView {
     private func createView(delay: TimeInterval, viewPlacing: ViewPlacing, index: Int) {
         let view = MainMenuSquareView(frame: mainMenuButton.frame)
         view.button.setTitle(buttonTitlesArray[index], for: .normal)
+        view.button.accessibilityIdentifier = buttonTitlesArray[index]
         containerView.insertSubview(view, belowSubview: mainMenuButton)
         
         view.mainView.backgroundColor = darkModeColor(reversedColors: true)

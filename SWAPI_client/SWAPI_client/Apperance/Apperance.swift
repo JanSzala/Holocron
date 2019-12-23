@@ -16,6 +16,7 @@ protocol AppearanceConfigType {
 class AppearanceConfig: AppearanceConfigType {
     func applyDefault() {
         NavigationBar.appearance().tintColor = UIColor.black
+        NavigationBar.appearance().backgroundColor = UIColor.white
         NavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.dinCondensedBold(ofSize: 50),
                                                                NSAttributedString.Key.kern: 2.0,
                                                                NSAttributedString.Key.foregroundColor: UIColor.black

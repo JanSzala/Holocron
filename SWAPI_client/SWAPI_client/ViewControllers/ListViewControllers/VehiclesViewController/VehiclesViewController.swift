@@ -30,6 +30,7 @@ class VehiclesViewController: ListViewController {
     
     override func setupUI() {
         super.setupUI()
+        
         title = vehiclesViewModel.controllerTitle
     }
 }

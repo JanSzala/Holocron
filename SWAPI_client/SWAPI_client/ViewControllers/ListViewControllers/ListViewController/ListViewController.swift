@@ -22,6 +22,7 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         setupTable()
         registerCells()
@@ -30,6 +31,7 @@ class ListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         tableView.backgroundColor = self.darkModeColor()
         activityIndicator.color = darkModeColor(reversedColors: true)
         deselectRow()
@@ -56,13 +58,13 @@ extension ListViewController {
 }
 
 extension ListViewController {
-    func deselectRow() {
+    private func deselectRow() {
         if let index = self.tableView.indexPathForSelectedRow {
             self.tableView.deselectRow(at: index, animated: true)
         }
     }
     
-    func populateTable() {
+    private func populateTable() {
         activityIndicator.startAnimating()
         viewModel.fetchData(onSuccess: {
             DispatchQueue.main.async {

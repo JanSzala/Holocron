@@ -1,10 +1,10 @@
 {
-  "commitish" : "1.5.0",
+  "commitish" : "1.6.0",
   "iOS" : [
     {
       "name" : "SnapshotTesting",
-      "hash" : "f9b7d245d2b978e27129d5a997f4e87dbfa546257acf0f7b8f229eeeba3e150c",
-      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+      "hash" : "9a734a60c60bcb4d05784e86a8ef75b2ea2fb23c6ec33249c870a8285529b304",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ]
 }

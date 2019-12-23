@@ -17,7 +17,6 @@ class APIParser: APIParserType {
         do {
             let json = try JSONDecoder().decode(T.self, from: data)
             onSuccess(json)
-            
         } catch let error {
             logMsg("Error during serialization of JSON: \(error)")
             onFailure()

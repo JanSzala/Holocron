@@ -1,6 +1,3 @@
-#EarlGrey
-github "google/EarlGrey"
-
 # LifetimeTracker
 github "krzysztofzablocki/LifetimeTracker" ~> 1.6
 

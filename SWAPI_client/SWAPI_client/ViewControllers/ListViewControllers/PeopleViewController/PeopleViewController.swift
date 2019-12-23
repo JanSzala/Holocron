@@ -30,6 +30,7 @@ class PeopleViewController: ListViewController {
     
     override func setupUI() {
         super.setupUI()
+        
         title = peopleViewModel.controllerTitle
     }
 }

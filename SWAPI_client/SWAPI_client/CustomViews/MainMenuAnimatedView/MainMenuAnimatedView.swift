@@ -31,6 +31,8 @@ class MainMenuAnimatedView: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mainMenuButton: MainMenuSquareView!
     
+    let screenSize: CGRect = UIScreen.main.bounds
+    
     var onOptions: () -> () = {}
     
     var onFilms: () -> () = {}
@@ -54,12 +56,7 @@ class MainMenuAnimatedView: UIView {
     
     lazy var closures: [() -> ()] = [onFilms, onPeople, onPlanets, onSpecies, onShips, onVehicles]
     
-    var buttonTitlesArray: [String] = [NSLocalizedString("Films", comment: ""),
-                                       NSLocalizedString("People", comment: ""),
-                                       NSLocalizedString("Planets", comment: ""),
-                                       NSLocalizedString("Species", comment: ""),
-                                       NSLocalizedString("Ships", comment: ""),
-                                       NSLocalizedString("Vehicles", comment: "")]
+    var buttonTitlesArray: [String] = ["Films", "People", "Planets", "Species", "Ships", "Vehicles"]
     
     override func awakeFromNib() {
         super.awakeFromNib()

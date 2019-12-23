@@ -17,7 +17,7 @@ extension FlowController {
         }
         
         let controller = dependencyContainer.filmsViewController(with: viewModel)
-        navigationController.pushViewController(controller, animated: true)
+        navigationController.pushViewController(controller, animated: false)
     }
     
     func showPeopleViewController() {

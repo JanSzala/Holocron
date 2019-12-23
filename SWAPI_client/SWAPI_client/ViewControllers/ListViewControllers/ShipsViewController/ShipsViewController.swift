@@ -30,6 +30,7 @@ class ShipsViewController: ListViewController {
     
     override func setupUI() {
         super.setupUI()
+        
         title = shipsViewModel.controllerTitle
     }
 }

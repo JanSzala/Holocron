@@ -93,7 +93,7 @@
 		671416EC21B0564E00B90FD9 /* MainMenuViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671416EB21B0564E00B90FD9 /* MainMenuViewModelType.swift */; };
 		671416EF21B056C500B90FD9 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671416EE21B056C500B90FD9 /* DependencyContainer.swift */; };
 		671416F121B056F300B90FD9 /* DependencyContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671416F021B056F300B90FD9 /* DependencyContainerType.swift */; };
-		6722E2D822246D6300DC0DDB /* UIViewController+ColorChanging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6722E2D722246D6300DC0DDB /* UIViewController+ColorChanging.swift */; };
+		6722E2D822246D6300DC0DDB /* NSObject+ColorChanging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6722E2D722246D6300DC0DDB /* NSObject+ColorChanging.swift */; };
 		67239BE82211EA8D006AB3B9 /* UserDefaults+IsFirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67239BE72211EA8D006AB3B9 /* UserDefaults+IsFirstLaunch.swift */; };
 		6742C5012233D8A50076A3BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6742C5032233D8A50076A3BA /* Localizable.strings */; };
 		6742C5092233ED860076A3BA /* BasicHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6742C5072233ED860076A3BA /* BasicHeaderView.xib */; };
@@ -279,7 +279,7 @@
 		671416EB21B0564E00B90FD9 /* MainMenuViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModelType.swift; sourceTree = "<group>"; };
 		671416EE21B056C500B90FD9 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		671416F021B056F300B90FD9 /* DependencyContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerType.swift; sourceTree = "<group>"; };
-		6722E2D722246D6300DC0DDB /* UIViewController+ColorChanging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ColorChanging.swift"; sourceTree = "<group>"; };
+		6722E2D722246D6300DC0DDB /* NSObject+ColorChanging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ColorChanging.swift"; sourceTree = "<group>"; };
 		67239BE72211EA8D006AB3B9 /* UserDefaults+IsFirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+IsFirstLaunch.swift"; sourceTree = "<group>"; };
 		6742C4FE2233D8300076A3BA /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6742C5022233D8A50076A3BA /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -728,7 +728,7 @@
 		6709F46921E0EEBC00056F80 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6722E2D722246D6300DC0DDB /* UIViewController+ColorChanging.swift */,
+				6722E2D722246D6300DC0DDB /* NSObject+ColorChanging.swift */,
 				22AAC33322A01E9A007EE666 /* KeyedDecodingContainer+Decode.swift */,
 				67B714E6224945410033C249 /* UIFont+ProjectFonts.swift */,
 				6709F46A21E0EEDE00056F80 /* UIView+fixInView.swift */,
@@ -1431,7 +1431,7 @@
 				22E4134B22BAD12400D44776 /* FilmsViewModelType.swift in Sources */,
 				671416EA21B0563600B90FD9 /* MainMenuViewModel.swift in Sources */,
 				22E4136E22BAEBE400D44776 /* FilmViewModel.swift in Sources */,
-				6722E2D822246D6300DC0DDB /* UIViewController+ColorChanging.swift in Sources */,
+				6722E2D822246D6300DC0DDB /* NSObject+ColorChanging.swift in Sources */,
 				22E4135E22BAD39C00D44776 /* VehiclesViewController.swift in Sources */,
 				22E4137422BAEC1100D44776 /* PlanetViewModel.swift in Sources */,
 				6799F39422D8CD8600D79A2E /* ListViewModel.swift in Sources */,

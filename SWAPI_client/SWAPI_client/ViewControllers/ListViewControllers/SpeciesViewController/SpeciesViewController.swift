@@ -30,6 +30,7 @@ class SpeciesViewController: ListViewController {
     
     override func setupUI() {
         super.setupUI()
+        
         title = speciesViewModel.controllerTitle
     }
 }

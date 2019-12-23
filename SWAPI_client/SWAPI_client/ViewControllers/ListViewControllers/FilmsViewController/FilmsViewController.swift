@@ -30,6 +30,7 @@ class FilmsViewController: ListViewController {
     
     override func setupUI() {
         super.setupUI()
+        
         title = filmsViewModel.controllerTitle
     }
 }

@@ -30,6 +30,7 @@ class PlanetsViewController: ListViewController {
     
     override func setupUI() {
         super.setupUI()
+        
         title = planetsViewModel.controllerTitle
     }
 }

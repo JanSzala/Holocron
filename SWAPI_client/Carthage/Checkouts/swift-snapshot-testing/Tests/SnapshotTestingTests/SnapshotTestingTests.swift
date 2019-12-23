@@ -225,7 +225,7 @@ final class SnapshotTestingTests: XCTestCase {
       sphereNode.position = SCNVector3Zero
       scene.rootNode.addChildNode(sphereNode)
 
-      sphereGeometry.firstMaterial?.diffuse.contents = URL(fileURLWithPath: String(#file))
+      sphereGeometry.firstMaterial?.diffuse.contents = URL(fileURLWithPath: String(#file), isDirectory: false)
         .deletingLastPathComponent()
         .appendingPathComponent("__Fixtures__/earth.png")
 
@@ -405,6 +405,30 @@ final class SnapshotTestingTests: XCTestCase {
       assertSnapshot(matching: viewController, as: .image(on: .iPadPro11(.landscape)), named: "ipad-pro-11")
       assertSnapshot(matching: viewController, as: .image(on: .iPadPro12_9(.landscape)), named: "ipad-pro-12-9")
 
+      assertSnapshot(matching: viewController, as: .image(on: .iPadMini(.landscape(splitView: .oneThird))), named: "ipad-mini-33-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadMini(.landscape(splitView: .oneHalf))), named: "ipad-mini-50-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadMini(.landscape(splitView: .twoThirds))), named: "ipad-mini-66-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadMini(.portrait(splitView: .oneThird))), named: "ipad-mini-33-split-portrait")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadMini(.portrait(splitView: .twoThirds))), named: "ipad-mini-66-split-portrait")
+      
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro10_5(.landscape(splitView: .oneThird))), named: "ipad-pro-10inch-33-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro10_5(.landscape(splitView: .oneHalf))), named: "ipad-pro-10inch-50-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro10_5(.landscape(splitView: .twoThirds))), named: "ipad-pro-10inch-66-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro10_5(.portrait(splitView: .oneThird))), named: "ipad-pro-10inch-33-split-portrait")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro10_5(.portrait(splitView: .twoThirds))), named: "ipad-pro-10inch-66-split-portrait")
+      
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro11(.landscape(splitView: .oneThird))), named: "ipad-pro-11inch-33-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro11(.landscape(splitView: .oneHalf))), named: "ipad-pro-11inch-50-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro11(.landscape(splitView: .twoThirds))), named: "ipad-pro-11inch-66-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro11(.portrait(splitView: .oneThird))), named: "ipad-pro-11inch-33-split-portrait")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro11(.portrait(splitView: .twoThirds))), named: "ipad-pro-11inch-66-split-portrait")
+      
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro12_9(.landscape(splitView: .oneThird))), named: "ipad-pro-12inch-33-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro12_9(.landscape(splitView: .oneHalf))), named: "ipad-pro-12inch-50-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro12_9(.landscape(splitView: .twoThirds))), named: "ipad-pro-12inch-66-split-landscape")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro12_9(.portrait(splitView: .oneThird))), named: "ipad-pro-12inch-33-split-portrait")
+      assertSnapshot(matching: viewController, as: .image(on: .iPadPro12_9(.portrait(splitView: .twoThirds))), named: "ipad-pro-12inch-66-split-portrait")
+      
       assertSnapshot(
         matching: viewController, as: .image(on: .iPhoneSe(.landscape)), named: "iphone-se-alternative")
       assertSnapshot(
@@ -426,20 +450,7 @@ final class SnapshotTestingTests: XCTestCase {
       assertSnapshot(
         matching: viewController, as: .image(on: .iPadPro12_9(.portrait)), named: "ipad-pro-12-9-alternative")
 
-      [
-        "extra-small": UIContentSizeCategory.extraSmall,
-        "small": .small,
-        "medium": .medium,
-        "large": .large,
-        "extra-large": .extraLarge,
-        "extra-extra-large": .extraExtraLarge,
-        "extra-extra-extra-large": .extraExtraExtraLarge,
-        "accessibility-medium": .accessibilityMedium,
-        "accessibility-large": .accessibilityLarge,
-        "accessibility-extra-large": .accessibilityExtraLarge,
-        "accessibility-extra-extra-large": .accessibilityExtraExtraLarge,
-        "accessibility-extra-extra-extra-large": .accessibilityExtraExtraExtraLarge,
-        ].forEach { name, contentSize in
+      allContentSizes.forEach { name, contentSize in
           assertSnapshot(
             matching: viewController,
             as: .image(on: .iPhoneSe, traits: .init(preferredContentSizeCategory: contentSize)),
@@ -562,6 +573,25 @@ final class SnapshotTestingTests: XCTestCase {
     #endif
   }
 
+  func testTraitsWithView() {
+    #if os(iOS)
+    if #available(iOS 11.0, *) {
+      let label = UILabel()
+      label.font = .preferredFont(forTextStyle: .title1)
+      label.adjustsFontForContentSizeCategory = true
+      label.text = "What's the point?"
+
+      allContentSizes.forEach { name, contentSize in
+        assertSnapshot(
+          matching: label,
+          as: .image(traits: .init(preferredContentSizeCategory: contentSize)),
+          named: "label-\(name)"
+        )
+      }
+    }
+    #endif
+  }
+
   func testUIView() {
     #if os(iOS)
     let view = UIButton(type: .contactAdd)
@@ -590,6 +620,7 @@ final class SnapshotTestingTests: XCTestCase {
     var get = URLRequest(url: URL(string: "https://www.pointfree.co/")!)
     get.addValue("pf_session={}", forHTTPHeaderField: "Cookie")
     get.addValue("text/html", forHTTPHeaderField: "Accept")
+    get.addValue("application/json", forHTTPHeaderField: "Content-Type")
     assertSnapshot(matching: get, as: .raw, named: "get")
     assertSnapshot(matching: get, as: .curl, named: "get-curl")
 
@@ -630,7 +661,7 @@ final class SnapshotTestingTests: XCTestCase {
 
   func testWebView() throws {
     #if os(iOS) || os(macOS)
-    let fixtureUrl = URL(fileURLWithPath: String(#file))
+    let fixtureUrl = URL(fileURLWithPath: String(#file), isDirectory: false)
       .deletingLastPathComponent()
       .appendingPathComponent("__Fixtures__/pointfree.html")
     let html = try String(contentsOf: fixtureUrl)
@@ -646,6 +677,24 @@ final class SnapshotTestingTests: XCTestCase {
     #endif
   }
 }
+
+#if os(iOS)
+private let allContentSizes =
+  [
+    "extra-small": UIContentSizeCategory.extraSmall,
+    "small": .small,
+    "medium": .medium,
+    "large": .large,
+    "extra-large": .extraLarge,
+    "extra-extra-large": .extraExtraLarge,
+    "extra-extra-extra-large": .extraExtraExtraLarge,
+    "accessibility-medium": .accessibilityMedium,
+    "accessibility-large": .accessibilityLarge,
+    "accessibility-extra-large": .accessibilityExtraLarge,
+    "accessibility-extra-extra-large": .accessibilityExtraExtraLarge,
+    "accessibility-extra-extra-extra-large": .accessibilityExtraExtraExtraLarge,
+    ]
+#endif
 
 #if os(Linux)
 extension SnapshotTestingTests {
@@ -665,6 +714,7 @@ extension SnapshotTestingTests {
       ("testTableViewController", testTableViewController),
       ("testTraits", testTraits),
       ("testTraitsEmbeddedInTabNavigation", testTraitsEmbeddedInTabNavigation),
+      ("testTraitsWithView", testTraitsWithView),
       ("testUIView", testUIView),
       ("testURLRequest", testURLRequest),
       ("testWebView", testWebView),
